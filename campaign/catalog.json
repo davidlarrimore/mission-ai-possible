@@ -1,0 +1,40 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "slug": "01-operation-boot-sequence",
+      "title": "Week 1 - Operation Boot Sequence",
+      "manifest": "./weeks/01-operation-boot-sequence/manifest.yaml"
+    },
+    {
+      "week": 2,
+      "slug": "02-operation-trust-fall",
+      "title": "Week 2 - Operation Trust Fall",
+      "manifest": "./weeks/02-operation-trust-fall/manifest.yaml"
+    },
+    {
+      "week": 3,
+      "slug": "03-operation-inside-job",
+      "title": "Week 3 - Operation Inside Job",
+      "manifest": "./weeks/03-operation-inside-job/manifest.yaml"
+    },
+    {
+      "week": 4,
+      "slug": "04-operation-directive-zero",
+      "title": "Week 4 - Operation Directive Zero",
+      "manifest": "./weeks/04-operation-directive-zero/manifest.yaml"
+    },
+    {
+      "week": 5,
+      "slug": "05-operation-firewall",
+      "title": "Week 5 - Operation Firewall",
+      "manifest": "./weeks/05-operation-firewall/manifest.yaml"
+    },
+    {
+      "week": 6,
+      "slug": "06-operation-deep-signal",
+      "title": "Week 6 - Operation Deep Signal",
+      "manifest": "./weeks/06-operation-deep-signal/manifest.yaml"
+    }
+  ]
+}

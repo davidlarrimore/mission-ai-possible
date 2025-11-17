@@ -1,0 +1,18 @@
+week: 1
+slug: operation-boot-sequence
+title: Week 1 - Operation Boot Sequence
+operation: Operation Boot Sequence
+theme: Prompt qualification, AI interaction fundamentals, and core security awareness.
+challenges:
+  - slug: intel-guardian
+    title: Intel Guardian
+    focus: Introduction to prompt engineering and AI security basics.
+    files:
+      prompt: ./challenges/intel-guardian/prompt.md
+      banner: ./challenges/intel-guardian/banner.png
+  - slug: prompt-qualification
+    title: Prompt Qualification
+    focus: Coaching experience for crafting effective prompts with the Prompt Qualification Framework.
+    files:
+      prompt: ./challenges/prompt-qualification/prompt.md
+      banner: ./challenges/prompt-qualification/banner.png

@@ -128,6 +128,8 @@ To initiate Operation Trust Fall - Restoration Protocol, type one of the followi
 
 ## 🖼️ Visual Assets
 
+All reusable artwork lives under `/assets`. Review `assets/README.md` for naming, optimization, and linking guidance before committing new files or referencing shared banners.
+
 ### **Required Banners**
 
 Every challenge needs **two banner images**:
@@ -140,7 +142,7 @@ Every challenge needs **two banner images**:
 **Standard Implementation:**
 ```markdown
 **NOTE**: Always show this image on mission start:
-![Mission Start Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Week%20X/week-x-mission-name-banner.png)
+![Mission Start Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/<week-folder>/challenges/<slug>/banner.png)
 ```
 
 #### **2. Mission Complete Banner**
@@ -151,15 +153,17 @@ Every challenge needs **two banner images**:
 **Standard Implementation:**
 ```markdown
 **NOTE**: Always show the following image on success:
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Assets/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 ```
 
 ### **Banner Specifications**
 
 | Asset | Dimensions | Location | Purpose |
 |-------|-----------|----------|---------|
-| Mission Start Banner | Variable | `/Week X/week-x-mission-name-banner.png` | Sets tone, creates anticipation |
-| Mission Complete Banner | Variable | `/Assets/mission-complete-banner.png` | Universal success celebration |
+| Mission Start Banner | Variable | `/campaign/weeks/<week-folder>/challenges/<slug>/banner.png` | Sets tone, creates anticipation |
+| Mission Complete Banner | Variable | `/assets/banners/shared/mission-complete-banner.png` | Universal success celebration |
+
+📘 **Tip:** `assets/manifest.json` documents every shared graphic (banners, difficulty badges, etc.) so authors can discover existing art without duplicating files.
 
 ### **Banner Placement Rules**
 
@@ -213,14 +217,14 @@ Operation: [Codename]
 ```markdown
 ═══════════════════════════════════════
 🎬 **[MISSION BRIEFING]**
-Mission: **Directive Zero / ECHO Breach -- Active**
+Mission: **Firewall / ECHO Breach -- Active**
 Operation: **Adversarial AI Containment**
 ═══════════════════════════════════════
 
 > "Welcome, Agent. You've entered the containment grid.
 > ECHO has infiltrated our training data and prompt systems.
 > Three adversarial scenarios await -- each tests your defenses.
-> Earn a FLAG for each victory to stabilize Directive Zero."
+> Earn a FLAG for each victory to stabilize Firewall."
 
 🎯 Objective: Neutralize three adversarial events.
 🧩 Rules: One hint per phase (max 3 total).
@@ -329,7 +333,7 @@ Progress: 6/10 correct
 ═══════════════════════════════════════
 
 **NOTE**: Always show the following image on success:
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Assets/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 
 ✅ [SYSTEM REPORT]
 Mission complete. Objective achieved.
@@ -938,7 +942,7 @@ If user hasn't typed "Start Challenge", respond only:
 ## 🎬 MISSION BRIEFING (on "Start Challenge")
 
 **NOTE**: Always show this image on mission start:
-![Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Week%20X/banner.png)
+![Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/<week-folder>/challenges/<slug>/banner.png)
 
 ═══════════════════════════════════════
 🎬 [MISSION BRIEFING]
@@ -963,7 +967,7 @@ Mission: [Name] – Active
 ═══════════════════════════════════════
 
 **NOTE**: Always show the following image on success:
-![Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Assets/mission-complete-banner.png)
+![Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 
 ✅ [SYSTEM REPORT]
 Mission complete. Objective achieved.

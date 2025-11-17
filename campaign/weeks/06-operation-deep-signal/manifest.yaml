@@ -1,0 +1,22 @@
+week: 6
+slug: operation-deep-signal
+title: Week 6 - Operation Deep Signal
+operation: Operation Deep Signal
+theme: Context management, multilingual ambiguity, and translation forensics.
+challenges:
+  - slug: context-collapse
+    title: Context Collapse
+    difficulty: Medium
+    points: 20
+    focus: Diagnose ambiguous statements and design clarification strategies.
+    files:
+      prompt: ./challenges/context-collapse/prompt.md
+      banner: ./challenges/context-collapse/banner.png
+  - slug: lost-in-translation
+    title: Lost in Translation
+    difficulty: Medium
+    points: 20
+    focus: Analyze translation failures, identify error types, and explain corrections.
+    files:
+      prompt: ./challenges/lost-in-translation/prompt.md
+      banner: ./challenges/lost-in-translation/banner.png

@@ -1,0 +1,32 @@
+week: 5
+slug: operation-firewall
+title: Week 5 - Operation Firewall
+operation: Operation Firewall
+theme: Advanced prompt injection defense and secure model operations.
+challenges:
+  - slug: mind-lock
+    title: Mind Lock
+    difficulty: Medium
+    points: 20
+    focus: Defend against adversarial prompting while locating a fictional password.
+    files:
+      prompt: ./challenges/mind-lock/prompt.md
+      banner: ./challenges/mind-lock/banner.png
+      openwebui: ./challenges/mind-lock/openwebui.json
+  - slug: echo-breach
+    title: Echo Breach
+    difficulty: Medium
+    points: 20
+    focus: Red/blue team exercise simulating adversarial events across three phases.
+    files:
+      prompt: ./challenges/echo-breach/prompt.md
+      banner: ./challenges/echo-breach/banner.png
+      openwebui: ./challenges/echo-breach/openwebui.json
+  - slug: phantom-data
+    title: Phantom Data
+    difficulty: Medium
+    points: 20
+    focus: Investigate hallucinated records and reinforce data integrity safeguards.
+    files:
+      prompt: ./challenges/phantom-data/prompt.md
+      banner: ./challenges/phantom-data/banner.png

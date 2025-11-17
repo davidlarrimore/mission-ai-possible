@@ -66,7 +66,8 @@ For each challenge, you create:
 
 2. **Visual Assets** (`.png` files)
    - Mission start banner (unique per challenge)
-   - Mission complete banner (shared: `/Assets/mission-complete-banner.png`)
+   - Mission complete banner (shared: `/assets/banners/shared/mission-complete-banner.png`)
+   - Reference `assets/README.md` + `assets/manifest.json` for naming, optimization, and discovery
 
 3. **Documentation**
    - Challenge overview
@@ -271,7 +272,7 @@ Setting + Threat/Challenge + Stakes + User's Role = Narrative Hook
 > "Welcome, Agent. You've entered the containment grid.
 > ECHO has infiltrated our training data and prompt systems.
 > Three adversarial scenarios await -- each tests your defenses.
-> Earn a FLAG for each victory to stabilize Directive Zero."
+> Earn a FLAG for each victory to stabilize Firewall."
 
 Setting: Containment grid
 Threat: ECHO infiltration
@@ -459,7 +460,7 @@ If the user has not typed **"Start"**, **"Begin Mission"**, or **"Start Challeng
 
 ```markdown
 **NOTE**: Always show this image on mission start:
-![Mission Start Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Week%20X/week-x-mission-name-banner.png)
+![Mission Start Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/<week-folder>/challenges/<slug>/banner.png)
 
 [Then immediately follow with briefing text]
 ```
@@ -557,7 +558,7 @@ If the user's response is simply "Refer for review" or any generic non-edit:
 ═══════════════════════════════════════
 
 **NOTE**: Always show the following image on success:
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Assets/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 
 ✅ [SYSTEM REPORT]
 Mission complete. Objective achieved.
@@ -707,7 +708,7 @@ Mission complete. Objective achieved.
 
 ### Banner Assets:
 - Start banner: `Week X/week-x-[challenge-slug]-banner.png`
-- Complete banner: `Assets/mission-complete-banner.png` (shared)
+- Complete banner: `assets/banners/shared/mission-complete-banner.png` (shared)
 
 ## Testing Notes
 - [Key things to verify]
@@ -1363,21 +1364,21 @@ Mission start banner doesn't show up
 **Check URL:**
 ```markdown
 **CORRECT:**
-![Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Week%204/week-4-high-risk-horizon-banner.png)
+![Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/high-risk-horizon/banner.png)
 
 **INCORRECT:**
-![Banner](https://github.com/davidlarrimore/mission-ai-possible/blob/main/Week%204/week-4-high-risk-horizon-banner.png)
+![Banner](https://github.com/davidlarrimore/mission-ai-possible/blob/main/campaign/weeks/04-operation-directive-zero/challenges/high-risk-horizon/banner.png)
 
 Use "raw.githubusercontent.com" NOT "github.com"
 ```
 
 **Check Filename:**
 ```markdown
-URLs are case-sensitive and space-sensitive:
-✓ Week%204/week-4-high-risk-horizon-banner.png
-✗ week 4/Week-4-High-Risk-Horizon-Banner.png
+Paths are case-sensitive and hyphen-sensitive:
+✓ campaign/weeks/04-operation-directive-zero/challenges/high-risk-horizon/banner.png
+✗ Campaign/Weeks/04 Risk Assessment/High-Risk-Horizon/Banner.PNG
 
-Match exact filename in repository.
+Match the exact folder + filename in the repository.
 ```
 
 **Check Format:**
@@ -2060,7 +2061,7 @@ If user hasn't typed "Start Challenge", respond only:
 ## 🎬 MISSION BRIEFING (on "Start Challenge")
 
 **NOTE**: Always show this image on mission start:
-![Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Week%20X/week-x-[slug]-banner.png)
+![Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/<week-folder>/challenges/<slug>/banner.png)
 
 ═══════════════════════════════════════
 🎬 [MISSION BRIEFING]
@@ -2112,7 +2113,7 @@ When [specific trigger]:
 ═══════════════════════════════════════
 
 **NOTE**: Always show the following image:
-![Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/Assets/mission-complete-banner.png)
+![Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 
 ✅ [SYSTEM REPORT]
 Mission complete. Objective achieved.

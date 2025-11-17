@@ -10,7 +10,7 @@ Through narrative-driven challenges and interactive simulations, participants le
 
 ## What's Included
 
-This repository contains comprehensive campaign assets for a 5-week AI literacy program:
+This repository contains comprehensive campaign assets for a 6-week AI literacy program:
 
 ### Challenge Content
 - **12 interactive challenge prompts** (.md files) covering AI literacy topics
@@ -19,11 +19,12 @@ This repository contains comprehensive campaign assets for a 5-week AI literacy 
 - **Comprehensive setup guide** for creating consistent challenges
 
 ### Topics Covered
-- **Week 1: Foundations** - Prompt qualification and basic AI interactions
+- **Week 1: Operation Boot Sequence** - Prompt qualification and basic AI interactions
 - **Week 2: Operation Trust Fall** - AI bias detection and mitigation
-- **Week 3: Critical Evaluation** - Decision-making and AI limitations
-- **Week 4: Risk Assessment** - AI security and risk evaluation
-- **Week 5: Directive Zero** - Advanced prompt injection and model security
+- **Week 3: Operation Inside Job** - Decision-making and AI limitations
+- **Week 4: Operation Directive Zero** - AI security and risk evaluation
+- **Week 5: Operation Firewall** - Advanced prompt injection and model security
+- **Week 6: Operation Deep Signal** - Context management, ambiguity resolution, and translation forensics
 
 ### Development Tools
 - **Markdown sanitizer** (clean.sh) for Open WebUI compatibility
@@ -33,43 +34,39 @@ This repository contains comprehensive campaign assets for a 5-week AI literacy 
 
 ```
 mission-ai-possible/
-├── Week 1/                    # Foundation challenges
-│   ├── week-1-intel-guardian-prompt.md
-│   ├── week-1-prompt-qualification-prompt.md
-│   └── *.png                  # Mission banners
-├── Week 2/                    # Operation Trust Fall
-│   ├── week-2-seeds-of-bias-prompt.md
-│   ├── week-2-restoration-protocol-prompt.md
-│   ├── week-2-algorithmic-integrity-prompt.md
-│   └── *.png
-├── Week 3/                    # Critical evaluation challenges
-│   ├── week-3-broken-compass-prompt.md
-│   ├── week-3-adjudication-protocol-prompt.md
-│   └── *.png
-├── Week 4/                    # Risk assessment challenges
-│   ├── week-4-red-light-protocol-prompt.md
-│   ├── week-4-high-risk-horizon-prompt.md
-│   └── *.png
-├── Week 5/                    # Directive Zero
-│   ├── week-5-mind-lock-prompt.md
-│   ├── week-5-echo-breach-prompt.md
-│   ├── week-5-phantom-data-prompt.md
-│   ├── openwebui-week-5-*.json
-│   └── *.png
-├── Week 6/                    # Reserved for future content
-├── Assets/                    # Shared campaign assets
-│   ├── mission-complete-banner.png
-│   └── Challenge Graphics/
-├── docs/                      # Documentation
-│   └── challenge-setup.md     # Comprehensive setup guide
-├── clean.sh                   # Markdown sanitization utility
-├── LICENSE                    # Apache 2.0
+├── campaign/
+│   ├── catalog.json                # Machine-readable index of all weeks
+│   └── weeks/
+│       ├── 01-operation-boot-sequence/
+│       │   ├── manifest.yaml       # Metadata + challenge manifest
+│       │   └── challenges/
+│       │       ├── intel-guardian/
+│       │       │   ├── prompt.md
+│       │       │   └── banner.png
+│       │       └── prompt-qualification/
+│       │           ├── prompt.md
+│       │           └── banner.png
+│       ├── 02-operation-trust-fall/
+│       │   └── ...
+│       ├── 03-operation-inside-job/
+│       ├── 04-operation-directive-zero/
+│       ├── 05-operation-firewall/
+│       └── 06-operation-deep-signal/
+├── assets/                        # Shared campaign assets & guidance
+│   ├── README.md                  # Usage + best practices
+│   ├── banners/
+│   │   └── shared/mission-complete-banner.png
+│   └── graphics/
+│       └── difficulty/{very-easy|easy|medium|hard}.png
+├── docs/                          # Documentation & guides
+├── clean.sh                       # Markdown sanitization utility
+├── LICENSE                        # Apache 2.0
 └── README.md
 ```
 
 ## Challenge Overview
 
-### Week 1: Foundations
+### Week 1: Operation Boot Sequence
 - **Intel Guardian** - Introduction to prompt engineering and AI security basics
 - **Prompt Qualification** - Learning effective AI interaction patterns
 
@@ -78,18 +75,22 @@ mission-ai-possible/
 - **Restoration Protocol** (Medium/20 pts) - Systematic approach to identifying AI bias categories
 - **Algorithmic Integrity** (Easy/15 pts) - Pattern recognition in biased AI outputs
 
-### Week 3: Critical Evaluation
+### Week 3: Operation Inside Job
 - **Broken Compass** - Understanding AI limitations in decision-making contexts
 - **Adjudication Protocol** - Evaluating AI recommendations critically
 
-### Week 4: Risk Assessment
+### Week 4: Operation Directive Zero
 - **Red Light Protocol** - AI security awareness and risk identification
 - **High-Risk Horizon** - Assessing high-stakes AI deployment scenarios
 
-### Week 5: Directive Zero
+### Week 5: Operation Firewall
 - **Mind Lock** - Advanced prompt injection defense techniques
 - **Echo Breach** - Red/blue team exercise for model security
 - **Phantom Data** - Data integrity and AI hallucination awareness
+
+### Week 6: Operation Deep Signal
+- **Context Collapse** - Analyze ambiguous statements and design clarification strategies
+- **Lost in Translation** - Identify translation failure modes with corrective actions
 
 ## Getting Started
 
@@ -189,6 +190,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
-**Current Status:** Active campaign development - Weeks 1-5 complete, Week 6 in planning
+**Current Status:** Active campaign development - Weeks 1-6 available with manifests and catalog
 
 **Last Updated:** November 15, 2024

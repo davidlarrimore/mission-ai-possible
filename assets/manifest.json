@@ -1,0 +1,45 @@
+{
+  "banners": {
+    "shared": [
+      {
+        "name": "mission-complete",
+        "path": "assets/banners/shared/mission-complete-banner.png",
+        "description": "Universal success banner rendered at 1600x900 for all challenges",
+        "tags": ["success", "shared", "mission"],
+        "usage": "Display when players complete any mission."
+      }
+    ]
+  },
+  "graphics": {
+    "difficulty": [
+      {
+        "name": "very-easy",
+        "path": "assets/graphics/difficulty/very-easy.png",
+        "description": "Difficulty badge for very easy challenges",
+        "tags": ["badge", "difficulty", "very-easy"],
+        "usage": "Docs, marketing, or dashboards indicating very easy missions."
+      },
+      {
+        "name": "easy",
+        "path": "assets/graphics/difficulty/easy.png",
+        "description": "Difficulty badge for easy challenges",
+        "tags": ["badge", "difficulty", "easy"],
+        "usage": "Docs, marketing, or dashboards indicating easy missions."
+      },
+      {
+        "name": "medium",
+        "path": "assets/graphics/difficulty/medium.png",
+        "description": "Difficulty badge for medium challenges",
+        "tags": ["badge", "difficulty", "medium"],
+        "usage": "Docs, marketing, or dashboards indicating medium missions."
+      },
+      {
+        "name": "hard",
+        "path": "assets/graphics/difficulty/hard.png",
+        "description": "Difficulty badge for hard challenges",
+        "tags": ["badge", "difficulty", "hard"],
+        "usage": "Docs, marketing, or dashboards indicating hard missions."
+      }
+    ]
+  }
+}

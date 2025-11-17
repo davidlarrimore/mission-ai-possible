@@ -1,0 +1,30 @@
+week: 2
+slug: operation-trust-fall
+title: Week 2 - Operation Trust Fall
+operation: Trust Fall
+theme: Bias detection and mitigation across AI systems.
+challenges:
+  - slug: seeds-of-bias
+    title: Seeds of Bias
+    difficulty: Hard
+    points: 25
+    focus: Hands-on identification and mitigation planning for bias hidden in training data.
+    files:
+      prompt: ./challenges/seeds-of-bias/prompt.md
+      banner: ./challenges/seeds-of-bias/banner.png
+  - slug: restoration-protocol
+    title: Restoration Protocol
+    difficulty: Medium
+    points: 20
+    focus: Systematic walkthrough of bias categories and remediation strategies.
+    files:
+      prompt: ./challenges/restoration-protocol/prompt.md
+      banner: ./challenges/restoration-protocol/banner.png
+  - slug: algorithmic-integrity
+    title: Algorithmic Integrity
+    difficulty: Easy
+    points: 15
+    focus: Pattern recognition of biased outputs and corrective reasoning.
+    files:
+      prompt: ./challenges/algorithmic-integrity/prompt.md
+      banner: ./challenges/algorithmic-integrity/banner.png
