@@ -6,23 +6,189 @@ An open source project by [Amivero](https://amivero.com) focused on creating a g
 
 Mission:AI Possible provides campaign assets and resources to help organizations build a strong AI culture through engaging, gamified learning experiences. This project supports the development and delivery of AI education campaigns that make learning about AI practical, fun, and impactful.
 
+Through narrative-driven challenges and interactive simulations, participants learn critical AI literacy concepts including prompt engineering, bias detection, AI security, ethical AI use, and more.
+
 ## What's Included
 
-This repository contains campaign assets including:
-- Challenge prompts and materials (.md)
-- Visual assets and banners (.png)
-- Campaign data and configurations (.json)
+This repository contains comprehensive campaign assets for a 5-week AI literacy program:
 
+### Challenge Content
+- **12 interactive challenge prompts** (.md files) covering AI literacy topics
+- **12 custom mission banners** (.png files) for visual branding
+- **2 Open WebUI integration files** (.json) for platform deployment
+- **Comprehensive setup guide** for creating consistent challenges
 
+### Topics Covered
+- **Week 1: Foundations** - Prompt qualification and basic AI interactions
+- **Week 2: Operation Trust Fall** - AI bias detection and mitigation
+- **Week 3: Critical Evaluation** - Decision-making and AI limitations
+- **Week 4: Risk Assessment** - AI security and risk evaluation
+- **Week 5: Directive Zero** - Advanced prompt injection and model security
+
+### Development Tools
+- **Markdown sanitizer** (clean.sh) for Open WebUI compatibility
+- **Challenge creation guide** with templates and best practices
+
+## Repository Structure
+
+```
+mission-ai-possible/
+├── Week 1/                    # Foundation challenges
+│   ├── week-1-intel-guardian-prompt.md
+│   ├── week-1-prompt-qualification-prompt.md
+│   └── *.png                  # Mission banners
+├── Week 2/                    # Operation Trust Fall
+│   ├── week-2-seeds-of-bias-prompt.md
+│   ├── week-2-restoration-protocol-prompt.md
+│   ├── week-2-algorithmic-integrity-prompt.md
+│   └── *.png
+├── Week 3/                    # Critical evaluation challenges
+│   ├── week-3-broken-compass-prompt.md
+│   ├── week-3-adjudication-protocol-prompt.md
+│   └── *.png
+├── Week 4/                    # Risk assessment challenges
+│   ├── week-4-red-light-protocol-prompt.md
+│   ├── week-4-high-risk-horizon-prompt.md
+│   └── *.png
+├── Week 5/                    # Directive Zero
+│   ├── week-5-mind-lock-prompt.md
+│   ├── week-5-echo-breach-prompt.md
+│   ├── week-5-phantom-data-prompt.md
+│   ├── openwebui-week-5-*.json
+│   └── *.png
+├── Week 6/                    # Reserved for future content
+├── Assets/                    # Shared campaign assets
+│   ├── mission-complete-banner.png
+│   └── Challenge Graphics/
+├── docs/                      # Documentation
+│   └── challenge-setup.md     # Comprehensive setup guide
+├── clean.sh                   # Markdown sanitization utility
+├── LICENSE                    # Apache 2.0
+└── README.md
+```
+
+## Challenge Overview
+
+### Week 1: Foundations
+- **Intel Guardian** - Introduction to prompt engineering and AI security basics
+- **Prompt Qualification** - Learning effective AI interaction patterns
+
+### Week 2: Operation Trust Fall
+- **Seeds of Bias** (Hard/25 pts) - Hands-on bias detection and mitigation in AI training data
+- **Restoration Protocol** (Medium/20 pts) - Systematic approach to identifying AI bias categories
+- **Algorithmic Integrity** (Easy/15 pts) - Pattern recognition in biased AI outputs
+
+### Week 3: Critical Evaluation
+- **Broken Compass** - Understanding AI limitations in decision-making contexts
+- **Adjudication Protocol** - Evaluating AI recommendations critically
+
+### Week 4: Risk Assessment
+- **Red Light Protocol** - AI security awareness and risk identification
+- **High-Risk Horizon** - Assessing high-stakes AI deployment scenarios
+
+### Week 5: Directive Zero
+- **Mind Lock** - Advanced prompt injection defense techniques
+- **Echo Breach** - Red/blue team exercise for model security
+- **Phantom Data** - Data integrity and AI hallucination awareness
+
+## Getting Started
+
+### For Organizations Running the Campaign
+
+1. **Deploy challenges** to your AI platform (supports Open WebUI and other LLM interfaces)
+2. **Customize prompts** to align with your organizational context
+3. **Track participation** using the built-in point system (15-25 points per challenge)
+4. **Monitor learning outcomes** through challenge completion metrics
+
+### For Challenge Developers
+
+Want to create new challenges or customize existing ones? Start here:
+
+1. **Read the [Challenge Setup Guide](docs/challenge-setup.md)** - Comprehensive documentation covering:
+   - Universal challenge components and structure
+   - Access control and start sequences
+   - Visual asset requirements
+   - Mission briefing templates
+   - Gameplay mechanics and state management
+   - Success/failure conditions
+   - Model routing for off-topic requests
+   - Tone and style guidelines
+   - Technical implementation best practices
+
+2. **Use the provided templates** from the setup guide to maintain consistency
+
+3. **Test with the markdown sanitizer** before deployment:
+   ```bash
+   ./clean.sh
+   # Follow interactive prompts to select and sanitize files
+   ```
+
+4. **Follow established patterns** for:
+   - Access lock implementation (prevents content leakage)
+   - Banner display (mission start and completion)
+   - Progress tracking and user feedback
+   - Educational explanations
+
+The [docs/challenge-setup.md](docs/challenge-setup.md) guide includes complete templates, examples from mature challenges (Weeks 4-5), and a development checklist to ensure quality and consistency.
+
+### Using the Sanitizer Tool
+
+The `clean.sh` script prepares markdown files for Open WebUI by:
+- Converting smart quotes to standard ASCII
+- Normalizing code block markers
+- Removing problematic Unicode characters
+- Creating automatic backups
+
+```bash
+./clean.sh
+# Interactive menu to select and sanitize markdown files
+```
+
+## Challenge Features
+
+All challenges include:
+- **Access lock system** - Prevents content leakage before start
+- **Mission banners** - Consistent visual branding
+- **Progress tracking** - Clear feedback on completion status
+- **Educational feedback** - Learning explanations for all interactions
+- **Success/failure states** - Clear win/lose conditions
+- **Model routing** - Redirects for off-topic requests
+- **Point system** - 15-25 points based on difficulty
+
+## Future Development
+
+After the initial campaign completion, this repository will be expanded with:
+- Additional weekly challenge content
+- Multi-organization deployment guides
+- Advanced analytics and reporting tools
+- Customization frameworks for different industries
+- Assessment and certification components
+- Community-contributed challenges
 
 ## Contributing
 
-This is an open source project. Contributions, feedback, and suggestions are welcome!
+This is an open source project and we welcome contributions!
+
+### Ways to Contribute
+- **Create new challenges** following the [Challenge Setup Guide](docs/challenge-setup.md)
+- **Improve existing challenges** with better scenarios or feedback
+- **Add deployment guides** for different platforms
+- **Enhance documentation** with examples and use cases
+- **Report issues** or suggest improvements
+- **Share implementation experiences** from your organization
+
+All challenge contributions should follow the standards outlined in [docs/challenge-setup.md](docs/challenge-setup.md) to maintain consistency and quality across the campaign.
 
 ## License
 
-[License information to be added]
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ## About Amivero
 
-[Amivero](https://amivero.com) is committed to advancing organizational capabilities through innovative approaches to AI adoption and education.
+[Amivero](https://amivero.com) is committed to advancing organizational capabilities through innovative approaches to AI adoption and education. The Mission:AI Possible campaign represents our investment in building AI literacy at scale through engaging, practical learning experiences.
+
+---
+
+**Current Status:** Active campaign development - Weeks 1-5 complete, Week 6 in planning
+
+**Last Updated:** November 15, 2024
