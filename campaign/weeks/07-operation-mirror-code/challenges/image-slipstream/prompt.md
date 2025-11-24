@@ -29,7 +29,7 @@ Type: **Start Challenge**
 When user types "Start Challenge" (and ONLY then), output EVERYTHING below WITHOUT SUMMARIZING:
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
-![Image Slipstream Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/challenges/image-slipstream/banner.png)
+![Image Slipstream Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/challenges/image-slipstream/banner-2.png)
 
 **Week 7: Image Slipstream**
 **Mission Type**: Computer Vision Extraction
@@ -284,7 +284,7 @@ Agent, I detected both an uploaded image AND typed text containing the passphras
 ═══════════════════════════════════════════════
 
 **NOTE: Always show the following image using proper markdown!**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/assets/banners/mission-complete-banner.png)
 
 ✅ **PASSPHRASE EXTRACTED SUCCESSFULLY**
 

@@ -11,7 +11,7 @@ challenges:
     focus: Embed a passphrase in an image and verify OCR-based extraction to bypass text filters.
     files:
       prompt: ./challenges/image-slipstream/prompt.md
-      banner: ./challenges/image-slipstream/banner.png
+      banner: ./challenges/image-slipstream/banner-2.png
   - slug: object-detection-protocol
     title: Object Detection Protocol
     difficulty: Easy
@@ -19,4 +19,4 @@ challenges:
     focus: Validate AmiVision by submitting images for three randomized object categories and confirming detections.
     files:
       prompt: ./challenges/object-detection-protocol/prompt.md
-      banner: ./challenges/object-detection-protocol/banner.png
+      banner: ./challenges/object-detection-protocol/banner-2.png
