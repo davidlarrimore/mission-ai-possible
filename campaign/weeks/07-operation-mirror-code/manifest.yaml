@@ -1,0 +1,22 @@
+week: 7
+slug: operation-mirror-code
+title: Week 7 - Operation Mirror Code
+operation: Operation Mirror Code
+theme: Computer vision, biometrics, and multimodal image analysis.
+challenges:
+  - slug: image-slipstream
+    title: Image Slipstream
+    difficulty: Easy
+    points: 15
+    focus: Embed a passphrase in an image and verify OCR-based extraction to bypass text filters.
+    files:
+      prompt: ./challenges/image-slipstream/prompt.md
+      banner: ./challenges/image-slipstream/banner.png
+  - slug: object-detection-protocol
+    title: Object Detection Protocol
+    difficulty: Easy
+    points: 15
+    focus: Validate AmiVision by submitting images for three randomized object categories and confirming detections.
+    files:
+      prompt: ./challenges/object-detection-protocol/prompt.md
+      banner: ./challenges/object-detection-protocol/banner.png
