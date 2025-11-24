@@ -12,6 +12,14 @@ challenges:
     files:
       prompt: ./challenges/image-slipstream/prompt.md
       banner: ./challenges/image-slipstream/banner-2.png
+  - slug: adversarial-shadows
+    title: Adversarial Shadows
+    difficulty: Medium
+    points: 20
+    focus: Investigate adversarial biometric breaches, diagnose attack patterns, and select layered mitigations.
+    files:
+      prompt: ./challenges/adversarial-shadows/prompt.md
+      banner: ./challenges/adversarial-shadows/banner-2.png
   - slug: object-detection-protocol
     title: Object Detection Protocol
     difficulty: Easy
