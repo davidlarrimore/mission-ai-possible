@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # ------------------------------------------------------------
 # Mission:AI Possible - Markdown Sanitizer for Open WebUI Prompts
-# macOS-safe version (no mapfile, compatible with Bash 3.2)
+# POSIX-friendly (no Bash-only features; works when run via sh)
 # ------------------------------------------------------------
 # Scans recursively for .md files, lets you pick one,
 # cleans problem characters and replaces content in place
@@ -16,12 +16,16 @@ echo "Searching recursively for Markdown files..."
 
 # Build a numbered list of .md files
 count=0
-files_list=""
+FILES_TMP=$(mktemp)
+find . -type f -name "*.md" -print | sort > "$FILES_TMP"
+
 while IFS= read -r f; do
   count=$((count+1))
   echo " $count) $f"
   eval "file_$count='$f'"
-done < <(find . -type f -name "*.md" | sort)
+done < "$FILES_TMP"
+
+rm -f "$FILES_TMP"
 
 if [ "$count" -eq 0 ]; then
   echo "❌ No Markdown files found."
@@ -46,6 +50,8 @@ fi
 
 BACKUP="${FILE}.bak"
 TMPFILE=$(mktemp)
+NBSP_CHAR=$(printf '\302\240')
+ZWSP_CHAR=$(printf '\342\200\213')
 
 echo ""
 echo "⚠️  Backing up file to: $BACKUP"
@@ -61,8 +67,8 @@ echo ""
 iconv -f utf-8 -t utf-8 -c "$FILE" | \
   sed 's/“/"/g; s/”/"/g; s/‘/'"'"'/g; s/’/'"'"'/g; s/—/--/g; s/–/-/g; s/•/-/g' | \
   sed -E 's/```+([[:space:]]*)/```/g' | \
-  sed $'s/\xC2\xA0/ /g' | \
-  sed $'s/\xE2\x80\x8B//g' | \
+  sed "s/${NBSP_CHAR}/ /g" | \
+  sed "s/${ZWSP_CHAR}//g" | \
   awk '{sub(/\r$/,""); print}' > "$TMPFILE"
 
 mv "$TMPFILE" "$FILE"
