@@ -1,0 +1,14 @@
+week: 8
+slug: operation-auto-run
+title: Week 8 - Operation Auto Run
+operation: Operation Auto Run
+theme: Automation and intelligent workflows.
+challenges:
+  - slug: tidebreaker
+    title: Tidebreaker
+    difficulty: Hard
+    points: 25
+    focus: Stabilize runaway automation at a fully autonomous port by diagnosing control loops and installing layered safeguards.
+    files:
+      prompt: ./challenges/tidebreaker/prompt.md
+      banner: ./challenges/tidebreaker/banner.png

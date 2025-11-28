@@ -10,10 +10,10 @@ Through narrative-driven challenges and interactive simulations, participants le
 
 ## What's Included
 
-This repository contains comprehensive campaign assets for a 6-week AI literacy program:
+This repository contains comprehensive campaign assets for a 10-week AI literacy program (Weeks 1-8 available today):
 
 ### Challenge Content
-- **12 interactive challenge prompts** (.md files) covering AI literacy topics
+- **20 interactive challenge prompts** (.md files) covering AI literacy topics (and growing)
 - **12 custom mission banners** (.png files) for visual branding
 - **2 Open WebUI integration files** (.json) for platform deployment
 - **Comprehensive setup guide** for creating consistent challenges
@@ -91,6 +91,16 @@ mission-ai-possible/
 ### Week 6: Operation Deep Signal
 - **Context Collapse** - Analyze ambiguous statements and design clarification strategies
 - **Lost in Translation** - Identify translation failure modes with corrective actions
+
+### Week 7: Operation Mirror Code
+- **Image Slipstream** - Embed and extract hidden passphrases inside images while bypassing text filters
+- **Adversarial Shadows** - Investigate biometric breaches and choose layered mitigations
+- **Object Detection Protocol** - Validate object recognition performance across randomized categories
+
+### Week 8: Operation Auto Run
+- **Tidebreaker** - Stabilize runaway port automation with human-centered safeguards
+- **Control Loop Audit** - Map automation loops, surface failure modes, and install guardrails
+- **Handover Protocol** - Build a clean human-in-the-loop runbook for pausing and resuming automation
 
 ## Getting Started
 
@@ -190,6 +200,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
-**Current Status:** Active campaign development - Weeks 1-6 available with manifests and catalog
+**Current Status:** Active campaign development - Weeks 1-8 available with manifests and catalog
 
 **Last Updated:** November 15, 2024

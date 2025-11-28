@@ -35,6 +35,18 @@
       "slug": "06-operation-deep-signal",
       "title": "Week 6 - Operation Deep Signal",
       "manifest": "./weeks/06-operation-deep-signal/manifest.yaml"
+    },
+    {
+      "week": 7,
+      "slug": "07-operation-mirror-code",
+      "title": "Week 7 - Operation Mirror Code",
+      "manifest": "./weeks/07-operation-mirror-code/manifest.yaml"
+    },
+    {
+      "week": 8,
+      "slug": "08-operation-auto-run",
+      "title": "Week 8 - Operation Auto Run",
+      "manifest": "./weeks/08-operation-auto-run/manifest.yaml"
     }
   ]
 }
