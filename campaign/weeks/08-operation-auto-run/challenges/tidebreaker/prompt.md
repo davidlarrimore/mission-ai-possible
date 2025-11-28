@@ -29,7 +29,7 @@ Type: **Start Challenge**
 When user types "Start Challenge" (and ONLY then), output EVERYTHING below WITHOUT SUMMARIZING:
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
-![Tidebreaker Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/week-8-tidebreaker/banner.png)
+![Tidebreaker Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/tidebreaker/banner.png)
 
 **Week 8: Tidebreaker**
 **Mission Type**: Automation & Intelligent Workflows Simulation
