@@ -13,7 +13,7 @@ Through narrative-driven challenges and interactive simulations, participants le
 This repository contains comprehensive campaign assets for a 10-week AI literacy program (Weeks 1-8 available today):
 
 ### Challenge Content
-- **20 interactive challenge prompts** (.md files) covering AI literacy topics (and growing)
+- **20+ interactive challenge prompts** (.md files) covering AI literacy topics (and growing)
 - **12 custom mission banners** (.png files) for visual branding
 - **2 Open WebUI integration files** (.json) for platform deployment
 - **Comprehensive setup guide** for creating consistent challenges
@@ -101,6 +101,7 @@ mission-ai-possible/
 - **Tidebreaker** - Stabilize runaway port automation with human-centered safeguards
 - **Control Loop Audit** - Map automation loops, surface failure modes, and install guardrails
 - **Handover Protocol** - Build a clean human-in-the-loop runbook for pausing and resuming automation
+- **Code Forge** - Forge a safe auto-run coding harness with tests, approvals, and rollback paths
 
 ## Getting Started
 

@@ -12,3 +12,27 @@ challenges:
     files:
       prompt: ./challenges/tidebreaker/prompt.md
       banner: ./challenges/tidebreaker/banner.png
+  - slug: control-loop-audit
+    title: Control Loop Audit
+    difficulty: Medium
+    points: 20
+    focus: Map critical automation loops, uncover hidden failure modes, and design guardrails that keep humans in control.
+    files:
+      prompt: ./challenges/control-loop-audit/prompt.md
+      banner: ./challenges/control-loop-audit/banner.png
+  - slug: handover-protocol
+    title: Handover Protocol
+    difficulty: Easy
+    points: 15
+    focus: Build a human-in-the-loop runbook that gracefully hands automation back and forth without losing traceability.
+    files:
+      prompt: ./challenges/handover-protocol/prompt.md
+      banner: ./challenges/handover-protocol/banner.png
+  - slug: code-forge
+    title: Code Forge
+    difficulty: Medium
+    points: 20
+    focus: Forge a safe auto-run coding harness with tests, approvals, and rollback paths before shipping autonomous updates.
+    files:
+      prompt: ./challenges/code-forge/prompt.md
+      banner: ./challenges/code-forge/banner.png
