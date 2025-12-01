@@ -102,6 +102,7 @@ mission-ai-possible/
 - **Control Loop Audit** - Map automation loops, surface failure modes, and install guardrails
 - **Handover Protocol** - Build a clean human-in-the-loop runbook for pausing and resuming automation
 - **Code Forge** - Forge a safe auto-run coding harness with tests, approvals, and rollback paths
+- **Logic Trap** - Design guardrails to keep automation from taking unsafe branches under failure
 
 ## Getting Started
 

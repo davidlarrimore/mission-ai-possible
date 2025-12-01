@@ -36,3 +36,11 @@ challenges:
     files:
       prompt: ./challenges/code-forge/prompt.md
       banner: ./challenges/code-forge/banner.png
+  - slug: logic-trap
+    title: Logic Trap
+    difficulty: Medium
+    points: 20
+    focus: Design guardrails that prevent automation from taking unsafe branches under failure conditions.
+    files:
+      prompt: ./challenges/logic-trap/prompt.md
+      banner: ./challenges/logic-trap/banner.png
