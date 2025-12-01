@@ -554,9 +554,8 @@ Your performance proves you understand that automation is not a binary choice --
 
 ═══════════════════════════════════════════════════════════
 
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/logic-trap/mission-complete.png)
-
-**NOTE: Always show this image using the markdown format with exclamation point!**
+**NOTE: Always show this image:**
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 
 **DO NOT say "rest follows standard protocol" or summarize. Output EVERYTHING above completely.**
 

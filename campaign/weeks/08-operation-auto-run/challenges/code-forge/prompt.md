@@ -1139,7 +1139,7 @@ Then immediately trigger MISSION COMPLETION.
 ```
 ✅ ✅ ✅ **[MISSION COMPLETE]** ✅ ✅ ✅
 
-**NOTE: Always show this image using the markdown format with exclamation point!**
+**NOTE: Always show this image:**
 ![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
 
 **Week 8: Code Forge**
