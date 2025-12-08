@@ -16,7 +16,7 @@ Use CRISPE when you want clarity, stability, and predictable performance across 
 
 ---
 
-## 🔍 CRISPE at a Glance (Mermaid Diagram)
+## 🔍 CRISPE at a Glance
 
 ```mermaid
 flowchart LR
