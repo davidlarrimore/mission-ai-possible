@@ -133,7 +133,7 @@ CoT prompts include cues that force step-by-step reasoning:
 - **Structure cues**: "First..., Then..., Finally...", "Walk through each factor"
 - **Explicit reasoning requests**: "Lay out pros and cons", "Reason through the tradeoffs"
 
-📚 **Want to learn more?** See the [Chain of Thought Reference Guide](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/neural-pathway/chain-of-thought-reference.md) for detailed examples and patterns.
+📚 **Want to learn more?** See the [Chain of Thought Reference Guide](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/docs/chain-of-thought-reference.md) for detailed examples and patterns.
 
 **The Problem:** A government contractor must decide whether to bid on a Department of Defense cybersecurity contract.
 
