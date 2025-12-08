@@ -272,43 +272,6 @@ If no → likely **template CoT** or shallow reasoning
 
 ---
 
-# 🧪 Practice Drills (Students Must Pass These!)
-
-## Drill 1 — Build the CoT  
-Problem:
-```
-A team has 5 tasks requiring 12 total hours but only 10 hours available. 
-Can they finish today?
-```
-
-**Expected CoT Structure:**  
-```
-1. Compute hours for tasks 1–3
-2. Compute hours for tasks 4–5
-3. Compare needed vs available
-4. Conclude
-```
-
----
-
-## Drill 2 — Hypothesis CoT  
-Scenario: slow web service; DB normal; ping normal; CPU at 95%.
-
-Student should produce:
-```
-H1 DB slow — contradicted
-H2 network slow — contradicted
-H3 CPU saturated — supported
-Conclusion: CPU saturation
-```
-
----
-
-## Drill 3 — Fix the Bad CoT  
-Students rewrite vague reasoning into measurable steps.
-
----
-
 # 📊 CoT Performance Diagram
 
 ```mermaid
