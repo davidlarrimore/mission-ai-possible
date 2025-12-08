@@ -1,0 +1,30 @@
+week: 9
+slug: operation-twin-mind
+title: Week 9 - Operation Twin Mind
+operation: Operation Twin Mind
+theme: Prompt engineering and human-AI collaboration.
+challenges:
+  - slug: signal-clarity
+    title: Signal Clarity
+    difficulty: Easy
+    points: 15
+    focus: Rewrite vague mission requests into precise, testable prompts using a clarity checklist.
+    files:
+      prompt: ./challenges/signal-clarity/prompt.md
+      banner: ./challenges/signal-clarity/banner.png
+  - slug: neural-pathway
+    title: Neural Pathway
+    difficulty: Medium
+    points: 20
+    focus: Design anchor-path-check-output reasoning patterns that align human objectives with model behavior.
+    files:
+      prompt: ./challenges/neural-pathway/prompt.md
+      banner: ./challenges/neural-pathway/banner.png
+  - slug: command-specification
+    title: Command Specification
+    difficulty: Hard
+    points: 25
+    focus: Build structured command specs with constraints, acceptance tests, and safety fail conditions.
+    files:
+      prompt: ./challenges/command-specification/prompt.md
+      banner: ./challenges/command-specification/banner.png

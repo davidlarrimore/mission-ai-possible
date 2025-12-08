@@ -10,7 +10,7 @@ Through narrative-driven challenges and interactive simulations, participants le
 
 ## What's Included
 
-This repository contains comprehensive campaign assets for a 10-week AI literacy program (Weeks 1-8 available today):
+This repository contains comprehensive campaign assets for a 10-week AI literacy program (Weeks 1-9 available today):
 
 ### Challenge Content
 - **20+ interactive challenge prompts** (.md files) covering AI literacy topics (and growing)
@@ -25,6 +25,9 @@ This repository contains comprehensive campaign assets for a 10-week AI literacy
 - **Week 4: Operation Directive Zero** - AI security and risk evaluation
 - **Week 5: Operation Firewall** - Advanced prompt injection and model security
 - **Week 6: Operation Deep Signal** - Context management, ambiguity resolution, and translation forensics
+- **Week 7: Operation Mirror Code** - Biometrics, adversarial images, and computer vision forensics
+- **Week 8: Operation Auto Run** - Automation guardrails, loop audits, and human-in-the-loop controls
+- **Week 9: Operation Twin Mind** - Prompt engineering patterns for human-AI co-reasoning
 
 ### Development Tools
 - **Markdown sanitizer** (clean.sh) for Open WebUI compatibility
@@ -51,7 +54,10 @@ mission-ai-possible/
 │       ├── 03-operation-inside-job/
 │       ├── 04-operation-directive-zero/
 │       ├── 05-operation-firewall/
-│       └── 06-operation-deep-signal/
+│       ├── 06-operation-deep-signal/
+│       ├── 07-operation-mirror-code/
+│       ├── 08-operation-auto-run/
+│       └── 09-operation-twin-mind/
 ├── assets/                        # Shared campaign assets & guidance
 │   ├── README.md                  # Usage + best practices
 │   ├── banners/
@@ -103,6 +109,11 @@ mission-ai-possible/
 - **Handover Protocol** - Build a clean human-in-the-loop runbook for pausing and resuming automation
 - **Code Forge** - Forge a safe auto-run coding harness with tests, approvals, and rollback paths
 - **Logic Trap** - Design guardrails to keep automation from taking unsafe branches under failure
+
+### Week 9: Operation Twin Mind
+- **Signal Clarity** - Rewrite vague mission requests into precise, testable prompts using a clarity checklist
+- **Neural Pathway** - Build anchor-path-check-output reasoning patterns that align human intent and model behavior
+- **Command Specification** - Author structured command specs with constraints, acceptance tests, and refusal rules
 
 ## Getting Started
 
@@ -202,6 +213,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
-**Current Status:** Active campaign development - Weeks 1-8 available with manifests and catalog
+**Current Status:** Active campaign development - Weeks 1-9 available with manifests and catalog
 
-**Last Updated:** November 15, 2024
+**Last Updated:** December 07, 2025
