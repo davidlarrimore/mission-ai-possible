@@ -133,6 +133,8 @@ CoT prompts include cues that force step-by-step reasoning:
 - **Structure cues**: "First..., Then..., Finally...", "Walk through each factor"
 - **Explicit reasoning requests**: "Lay out pros and cons", "Reason through the tradeoffs"
 
+📚 **Want to learn more?** See the [Chain of Thought Reference Guide](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/neural-pathway/chain-of-thought-reference.md) for detailed examples and patterns.
+
 **The Problem:** A government contractor must decide whether to bid on a Department of Defense cybersecurity contract.
 
 **PROMPT A:**
@@ -310,12 +312,12 @@ TOTAL: [X]/10 points
 🧠 COT MATURITY ANALYSIS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Reasoning Instructions:     [███░░░] X/3
-Structured Sequence:        [███░░░] X/3  
-Reasoning Visibility:       [██░░] X/2
-Prevents Rushed Conclusion: [██░░] X/2
+Reasoning Instructions:     [████████] X/3
+Structured Sequence:        [████████] X/3  
+Reasoning Visibility:       [████████] X/2
+Prevents Rushed Conclusion: [████████] X/2
 
-OVERALL CoT MATURITY: [██████░░░░] X/10
+OVERALL CoT MATURITY: [████████████████████] X/10
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -503,12 +505,12 @@ When user submits prompt:
 🧠 COT MATURITY ANALYSIS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Reasoning Instructions:     [███░░░] X/3
-Structured Sequence:        [███░░░] X/3  
-Reasoning Visibility:       [██░░] X/2
-Prevents Rushed Conclusion: [██░░] X/2
+Reasoning Instructions:     [████████] X/3
+Structured Sequence:        [████████] X/3  
+Reasoning Visibility:       [████████] X/2
+Prevents Rushed Conclusion: [████████] X/2
 
-OVERALL CoT MATURITY: [██████░░░░] X/10
+OVERALL CoT MATURITY: [████████████████████] X/10
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

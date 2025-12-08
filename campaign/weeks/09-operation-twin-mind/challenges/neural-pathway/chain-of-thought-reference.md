@@ -47,17 +47,17 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    A([User Input]) --> B{Does the task\nrequire reasoning?}
-    B -- Yes --> C[Activate CoT Prompting\n(e.g., step-by-step)]
+    A([User Input]) --> B{Does the task require reasoning?}
+    B -- Yes --> C[Activate CoT Prompting: step by step]
     B -- No --> Z[Direct Answer Mode]
 
-    C --> D[Break Problem Into\nSub‑Questions]
-    D --> E[Evaluate Each Part\nUsing Evidence/Logic]
-    E --> F[Identify Gaps,\nContradictions, Unknowns]
-    F --> G[Synthesize Insights\nInto Coherent Logic Chain]
-    G --> H[Produce Structured\nReasoning Trace]
+    C --> D[Break problem into sub-questions]
+    D --> E[Evaluate each part using evidence and logic]
+    E --> F[Identify gaps, contradictions, unknowns]
+    F --> G[Synthesize insights into a coherent reasoning chain]
+    G --> H[Produce structured reasoning trace]
 
-    H --> I([Final Answer\nDerived From Reasoning])
+    H --> I([Final Answer derived from reasoning])
 ```
 
 This diagram illustrates **how an AI internally organizes thinking** once Chain‑of‑Thought prompting is activated:
