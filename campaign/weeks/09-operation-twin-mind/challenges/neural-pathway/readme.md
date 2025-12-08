@@ -1,4 +1,5 @@
 # Neural Pathway Challenge - README
+![Banner](./banner.png)
 
 ## Overview
 
