@@ -15,7 +15,7 @@ It is one of the most reliable and transferable prompt-engineering structures fo
 
 While Chain-of-Thought tells the AI *how to think*, **RGCC tells the AI *who to be*, *what to do*, *what information matters*, and *what boundaries apply*.**
 
-Together, RGCC + CoT = **elite-grade reasoning control.**
+Together, RGCC + Chain of Thought = **elite-grade reasoning control.**
 
 ---
 
@@ -119,7 +119,7 @@ This shows the **input architecture AI relies on** before generating reasoning o
 
 ---
 
-# 🔮 RGCC + CoT Pipeline (How They Work Together)
+# 🔮 RGCC + Chain of Thought Pipeline (How They Work Together)
 
 ```mermaid
 flowchart LR
@@ -133,7 +133,7 @@ flowchart LR
 
 **Interpretation:**  
 - RGCC defines the **container**.  
-- CoT defines the **thinking inside the container**.
+- Chain of Thought defines the **thinking inside the container**.
 
 ---
 
@@ -151,7 +151,7 @@ Now perform the task.
 
 ---
 
-## Template 2 — RGCC + CoT (Recommended for analysis)
+## Template 2 — RGCC + Chain of Thought (Recommended for analysis)
 ```
 Role: Act as a [specialist].
 Goal: Your goal is to [complete task].
@@ -310,11 +310,11 @@ This framework trains you and your team to:
 - Craft **repeatable**, **policy-aligned**, **high-signal prompts**  
 - Reduce ambiguity and hallucination  
 - Scale AI behaviors across enterprise tasks  
-- Improve reasoning outcomes when paired with CoT  
+- Improve reasoning outcomes when paired with Chain of Thought  
 - Build prompts that *anyone* can use reliably  
 
 **RGCC is the foundation.  
-CoT is the accelerator.  
+Chain of Thought is the accelerator.  
 Together, they unlock elite AI performance.**
 
 ---

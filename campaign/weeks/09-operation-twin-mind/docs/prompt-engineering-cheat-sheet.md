@@ -30,7 +30,7 @@ Preferences: [Tone, format, limits, style]
 - Works for almost any task
 - Ensures repeatability
 
-### 2. Chain of Thought (CoT)
+### 2. Chain of Thought (Chain of Thought)
 
 **Purpose:** A reasoning *mode* , not a format. It instructs the model to show intermediate steps.
 
@@ -145,6 +145,6 @@ You can paste this directly into a slide or document:
 
 ✔ CRISP = Most complete structure
 
-✔ CoT = Deep reasoning mode
+✔ Chain of Thought = Deep reasoning mode
 
 ✔ RGCC = Tight control &amp; guardrails

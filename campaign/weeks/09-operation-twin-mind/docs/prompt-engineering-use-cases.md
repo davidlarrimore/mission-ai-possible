@@ -6,11 +6,11 @@ Modern CRISP-style frameworks break a prompt into explicit fields such as **Cont
 
 **Best mental model:** “Use CRISP when I need a *high-quality, repeatable template* for a task.”
 
-### Chain of Thought (CoT)
+### Chain of Thought (Chain of Thought)
 
 Chain-of-thought prompting tells the model to **lay out intermediate reasoning steps** before giving an answer (“think step by step”). Research shows this improves performance on multi-step math, logic, and symbolic reasoning tasks.
 
-**Best mental model:** “Use CoT when I need the model to *reason through* a problem, not just answer directly.”
+**Best mental model:** “Use Chain of Thought when I need the model to *reason through* a problem, not just answer directly.”
 
 ### RGCC (Role + Goal + Context + Constraints)
 
@@ -21,7 +21,7 @@ Many recent guides describe effective prompts as **role + goal + context + const
 Below, for each domain:
 
 - **CRISP** → templated work products / docs / structured outputs
-- **CoT** → analysis, root-cause, planning, tradeoffs
+- **Chain of Thought** → analysis, root-cause, planning, tradeoffs
 - **RGCC** → assistants, copilots, or automations that must stay within rules
 
 ### 2️⃣ Backoffice (HR, Finance, Accounting, IT)
@@ -34,7 +34,7 @@ Below, for each domain:
 4. **IT change advisory briefs:** Convert raw technical change tickets into executive-ready CAB summaries with impact, risk, and rollback steps.
 5. **Quarterly financial narrative:** Turn trial balance exports + variance notes into a narrative FP&amp;A commentary by cost center.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Payroll discrepancy investigation:** Walk step-by-step through payroll inputs to explain why a specific paycheck amount differs from the prior period.
 2. **Headcount &amp; budget planning:** Reason through scenarios (e.g., hiring freeze vs. backfill only) and lay out pros/cons and financial impacts step-by-step.
@@ -60,7 +60,7 @@ Below, for each domain:
 4. **Win theme development:** From a capture strategy, generate 3–5 sharp win themes with proof points and discriminators.
 5. **Color team summary decks:** Summarize red/pink/etc team findings into slide-ready bullets by volume/section.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Bid/no-bid reasoning:** Evaluate opportunity fit with weighted criteria (customer fit, Pwin, teaming, margin, capacity) and show the reasoning chain.
 2. **Price-to-win analysis (high level):** Reason through how technical solution tradeoffs (staffing levels, tools, SLAs) impact likely competitive price bands.
@@ -86,7 +86,7 @@ Below, for each domain:
 4. **Training scenario creation:** Build realistic but anonymized training scenarios from patterns in historical cases.
 5. **Policy explainer memos:** Summarize use-of-force or evidence-handling policies for line officers.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Timeline reconstruction:** Given multiple incident reports and timestamps, reason through a unified, ordered sequence of events.
 2. **Consistency checking:** Compare multiple witness statements and reason through where accounts align vs. conflict.
@@ -112,7 +112,7 @@ Below, for each domain:
 4. **Fraud playbook documentation:** Turn scattered notes into process documents for different alert queues.
 5. **KPI dashboard narratives:** Convert raw metrics (alert volumes, false positives, time-to-close) into an executive narrative.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Alert prioritization reasoning:** Given features (velocity, geography, device fingerprints), reason step-by-step which alerts should be prioritized and why.
 2. **False-positive root cause analysis:** Analyze sets of resolved false positives and reason through which rules or thresholds may be miscalibrated.
@@ -138,7 +138,7 @@ Below, for each domain:
 4. **Proactive outreach scripts:** Draft outbound messages for known incidents (e.g., partial outage notifications).
 5. **CSAT follow-up templates:** Create personalized follow-up messages based on survey feedback.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Troubleshooting trees:** Reason step-by-step through possible causes of an issue and propose a decision tree for agents.
 2. **Root cause pattern analysis:** Analyze categories of tickets and reason how product issues or UX problems are driving volume.
@@ -164,7 +164,7 @@ Below, for each domain:
 4. **Adjudication memo templates:** Draft memos with defined headings (summary, issues, mitigating factors, recommendation) from structured notes.
 5. **Applicant communication drafts:** Create clear, neutral notification letters requesting additional information.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Timeline reconstruction:** Reason through employment and residence histories and highlight gaps.
 2. **Discrepancy analysis:** Step-by-step comparison of forms, references, and checks to identify and categorize inconsistencies.
@@ -190,7 +190,7 @@ Below, for each domain:
 4. **Form-to-criteria mapping:** Turn statutory/regulatory eligibility criteria into checklists tied to form questions.
 5. **Policy update digests:** Summarize new policy updates and map them to affected case types.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Eligibility reasoning walkthrough:** Step through criteria for a hypothetical case and outline what evidence would support or undermine each element (for training use).
 2. **Impact assessment of rule changes:** Reason about how a regulatory change could affect volumes, processing time, or evidence requirements.
@@ -216,7 +216,7 @@ Below, for each domain:
 4. **Event timelines:** Turn timestamped items into a visualizable timeline description.
 5. **Analytic product templates:** Standardize report structures for recurring deliverables.
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Narrative analysis:** Reason step-by-step about how different actors’ narratives on a topic converge/diverge.
 2. **Claim plausibility assessment:** Walk through evidence for and against a specific open-source claim.
@@ -242,7 +242,7 @@ Below, for each domain:
 4. **Release notes:** Convert merged PR descriptions into release notes grouped by feature/bug/security.
 5. **Design decision records (ADRs):** Turn meeting notes into standardized ADRs (context, decision, alternatives, consequences).
 
-#### 🧠 CoT use cases
+#### 🧠 Chain of Thought use cases
 
 1. **Bug diagnosis reasoning:** Reason step-by-step through logs and error messages to propose likely causes and next investigative steps.
 2. **Refactor planning:** Reason about trade-offs between different refactor approaches (big-bang vs incremental).
@@ -266,7 +266,7 @@ Below, for each domain:
 - Produce **analyst shift handover summaries** from daily case notes and alert queues.
 - Generate **data quality issue catalogs** from profiling results (e.g., missing fields, inconsistent IDs).
 
-#### CoT
+#### Chain of Thought
 
 - Reason through **alert prioritization logic** for mixed immigration/security signals, outlining trade-offs between sensitivity and workload.
 - Analyze multi-step **information flows** between systems (e.g., portal → vetting → case management) to identify bottlenecks.
@@ -286,7 +286,7 @@ Below, for each domain:
 - Generate **role competency profiles** for trade analysts, auditors, and planners.
 - Create **scenario narrative briefs** for workforce planning options (e.g., regional staffing shifts).
 
-#### CoT
+#### Chain of Thought
 
 - Reason through **future workload scenarios** (trade volume shifts, new mandates) and staffing implications.
 - Analyze **skill gaps** vs. future mission needs, step-by-step.
@@ -306,7 +306,7 @@ Below, for each domain:
 - Generate **performance work statement (PWS)** drafts from requirements notes.
 - Create **source selection briefing decks** from evaluation records.
 
-#### CoT
+#### Chain of Thought
 
 - Reason through **contracting strategy** options (IDIQ vs BPA vs single-award) and trade-offs.
 - Analyze **evaluation score patterns** to identify where criteria might be unclear or mis-weighted.
@@ -326,7 +326,7 @@ Below, for each domain:
 - Generate **data dictionary drafts** from schema definitions.
 - Draft **AI use case one-pagers** for candidate analytics projects (problem, users, data, outcomes, risks).
 
-#### CoT
+#### Chain of Thought
 
 - Reason through **data pipeline migration paths** (lift-and-shift vs re-platforming) with pros/cons.
 - Evaluate **which datasets** provide the most value for early AI use cases.

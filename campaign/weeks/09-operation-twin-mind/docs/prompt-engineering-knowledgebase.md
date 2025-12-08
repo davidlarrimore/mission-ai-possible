@@ -8,7 +8,7 @@ Large language models (LLMs) have gone from interesting demos to core components
 
 This whitepaper:
 
-- Explains four widely used prompt engineering frameworks— **CRISP** , **ReAct** , **Chain-of-Thought (CoT)** , and **Role + Goal + Context + Constraints (RGCC)** —in practical terms.
+- Explains four widely used prompt engineering frameworks— **CRISP** , **ReAct** , **Chain-of-Thought (Chain of Thought)** , and **Role + Goal + Context + Constraints (RGCC)** —in practical terms.
 - Maps these frameworks to **common enterprise use cases** (customer support, coding copilots, internal knowledge assistants, workflow automation, decision support).
 - Shows how they fit within emerging **AI governance and security standards** such as **NIST’s AI Risk Management Framework** , **ISO/IEC 42001** for AI management systems, and the **OWASP Top 10 for LLM applications** .
 
@@ -30,7 +30,7 @@ The result:
 
 Prompt engineering is no longer just “how do I phrase this?” but “how do we design and govern a repeatable interaction layer between people, systems, and LLMs that is safe, performant, and auditable?”
 
-Frameworks like CRISP, ReAct, CoT, and RGCC give your teams a shared language and reusable patterns to do exactly that.
+Frameworks like CRISP, ReAct, Chain of Thought, and RGCC give your teams a shared language and reusable patterns to do exactly that.
 
 ### 3. The prompt engineering framework landscape
 
@@ -41,7 +41,7 @@ It helps to think of prompt frameworks as falling into three broad categories:
     - Example: **CRISP** and related CRISPE variants.
 2. **Reasoning frameworks**
     - Structure **how the model thinks** , often by making intermediate reasoning steps explicit.
-    - Examples: **Chain-of-Thought** , **Auto-CoT** , and related iterative reasoning methods.
+    - Examples: **Chain-of-Thought** , **Auto-Chain of Thought** , and related iterative reasoning methods.
 3. **Agent / tool-use frameworks**
     - Govern **how the model interacts with tools and external systems** , such as search, APIs, or databases.
     - Example: **ReAct** , which interleaves reasoning (“Thought: …”) with tool calls (“Action: …”).
@@ -128,21 +128,21 @@ ReAct is powerful—but it’s also where **security and governance become criti
 
 In short: Use ReAct when you need agents—not just chat—but treat it like building a distributed system with a security boundary, not just a clever prompt.
 
-### 6. Chain-of-Thought (CoT): Structuring reasoning
+### 6. Chain-of-Thought (Chain of Thought): Structuring reasoning
 
-#### 6.1 What is CoT?
+#### 6.1 What is Chain of Thought?
 
 **Chain-of-Thought prompting** encourages the model to **reason step by step** before producing a final answer. It can be implemented via:
 
-- **Instruction-based CoT** – Adding cues like “Explain your reasoning step by step before answering.”
-- **Few-shot CoT** – Providing examples that show short reasoning chains followed by correct answers.
-- **Auto-CoT** – Programmatically generating diverse reasoning chains and using them as exemplars.
+- **Instruction-based Chain of Thought** – Adding cues like “Explain your reasoning step by step before answering.”
+- **Few-shot Chain of Thought** – Providing examples that show short reasoning chains followed by correct answers.
+- **Auto-Chain of Thought** – Programmatically generating diverse reasoning chains and using them as exemplars.
 
-Research has shown that CoT **substantially improves performance** on math word problems, logical reasoning, and other multi-step tasks—especially for **larger models (~100B+ parameters)** .
+Research has shown that Chain of Thought **substantially improves performance** on math word problems, logical reasoning, and other multi-step tasks—especially for **larger models (~100B+ parameters)** .
 
-#### 6.2 Where CoT fits
+#### 6.2 Where Chain of Thought fits
 
-CoT is suited to tasks where:
+Chain of Thought is suited to tasks where:
 
 - There is a **structured correct answer** , but obtaining it requires intermediate reasoning
 - Auditors or downstream processes benefit from seeing **rationales** (even if they must be checked)
@@ -156,9 +156,9 @@ Examples:
 
 #### 6.3 Operational considerations
 
-- **Don’t always show CoT to end-users** : For high-stakes or consumer-facing use cases, many organizations keep reasoning hidden (or summarize it) to avoid exposing internal logic, sensitive context, or confusing partial reasoning.
-- **Evaluate CoT quality** : LLMs can produce plausible-but-wrong reasoning. You may need **post-hoc checks** , test suites, or secondary models to verify answers.
-- **Combine with ReAct** : CoT can drive **when and why tools are called** in ReAct-style agents, giving you more structured behavior.
+- **Don’t always show Chain of Thought to end-users** : For high-stakes or consumer-facing use cases, many organizations keep reasoning hidden (or summarize it) to avoid exposing internal logic, sensitive context, or confusing partial reasoning.
+- **Evaluate Chain of Thought quality** : LLMs can produce plausible-but-wrong reasoning. You may need **post-hoc checks** , test suites, or secondary models to verify answers.
+- **Combine with ReAct** : Chain of Thought can drive **when and why tools are called** in ReAct-style agents, giving you more structured behavior.
 
 ### 7. Role + Goal + Context + Constraints: Structuring prompts for teams
 
@@ -194,7 +194,7 @@ Example template:
 RGCC is a **general-purpose structuring pattern** that combines well with all other frameworks:
 
 - With **CRISP** : Use CRISP to refine each part of RGCC for clarity and precision.
-- With **CoT** : Add “Explain your reasoning step by step” under Constraints.
+- With **Chain of Thought** : Add “Explain your reasoning step by step” under Constraints.
 - With **ReAct** : Define which tools the model may call and under what circumstances in the Constraints section.
 
 In practice, RGCC is often an organization’s **base template** for all system prompts and core user prompts.
@@ -207,13 +207,13 @@ The frameworks are complementary. Here’s a practical mapping you can use as a 
 
 | Use case / pattern                            | Primary framework(s)   | Secondary patterns                        |
 |-----------------------------------------------|------------------------|-------------------------------------------|
-| FAQ & customer support assistants             | RGCC + CRISP           | Light CoT for edge cases                  |
-| Internal knowledge assistants / RAG           | RGCC + CRISP           | CoT for reasoning; ReAct for tools/search |
-| Coding copilots & dev tools                   | RGCC + CoT             | ReAct for tools (tests, linters, docs)    |
-| Decision support & analysis                   | CoT + RGCC             | CRISP for question clarity                |
+| FAQ & customer support assistants             | RGCC + CRISP           | Light Chain of Thought for edge cases                  |
+| Internal knowledge assistants / RAG           | RGCC + CRISP           | Chain of Thought for reasoning; ReAct for tools/search |
+| Coding copilots & dev tools                   | RGCC + Chain of Thought             | ReAct for tools (tests, linters, docs)    |
+| Decision support & analysis                   | Chain of Thought + RGCC             | CRISP for question clarity                |
 | Workflow agents & automation                  | ReAct + RGCC           | CRISP for action descriptions             |
-| Document drafting (reports, policies, emails) | CRISP + RGCC           | CoT for option analysis & planning        |
-| Classification, tagging, extraction           | CRISP                  | CoT for ambiguous edge cases              |
+| Document drafting (reports, policies, emails) | CRISP + RGCC           | Chain of Thought for option analysis & planning        |
+| Classification, tagging, extraction           | CRISP                  | Chain of Thought for ambiguous edge cases              |
 
 #### 8.2 Patterns by scenario
 
@@ -221,13 +221,13 @@ The frameworks are complementary. Here’s a practical mapping you can use as a 
 
 - **RGCC** defines role (“Tier-2 support agent”), goal (resolve issues / route correctly), context (KB &amp; account data), constraints (no legal advice, no changes to billing without confirmation).
 - **CRISP** drives how each intent-specific prompt is written (“refund eligibility check,” “feature explanation”).
-- **CoT** is enabled for tricky edge cases (“think step by step about whether this qualifies as an SLA breach”).
+- **Chain of Thought** is enabled for tricky edge cases (“think step by step about whether this qualifies as an SLA breach”).
 - **ReAct** is used to call tools (ticketing API, billing system) with strong guardrails.
 
 **2. Internal architecture assistant**
 
 - **RGCC** sets role (“Principal cloud architect”), goal (design patterns &amp; tradeoff analysis), context (internal standards, workloads), constraints (align with reference architectures).
-- **CoT** drives structured reasoning across options (multi-cloud vs single-cloud, etc.).
+- **Chain of Thought** drives structured reasoning across options (multi-cloud vs single-cloud, etc.).
 - **CRISP** ensures individual questions and follow-ups are unambiguous.
 
 **3. AI agent to automate workflows**
@@ -235,7 +235,7 @@ The frameworks are complementary. Here’s a practical mapping you can use as a 
 - **ReAct** is the backbone for tool orchestration: calling issue trackers, CRMs, email, etc.
 - **RGCC** defines what the agent is allowed to do and under what rules (e.g., “never send an external email without human review”).
 - **CRISP** ensures tool instructions are specific and machine-parsable (e.g., JSON schemas).
-- **CoT** helps the agent **plan before acting** , which can reduce unsafe or inefficient action sequences.
+- **Chain of Thought** helps the agent **plan before acting** , which can reduce unsafe or inefficient action sequences.
 
 ### 9. Best practices for implementing these frameworks
 
@@ -294,7 +294,7 @@ Relevance to prompt engineering:
 
 - Requires organizations to define and control **AI-related processes and documentation** —prompts and prompt workflows should be part of that system.
 - Encourages **auditable processes** ; prompt templates, change history, and evaluation reports contribute to this.
-- Supports **risk and opportunity management** across the AI lifecycle; prompt engineering decisions (e.g., when to use CoT vs. not) affect both risk and value.
+- Supports **risk and opportunity management** across the AI lifecycle; prompt engineering decisions (e.g., when to use Chain of Thought vs. not) affect both risk and value.
 
 #### 10.3 OWASP Top 10 for LLM Applications
 
@@ -327,7 +327,7 @@ Here’s a practical roadmap to move from one-off prompts to a **standardized pr
 #### Step 2: Choose baseline frameworks
 
 - Standardize on **RGCC + CRISP** as your **default structure** for all prompts.
-- Add **CoT** for reasoning-heavy or high-stakes analytical tasks.
+- Add **Chain of Thought** for reasoning-heavy or high-stakes analytical tasks.
 - Reserve **ReAct** for use cases that truly need tool-using agents and where you can invest in strong security and testing.
 
 #### Step 3: Create a prompt catalog
@@ -354,7 +354,7 @@ For each use case:
 
 #### Step 6: Train and support teams
 
-- Offer **internal training** on CRISP, ReAct, CoT, and RGCC with concrete examples from your own products.
+- Offer **internal training** on CRISP, ReAct, Chain of Thought, and RGCC with concrete examples from your own products.
 - Encourage cross-functional collaboration: product, security, legal, compliance, and data science should all have a seat at the table.
 - Create a light-weight **prompt review board** process for high-risk use cases.
 
@@ -367,7 +367,7 @@ When designing or reviewing a prompt-based system, you can use this quick checkl
 3. **Context** – Is the model given the right context—not too little, not too much? (RGCC)
 4. **Constraints** – Are legal, safety, formatting, and security constraints explicit? (RGCC + OWASP)
 5. **Clarity &amp; Specificity** – Is there any ambiguity in the instructions? (CRISP)
-6. **Reasoning** – Does the task benefit from structured reasoning (CoT)? Have you handled how that reasoning is surfaced (or hidden)?
+6. **Reasoning** – Does the task benefit from structured reasoning (Chain of Thought)? Have you handled how that reasoning is surfaced (or hidden)?
 7. **Tools &amp; Actions** – Does the system need tools? If yes, are ReAct-style actions strictly bounded and validated?
 8. **Evaluation** – Is there a test suite and monitoring in place for this prompt and use case?
 9. **Governance** – Is the prompt cataloged, versioned, and mapped to your AI governance framework (NIST/ISO)?
