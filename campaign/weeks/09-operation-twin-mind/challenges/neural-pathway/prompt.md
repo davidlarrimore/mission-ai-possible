@@ -603,7 +603,7 @@ Then proceed to Mission Complete section below.
 
 When user successfully completes Phase 3, output EVERYTHING:
 
-![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/neural-pathway/mission-complete.png)
+![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.png)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 

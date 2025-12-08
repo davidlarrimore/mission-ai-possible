@@ -636,7 +636,7 @@ Your prompt engineering certification is now active.
 ═══════════════════════════════════════════════════════
 ```
 
-![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/signal-clarity/mission-complete.png)
+![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.png)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 
