@@ -4,6 +4,13 @@
 
 This guide contains all of the hands-on activities for the Prompt Engineering Lunch & Learn. You’ll use [AmiChat](https://amichat.prod.amivero-solutions.com/) and the prompts/content below. Each exercise is self-contained.
 
+## Table of contents
+
+- [Exercise 1 – RGCC: Backoffice & Customer Support](#exercise-1)
+- [Exercise 2 – CRISP: GovCon RFP & Compliance](#exercise-2)
+- [Exercise 3 – Chain-of-Thought: Reasoning Through Work Problems](#exercise-3)
+- [Exercise 4 – Capstone: Build Your Own Prompt](#exercise-4)
+
 ## How to use this guide
 
 1. Open [AmiChat](https://amichat.prod.amivero-solutions.com/) in your browser.
@@ -14,6 +21,9 @@ This guide contains all of the hands-on activities for the Prompt Engineering Lu
 3. Tweak prompts and see how the model responds.
 
 ---
+
+<p align="center">🎛️ 🎛️ 🎛️</p>
+<a id="exercise-1"></a>
 
 ## Exercise 1 – RGCC: Backoffice & Customer Support
 
@@ -291,6 +301,9 @@ Now, draft the replies.
 
 ---
 
+<p align="center">📐 📐 📐</p>
+<a id="exercise-2"></a>
+
 ## Exercise 2 – CRISP: GovCon RFP & Compliance
 
 In these scenarios, you’ll practice **CRISP**:
@@ -533,6 +546,9 @@ Generate the table now.
 
 ---
 
+<p align="center">🧠 🧠 🧠</p>
+<a id="exercise-3"></a>
+
 ## Exercise 3 – Chain-of-Thought: Reasoning Through Work Problems
 
 In these scenarios, you’ll practice **Chain-of-Thought (CoT)** prompting:
@@ -706,6 +722,9 @@ Show your reasoning for steps 1–4 before giving the final recommendation.
 - What CoT steps would you tweak to better match your real bid/no-bid process?
 
 ---
+
+<p align="center">🚀 🚀 🚀</p>
+<a id="exercise-4"></a>
 
 ## Exercise 4 – Capstone: Build Your Own Prompt
 
