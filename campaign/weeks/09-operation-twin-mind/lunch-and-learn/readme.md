@@ -2,16 +2,16 @@
 
 # Lunch & Learn Lab Guide: Prompt Engineering in AmiChat
 
-This guide contains all of the hands-on activities for the Prompt Engineering Lunch & Learn.  
-You’ll use [AmiChat](https://amichat.prod.amivero-solutions.com/) and the prompts/content below. Each exercise is self-contained.
+This guide contains all of the hands-on activities for the Prompt Engineering Lunch & Learn. You’ll use [AmiChat](https://amichat.prod.amivero-solutions.com/) and the prompts/content below. Each exercise is self-contained.
 
-> **How to use this guide**
-> 1. Open [AmiChat](https://amichat.prod.amivero-solutions.com/) in your browser.  
-> 2. For each exercise:
->    - Copy the **Content to paste into AmiChat** section into the chat/input box.
->    - Then copy the **Bad prompt** (or **Baseline prompt**) and run it once to see the difference.
->    - Then replace it with the **Improved prompt** and run again.
-> 3. Feel free to tweak prompts and see how the model responds.
+## How to use this guide
+
+1. Open [AmiChat](https://amichat.prod.amivero-solutions.com/) in your browser.
+2. For each exercise:
+   - Copy the **Content to paste into AmiChat** section into the chat/input box.
+   - Then copy the **Bad prompt** (or **Baseline prompt**) and run it once to see the difference.
+   - Replace it with the **Improved prompt** and run again.
+3. Tweak prompts and see how the model responds.
 
 ---
 
@@ -19,60 +19,61 @@ You’ll use [AmiChat](https://amichat.prod.amivero-solutions.com/) and the prom
 
 In these scenarios, you’ll practice **RGCC**:
 
-- **R – Role**: Who should the model “be”?  
-- **G – Goal**: What outcome are you aiming for?  
-- **C – Context**: What information does it need?  
+- **R – Role**: Who should the model “be”?
+- **G – Goal**: What outcome are you aiming for?
+- **C – Context**: What information does it need?
 - **C – Constraints**: What rules or formatting should it follow?
 
 ### Quick RGCC overview
-
-At a high level, RGCC is a simple recipe you can visualize as:
 
 ```text
 Role → Goal → Context → Constraints
 (Who)   (What)   (Info)     (Rules & format)
 
 You decide who the assistant is, what you want, what information it should use, and what boundaries or output shape it must follow.
+```
 
-For a one-page RGCC reference, see the Twin Mind docs:
-RGCC & Prompting Reference￼.
+For a one-page RGCC reference, see the Twin Mind docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
 
 You’ll work through three scenarios:
-	1.	IT Ticket Triage Agent (Backoffice RGCC)
-	2.	HR Assistant Bot (Backoffice RGCC)
-	3.	Customer Support Response Drafter (Customer Support RGCC)
+
+1. IT Ticket Triage Agent (Backoffice RGCC)
+2. HR Assistant Bot (Backoffice RGCC)
+3. Customer Support Response Drafter (Customer Support RGCC)
 
 For each scenario, you will:
-	•	Copy the test data into AmiChat￼
-	•	Run a short “Bad Prompt” to see baseline results
-	•	Run the improved RGCC prompt for the same data
-	•	Compare how Role, Goal, Context, and Constraints change the output
 
-You can do one or all three of the scenarios below.
+- Copy the test data into AmiChat.
+- Run a short **Bad Prompt** to see baseline results.
+- Run the improved RGCC prompt for the same data.
+- Compare how Role, Goal, Context, and Constraints change the output.
 
-⸻
+---
 
-1.1 IT Ticket Triage Agent (Backoffice RGCC)
+### 1.1 IT Ticket Triage Agent (Backoffice RGCC)
 
-Scenario:
-You are building an assistant to help a Level 1 IT service desk triage tickets into the right queue.
+**Scenario:** You are building an assistant to help a Level 1 IT service desk triage tickets into the right queue.
 
-Step 1 – Content to paste into AmiChat
-Paste this CSV block into AmiChat￼ when the prompt asks for “tickets”:
+#### Step 1 – Content to paste into AmiChat
 
+```csv
 ticket_id,subject,description
 INC-10234,"Can't log into VPN","User reports: 'VPN keeps saying my credentials are invalid since password reset yesterday.'"
 INC-10235,"New laptop request","Manager requesting a new laptop for a new hire starting next week in the DC office."
 INC-10236,"Wi-Fi dropping","Several users on 3rd floor say Wi-Fi disconnects every 10-15 minutes, especially near conference rooms."
 INC-10237,"Suspicious email","User forwarded an email that looks like a phishing attempt asking them to update payroll info via attached link."
 INC-10238,"Software install","Request to install Adobe Creative Cloud for a marketing contractor on their existing laptop."
+```
 
-Step 2 – Bad prompt (run this once)
+#### Step 2 – Bad prompt (run this once)
 
+```text
 Help me route IT tickets.
+```
 
-Step 3 – Improved RGCC prompt (run this next)
+#### Step 3 – Improved RGCC prompt (run this next)
 
+```markdown
 You are a Level 1 IT service desk agent.
 
 Your goal is to route incoming IT tickets to the correct queue.
@@ -85,38 +86,38 @@ Context:
   - "Security"
   - "General Support"
 - Here are some recent tickets in CSV form:
-
-```csv
+~~~csv
 ticket_id,subject,description
 INC-10234,"Can't log into VPN","User reports: 'VPN keeps saying my credentials are invalid since password reset yesterday.'"
 INC-10235,"New laptop request","Manager requesting a new laptop for a new hire starting next week in the DC office."
 INC-10236,"Wi-Fi dropping","Several users on 3rd floor say Wi-Fi disconnects every 10-15 minutes, especially near conference rooms."
 INC-10237,"Suspicious email","User forwarded an email that looks like a phishing attempt asking them to update payroll info via attached link."
 INC-10238,"Software install","Request to install Adobe Creative Cloud for a marketing contractor on their existing laptop."
+~~~
 
 Constraints:
-	•	Do not suggest or perform any technical fixes.
-	•	For each ticket, only return:
-	•	ticket_id
-	•	assigned_queue
-	•	one-sentence rationale
-	•	If the ticket mentions phishing, malware, suspicious email, or data breach, route to “Security”.
-	•	If the correct queue is unclear, route to “General Support” and say why it’s unclear.
+- Do not suggest or perform any technical fixes.
+- For each ticket, only return:
+  - ticket_id
+  - assigned_queue
+  - one-sentence rationale
+- If the ticket mentions phishing, malware, suspicious email, or data breach, route to "Security".
+- If the correct queue is unclear, route to "General Support" and say why it’s unclear.
 
 Now, read the tickets and produce a markdown table with columns:
 ticket_id | assigned_queue | rationale
+```
 
 #### Reflection
 
-- How does the output change between the bad and improved prompts?  
+- How does the output change between the bad and improved prompts?
 - What additional constraints would you add for your real IT environment?
 
 ---
 
 ### 1.2 HR Assistant Bot (Backoffice RGCC)
 
-**Scenario:**  
-You are building an HR assistant that answers employee questions strictly based on approved policy text.
+**Scenario:** You are building an HR assistant that answers employee questions strictly based on approved policy text.
 
 #### Step 1 – Content to paste into AmiChat
 
@@ -134,13 +135,17 @@ You are building an HR assistant that answers employee questions strictly based 
 - Employees may work remotely up to 3 days per week with manager approval.
 - Fully remote arrangements require VP-level approval.
 - Employees must be available during core hours (9am–3pm Eastern).
+```
 
-Step 2 – Bad prompt
+#### Step 2 – Bad prompt
 
+```text
 Answer HR questions for employees.
+```
 
-Step 3 – Improved RGCC prompt
+#### Step 3 – Improved RGCC prompt
 
+```markdown
 You are an HR generalist supporting employees.
 
 Your goal is to answer HR policy questions clearly and consistently based only on the snippets I provide.
@@ -151,8 +156,7 @@ I will provide:
 2) One or more employee questions about those policies.
 
 Here are the current handbook excerpts:
-
-```markdown
+~~~markdown
 # Amivero PTO Policy (Excerpt)
 
 - Full-time employees accrue 10 hours of Paid Time Off (PTO) per month during their first two years.
@@ -166,21 +170,23 @@ Here are the current handbook excerpts:
 - Employees may work remotely up to 3 days per week with manager approval.
 - Fully remote arrangements require VP-level approval.
 - Employees must be available during core hours (9am–3pm Eastern).
+~~~
 
 Constraints:
-	•	Answer ONLY using the policy excerpts above.
-	•	Do NOT give legal advice or personal opinions.
-	•	Always cite the relevant section heading in your answer (e.g., “PTO Policy (Excerpt)”).
-	•	If the policy text does not clearly answer the question, say:
-	•	what’s unclear, and
-	•	that the employee should contact HR directly.
+- Answer ONLY using the policy excerpts above.
+- Do NOT give legal advice or personal opinions.
+- Always cite the relevant section heading in your answer (e.g., "PTO Policy (Excerpt)").
+- If the policy text does not clearly answer the question, say:
+  - what’s unclear, and
+  - that the employee should contact HR directly.
 
 Employee questions:
-	1.	“I’ve been here 3 years. How many hours of PTO do I earn per month?”
-	2.	“Can I take PTO next week if I submit the request two days before?”
-	3.	“Can I work fully remote without VP approval if my manager is ok with it?”
+1. "I’ve been here 3 years. How many hours of PTO do I earn per month?"
+2. "Can I take PTO next week if I submit the request two days before?"
+3. "Can I work fully remote without VP approval if my manager is ok with it?"
 
 Please answer each question in 2–3 sentences, numbered 1, 2, 3.
+```
 
 #### Reflection
 
@@ -192,8 +198,7 @@ Please answer each question in 2–3 sentences, numbered 1, 2, 3.
 
 ### 1.3 Customer Support Response Drafter (Customer Support RGCC)
 
-**Scenario:**  
-You want the model to draft **DRAFT** replies to customer tickets that agents will review and edit before sending.
+**Scenario:** You want the model to draft **DRAFT** replies to customer tickets that agents will review and edit before sending.
 
 #### Step 1 – Content to paste into AmiChat
 
@@ -220,21 +225,24 @@ Internal notes:
 - Incident #INC-2207 opened with engineering.
 - Status page shows: "Degraded performance on Reporting service."
 - Policy: Acknowledge outage, share status page link, no ETA promises.
+```
 
-Step 2 – Bad prompt
+#### Step 2 – Bad prompt
 
+```text
 Write replies to these tickets.
+```
 
-Step 3 – Improved RGCC prompt
+#### Step 3 – Improved RGCC prompt
 
+```markdown
 You are an L1 customer support agent copilot.
 
 Your goal is to draft DRAFT replies to customers based on their ticket details and internal notes.
 
 Context:
 Below are two tickets with customer messages and internal notes.
-
-```markdown
+~~~markdown
 ## Ticket 48291
 Channel: Email
 Customer: Sarah Lopez
@@ -257,21 +265,23 @@ Internal notes:
 - Incident #INC-2207 opened with engineering.
 - Status page shows: "Degraded performance on Reporting service."
 - Policy: Acknowledge outage, share status page link, no ETA promises.
+~~~
 
 Constraints:
-	•	Always mark each reply clearly as a DRAFT – agent review required at the top.
-	•	Follow the policy hints in the internal notes.
-	•	Be friendly, concise, and professional.
-	•	Do NOT promise specific outcomes or dates beyond what’s in the notes.
-	•	Do NOT issue refunds yourself; only talk about what “our team will do”.
+- Always mark each reply clearly as a DRAFT – agent review required at the top.
+- Follow the policy hints in the internal notes.
+- Be friendly, concise, and professional.
+- Do NOT promise specific outcomes or dates beyond what’s in the notes.
+- Do NOT issue refunds yourself; only talk about what "our team will do".
 
 Instructions:
-	•	For each ticket, produce:
-	•	A heading with the ticket number (e.g., “Ticket 48291”)
-	•	A draft email/chat reply to the customer
-	•	Separate the two replies with a horizontal rule (---).
+- For each ticket, produce:
+  - A heading with the ticket number (e.g., "Ticket 48291")
+  - A draft email/chat reply to the customer
+  - Separate the two replies with a horizontal rule (---).
 
 Now, draft the replies.
+```
 
 #### Reflection
 
@@ -279,79 +289,70 @@ Now, draft the replies.
 - Did the model follow the internal notes and avoid over-promising?
 - What additional constraints would you add for your real support environment (e.g., regulatory language, escalation paths)?
 
-----
+---
 
 ## Exercise 2 – CRISP: GovCon RFP & Compliance
 
 In these scenarios, you’ll practice **CRISP**:
 
-- **C – Context**: What’s going on? Who is involved?  
-- **R – Role**: What expert do you want the model to be?  
-- **I – Instructions**: Clear, step-by-step directions.  
-- **S – Specifics**: Format, style, length, structure.  
+- **C – Context**: What’s going on? Who is involved?
+- **R – Role**: What expert do you want the model to be?
+- **I – Instructions**: Clear, step-by-step directions.
+- **S – Specifics**: Format, style, length, structure.
 - **P – Purpose**: Why you need this; how you’ll use it.
 
 ### Quick CRISP overview
-
-CRISP is easiest to picture as a funnel that narrows from situation to specific output:
 
 ```text
 Context → Role → Instructions → Specifics → Purpose
 (What's going on?) (Who am I?) (What to do?) (How to format?) (Why it matters?)
 
 You give the model the situation, assign a role, walk it through the steps, lock in the format, and remind it how the result will be used.
+```
 
-For a visual CRISP reference, see the Twin Mind docs:
-CRISP Reference & Examples￼.
+For a visual CRISP reference, see the Twin Mind docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
 
-Example outputs (optional – for comparison)
+### Example outputs (optional – for comparison)
+
 Use these examples if you’d like to see what a typical “bad” vs improved response looks like before or after you run your own prompts.
 
-Exercise 1.1 – IT Ticket Triage
+#### Exercise 1.1 – IT Ticket Triage
 
-Bad Prompt Output Example:
+**Bad Prompt Output Example**
 
-Here's how I'd route these tickets:
+1. The VPN issue should go to IT support since it's about login credentials.
+2. The laptop request is a hardware request for a new employee.
+3. The Wi-Fi problem sounds like a networking issue affecting multiple users.
+4. The suspicious email is definitely a security concern and should be investigated.
+5. The software installation is a standard support request.
 
-1. The VPN issue should go to IT support since it's about login credentials
-2. The laptop request is a hardware request for a new employee
-3. The Wi-Fi problem sounds like a networking issue affecting multiple users
-4. The suspicious email is definitely a security concern and should be investigated
-5. The software installation is a standard support request
-
-Let me know if you need more details on any of these!
-
-Improved RGCC Prompt Output Example:
+**Improved RGCC Prompt Output Example**
 
 | ticket_id | assigned_queue | rationale |
 |-----------|----------------|-----------|
 | INC-10234 | Account Access | User's VPN credentials became invalid after password reset yesterday, indicating an authentication sync issue between AD and VPN system. |
-| INC-10235 | Hardware       | Manager requesting new laptop for incoming employee with specific timeline (next week) and location (DC office). |
-| INC-10236 | Networking     | Multiple users on same floor experiencing consistent Wi-Fi disconnections suggests access point or infrastructure issue requiring networking team diagnosis. |
-| INC-10237 | Security       | Email requesting payroll info update via attached link matches phishing attack pattern and must be reviewed by security team immediately. |
-| INC-10238 | General Support| Software installation request for contractor requires verification of licensing and approval before routing to appropriate technical team. |
+| INC-10235 | Hardware | Manager requesting new laptop for incoming employee with specific timeline (next week) and location (DC office). |
+| INC-10236 | Networking | Multiple users on same floor experiencing consistent Wi-Fi disconnections suggests access point or infrastructure issue requiring networking team diagnosis. |
+| INC-10237 | Security | Email requesting payroll info update via attached link matches phishing attack pattern and must be reviewed by security team immediately. |
+| INC-10238 | General Support | Software installation request for contractor requires verification of licensing and approval before routing to appropriate technical team. |
 
-Exercise 1.2 – HR Assistant Bot
+#### Exercise 1.2 – HR Assistant Bot
 
-Bad Prompt Output Example:
+**Bad Prompt Output Example**
 
 1. After 3 years, you'd be earning 14 hours of PTO per month since you're past the 2-year mark.
-
 2. No, you need to submit PTO requests at least 5 business days in advance, so 2 days wouldn't be enough notice.
-
 3. You can work remotely up to 3 days per week with manager approval, but going fully remote requires VP-level approval, so your manager's approval alone isn't sufficient.
 
-Improved RGCC Prompt Output Example:
+**Improved RGCC Prompt Output Example**
 
 1. According to the **PTO Policy (Excerpt)**, after two years of continuous service, employees accrue 14 hours of PTO per month. Since you've been here 3 years, you earn 14 hours per month.
-
 2. According to the **PTO Policy (Excerpt)**, PTO requests must be submitted at least 5 business days in advance for planned leave. Two days before would not meet this requirement, so your request would likely not be approved under the standard policy. For urgent situations, please contact HR directly to discuss options.
-
 3. According to the **Remote Work Policy (Excerpt)**, employees may work remotely up to 3 days per week with manager approval, but fully remote arrangements require VP-level approval. Your manager's approval alone would not be sufficient for a fully remote arrangement. You would need to escalate the request to the VP level.
 
-Exercise 1.3 – Customer Support Response Drafter
+#### Exercise 1.3 – Customer Support Response Drafter
 
-Bad Prompt Output Example:
+**Bad Prompt Output Example**
 
 **Ticket 48291**
 
@@ -371,7 +372,7 @@ We're aware of the issue with the Monthly Compliance report. Our engineering tea
 
 Thanks for your patience.
 
-Improved RGCC Prompt Output Example:
+**Improved RGCC Prompt Output Example**
 
 **Ticket 48291**
 
@@ -385,7 +386,7 @@ Our billing team will process a refund for the duplicate charge today. You shoul
 
 We apologize for this error and any inconvenience it caused.
 
-Best regards,
+Best regards,  
 [Your name]
 
 ---
@@ -402,44 +403,16 @@ Our engineering team has opened incident #INC-2207 and is actively investigating
 
 We understand the importance of this report for your analysts and will keep you updated as we make progress. Please check the status page for real-time updates, or reply to this message if you need additional assistance.
 
-Best regards,
+Best regards,  
 [Your name]
 
+---
 
-⸻
+### 2.1 RFP Decomposition (GovCon CRISP)
 
-2.1 RFP Decomposition (GovCon CRISP)
+**Scenario:** You’re analyzing an RFP excerpt and want to pull out requirements, evaluation factors, constraints, and deliverables.
 
-Scenario:
-You’re analyzing an RFP excerpt and want to pull out requirements, evaluation factors, constraints, and deliverables.
-
-Step 1 – Content to paste into AmiChat
-
-SECTION C – STATEMENT OF WORK (Excerpt)
-
-The Contractor shall provide Operations and Maintenance (O&M) support for the Department’s Case Management System (CMS).
-
-1. The Contractor shall provide Tier 2 and Tier 3 support services for approximately 3,000 users nationwide, 7 days per week, 6am–10pm Eastern Time.
-2. The Contractor shall maintain system availability of 99.5% during core business hours (8am–6pm Eastern Time, Monday–Friday), excluding planned maintenance.
-3. The Contractor shall comply with DHS 4300A Sensitive Systems Handbook and all applicable federal information security requirements.
-4. The Contractor shall provide monthly performance reports including, at a minimum: ticket volumes, mean time to resolution, system availability, and summary of significant incidents.
-5. The Contractor shall support one major and up to four minor releases per year, including regression testing and deployment support.
-
-SECTION L – INSTRUCTIONS TO OFFERORS (Excerpt)
-
-- Offerors shall describe their technical approach to meeting the requirements in Section C.
-- Offerors shall provide a staffing plan including key personnel and labor categories.
-- Page limit: 25 pages for the technical volume.
-
-Step 2 – Bad prompt
-
-Help me with this RFP.
-
-Step 3 – Improved CRISP prompt
-
-Context:
-I am preparing a proposal response for a DHS Case Management System O&M contract.
-Below is an excerpt from Sections C and L of the RFP.
+#### Step 1 – Content to paste into AmiChat
 
 ```markdown
 SECTION C – STATEMENT OF WORK (Excerpt)
@@ -457,35 +430,67 @@ SECTION L – INSTRUCTIONS TO OFFERORS (Excerpt)
 - Offerors shall describe their technical approach to meeting the requirements in Section C.
 - Offerors shall provide a staffing plan including key personnel and labor categories.
 - Page limit: 25 pages for the technical volume.
+```
+
+#### Step 2 – Bad prompt
+
+```text
+Help me with this RFP.
+```
+
+#### Step 3 – Improved CRISP prompt
+
+```markdown
+Context:
+I am preparing a proposal response for a DHS Case Management System O&M contract.
+Below is an excerpt from Sections C and L of the RFP.
+
+~~~markdown
+SECTION C – STATEMENT OF WORK (Excerpt)
+
+The Contractor shall provide Operations and Maintenance (O&M) support for the Department’s Case Management System (CMS).
+
+1. The Contractor shall provide Tier 2 and Tier 3 support services for approximately 3,000 users nationwide, 7 days per week, 6am–10pm Eastern Time.
+2. The Contractor shall maintain system availability of 99.5% during core business hours (8am–6pm Eastern Time, Monday–Friday), excluding planned maintenance.
+3. The Contractor shall comply with DHS 4300A Sensitive Systems Handbook and all applicable federal information security requirements.
+4. The Contractor shall provide monthly performance reports including, at a minimum: ticket volumes, mean time to resolution, system availability, and summary of significant incidents.
+5. The Contractor shall support one major and up to four minor releases per year, including regression testing and deployment support.
+
+SECTION L – INSTRUCTIONS TO OFFERORS (Excerpt)
+
+- Offerors shall describe their technical approach to meeting the requirements in Section C.
+- Offerors shall provide a staffing plan including key personnel and labor categories.
+- Page limit: 25 pages for the technical volume.
+~~~
 
 Role:
 Act as a federal proposal analyst experienced in IT services RFPs.
 
 Instructions:
-	1.	Extract all explicit requirements as individual line items.
-	2.	Identify any evaluation factors implied or stated in the text.
-	3.	Identify any constraints (page limits, standards, required reports, hours of support).
-	4.	Identify any deliverables (e.g., reports, releases, support).
+1. Extract all explicit requirements as individual line items.
+2. Identify any evaluation factors implied or stated in the text.
+3. Identify any constraints (page limits, standards, required reports, hours of support).
+4. Identify any deliverables (e.g., reports, releases, support).
 
 Specifics:
-	•	Output a markdown table with columns:
-	•	ID
-	•	Requirement / Factor / Constraint / Deliverable
-	•	Source Section (e.g., “C.1”, “L.1”)
-	•	Notes (e.g., related metrics, standards)
-	•	Keep entries short and scannable.
+- Output a markdown table with columns:
+  - ID
+  - Requirement / Factor / Constraint / Deliverable
+  - Source Section (e.g., "C.1", "L.1")
+  - Notes (e.g., related metrics, standards)
+- Keep entries short and scannable.
 
 Purpose:
 I will use this table as the starting point for our compliance matrix and writing plan.
 
 Now read the RFP excerpt and produce the table.
+```
 
 ---
 
 ### 2.2 Compliance Matrix Generation (GovCon CRISP)
 
-**Scenario:**  
-You’re building a compliance matrix from the same RFP excerpt and need a structured table to assign writing responsibilities.
+**Scenario:** You’re building a compliance matrix from the same RFP excerpt and need a structured table to assign writing responsibilities.
 
 #### Step 1 – Content to reuse in AmiChat
 
@@ -493,38 +498,38 @@ Use the **same RFP excerpt** from Exercise 2.1.
 
 #### Step 2 – Improved CRISP prompt
 
-(You can skip the bad prompt here if you’d like to save time.)
-
 ```text
 Context:
 We are building a compliance matrix for the DHS CMS O&M RFP.
 Below is the same RFP excerpt (Sections C and L).
 
-```markdown
+~~~markdown
 [RFP excerpt from Exercise 2.1]
+~~~
 
 Role:
 Act as a proposal manager creating a compliance matrix.
 
 Instructions:
-	1.	Identify each requirement that the proposal must address.
-	2.	For each requirement, recommend:
-	•	A short “Requirement ID” label (e.g., “REQ-AVAIL-99.5”).
-	•	The likely volume/section of the proposal where it should be addressed (e.g., “Tech Approach – O&M”).
-	3.	Note any required artifacts (e.g., staffing plan, reports).
+1. Identify each requirement that the proposal must address.
+2. For each requirement, recommend:
+   - A short "Requirement ID" label (e.g., "REQ-AVAIL-99.5").
+   - The likely volume/section of the proposal where it should be addressed (e.g., "Tech Approach – O&M").
+3. Note any required artifacts (e.g., staffing plan, reports).
 
 Specifics:
-	•	Output a markdown table with columns:
-	•	Requirement ID
-	•	Requirement Text
-	•	Recommended Proposal Section
-	•	Required Artifact (if any)
-	•	Limit each cell to one brief sentence.
+- Output a markdown table with columns:
+  - Requirement ID
+  - Requirement Text
+  - Recommended Proposal Section
+  - Required Artifact (if any)
+- Limit each cell to one brief sentence.
 
 Purpose:
 I will import this table into our compliance matrix and use it to assign writing owners.
 
 Generate the table now.
+```
 
 ---
 
@@ -532,31 +537,29 @@ Generate the table now.
 
 In these scenarios, you’ll practice **Chain-of-Thought (CoT)** prompting:
 
-- Ask the model to **think step-by-step**  
-- Have it show its **intermediate reasoning** before it gives a final answer  
-- Compare a simple “direct” prompt vs. a structured CoT prompt
+- Ask the model to **think step-by-step**.
+- Have it show its **intermediate reasoning** before it gives a final answer.
+- Compare a simple “direct” prompt vs. a structured CoT prompt.
 
 ### Quick CoT overview
-
-Chain-of-Thought turns one big jump into a series of smaller, checkable steps:
 
 ```text
 Problem → Break into steps → Reason step-by-step → Check the work → Final answer
 
 You explicitly ask the model to show its thinking before giving the final result, so you can verify the logic and catch mistakes.
+```
 
-For more CoT diagrams and examples, see the Twin Mind docs:
-CoT Reference & Examples￼.
+For more CoT diagrams and examples, see the Twin Mind docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
 
-⸻
+---
 
-3.1 Payroll Discrepancy Investigation (Backoffice CoT)
+### 3.1 Payroll Discrepancy Investigation (Backoffice CoT)
 
-Scenario:
-You need to explain to an employee why their take-home pay changed between two pay periods, despite working overtime and receiving a bonus.
+**Scenario:** You need to explain to an employee why their take-home pay changed between two pay periods, despite working overtime and receiving a bonus.
 
-Step 1 – Content to paste into AmiChat
+#### Step 1 – Content to paste into AmiChat
 
+```markdown
 Employee: Jordan Smith
 Pay frequency: Bi-weekly
 
@@ -586,18 +589,22 @@ Current paycheck (Pay Period: 2025-03-15 to 2025-03-28)
 - Net pay: $2,630
 
 Employee question:
-“My hours and pay look weird this period. Why is my take-home pay lower than last time if I worked overtime and got a bonus?”
+"My hours and pay look weird this period. Why is my take-home pay lower than last time if I worked overtime and got a bonus?"
+```
 
-Step 2 – Baseline (Direct prompt – run this once)
+#### Step 2 – Baseline (Direct prompt – run this once)
 
+```text
 Explain why this employee's take-home pay decreased despite overtime and a bonus.
 
 [payroll data]
+```
 
 Reflection tip: As you run this, notice whether the model shows its work, how confident you feel in the answer, and how easy it is to verify the math.
 
-Step 3 – Improved CoT prompt (run this next)
+#### Step 3 – Improved CoT prompt (run this next)
 
+```markdown
 You are a payroll analyst helping explain paycheck differences to employees.
 
 Think through this step-by-step.
@@ -612,10 +619,12 @@ Think through this step-by-step.
 
 Here is the data:
 
-```markdown
+~~~markdown
 [payroll data from above]
+~~~
 
 Show your reasoning for steps 1–3 before giving the final explanation.
+```
 
 #### Reflection
 
@@ -627,8 +636,7 @@ Show your reasoning for steps 1–3 before giving the final explanation.
 
 ### 3.2 Bid / No-Bid Reasoning (GovCon CoT)
 
-**Scenario:**  
-You’re helping a capture team decide whether to bid on an opportunity.
+**Scenario:** You’re helping a capture team decide whether to bid on an opportunity.
 
 #### Step 1 – Content to paste into AmiChat
 
@@ -652,17 +660,21 @@ Our company profile (for this exercise):
 - Limited experience with 24x7 follow-the-sun operations (we mostly run 8x5).
 - Current staffing is tight; would require hiring ~20 additional FTEs within 6 months.
 - Existing strategic partner with a large Tier 1 integrator interested in teaming.
+```
 
-Step 2 – Baseline (Direct prompt – run this once)
+#### Step 2 – Baseline (Direct prompt – run this once)
 
+```text
 Should we bid on this opportunity?
 
 [opportunity and company profile]
+```
 
 Reflection tip: After you run this, ask yourself whether the model actually shows how it reached the recommendation, or just gives a high-level answer.
 
-Step 3 – Improved CoT prompt (run this next)
+#### Step 3 – Improved CoT prompt (run this next)
 
+```markdown
 You are a capture strategist helping with a bid/no-bid decision.
 
 Think through this step-by-step.
@@ -675,15 +687,17 @@ Think through this step-by-step.
    - Capacity to staff
    - Margin potential
 3. For each rating, give 1–2 bullets explaining your reasoning based on the company profile.
-4. Compute a simple “fit score” (for example, the average of all ratings) and explain what that number implies in plain language.
-5. Finally, recommend “bid” or “no-bid” and explain why in 3–4 bullets, including any key conditions (e.g., must team with X, must negotiate Y).
+4. Compute a simple "fit score" (for example, the average of all ratings) and explain what that number implies in plain language.
+5. Finally, recommend "bid" or "no-bid" and explain why in 3–4 bullets, including any key conditions (e.g., must team with X, must negotiate Y).
 
 Here is the opportunity and company profile:
 
-```markdown
+~~~markdown
 [opportunity and company profile from above]
+~~~
 
 Show your reasoning for steps 1–4 before giving the final recommendation.
+```
 
 #### Reflection
 
@@ -705,27 +719,26 @@ In this final exercise, you’ll combine what you’ve learned about **RGCC**, *
    - **CRISP** – if you want a structured, repeatable template for an artifact (matrix, summary, deck, etc.).
    - **CoT** – if the task involves multi-step reasoning or tradeoffs.
 3. Draft a prompt that:
-   - Clearly defines **Role, Goal, Context, Constraints** (RGCC) or  
-   - Uses **Context, Role, Instructions, Specifics, Purpose** (CRISP), and  
+   - Clearly defines **Role, Goal, Context, Constraints** (RGCC) or
+   - Uses **Context, Role, Instructions, Specifics, Purpose** (CRISP), and
    - Optionally includes at least one CoT instruction (e.g., “Think through this step-by-step…”).
 4. Run it in [AmiChat](https://amichat.prod.amivero-solutions.com/) with some realistic content.
 5. Make **one improvement**:
-   - Add or tighten a constraint
-   - Clarify the role
-   - Change the output format (table vs bullets)
+   - Add or tighten a constraint.
+   - Clarify the role.
+   - Change the output format (table vs bullets).
 6. Save the final version somewhere you’ll reuse it (notes, bookmark, preset, etc.).
 
-If you need a quick reminder of any framework while you work, you can glance back at the overviews above or open the Twin Mind reference docs:  
-[Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
+If you need a quick reminder of any framework while you work, you can glance back at the overviews above or open the Twin Mind reference docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
 
 ### Optional sharing
 
-- If you’re in a live session, share your favorite prompt with the group or drop it in chat.  
+- If you’re in a live session, share your favorite prompt with the group or drop it in chat.
 - Look for:
-  - Clear role definition  
-  - Specific, concrete instructions  
-  - Helpful constraints and output format  
-  - Thoughtful reasoning steps where appropriate
+  - Clear role definition.
+  - Specific, concrete instructions.
+  - Helpful constraints and output format.
+  - Thoughtful reasoning steps where appropriate.
 
 ---
 
