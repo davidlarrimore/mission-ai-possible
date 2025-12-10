@@ -43,7 +43,7 @@ Role → Goal → Context → Constraints
 You decide who the assistant is, what you want, what information it should use, and what boundaries or output shape it must follow.
 ```
 
-For a one-page RGCC reference, see the Twin Mind docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
+For a one-page RGCC reference, see the Twin Mind docs: [(RGCC Reference)](https://github.com/davidlarrimore/mission-ai-possible/blob/main/campaign/weeks/09-operation-twin-mind/docs/rgcc-reference.md).
 
 You’ll work through three scenarios:
 
@@ -323,7 +323,7 @@ Context → Role → Instructions → Specifics → Purpose
 You give the model the situation, assign a role, walk it through the steps, lock in the format, and remind it how the result will be used.
 ```
 
-For a visual CRISP reference, see the Twin Mind docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
+For a visual CRISP reference, see the Twin Mind docs: [CRISPE Reference)](https://github.com/davidlarrimore/mission-ai-possible/blob/main/campaign/weeks/09-operation-twin-mind/docs/crispe-reference.md).
 
 ### Example outputs (optional – for comparison)
 
@@ -565,7 +565,7 @@ Problem → Break into steps → Reason step-by-step → Check the work → Fina
 You explicitly ask the model to show its thinking before giving the final result, so you can verify the logic and catch mistakes.
 ```
 
-For more CoT diagrams and examples, see the Twin Mind docs: [Prompting Strategy References (RGCC, CRISP, CoT)](https://github.com/davidlarrimore/mission-ai-possible/tree/main/campaign/weeks/09-operation-twin-mind/docs).
+For more CoT diagrams and examples, see the Twin Mind docs: [Chain of Thought Reference)](https://github.com/davidlarrimore/mission-ai-possible/blob/main/campaign/weeks/09-operation-twin-mind/docs/chain-of-thought-reference.md).
 
 ---
 
