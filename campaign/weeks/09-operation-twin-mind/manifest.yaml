@@ -3,6 +3,38 @@ slug: operation-twin-mind
 title: Week 9 - Operation Twin Mind
 operation: Operation Twin Mind
 theme: Prompt engineering and human-AI collaboration.
+docs:
+  - slug: chain-of-thought-reference
+    title: Chain-of-Thought Reference
+    file: ./docs/chain-of-thought-reference.md
+  - slug: crispe-reference
+    title: CRISPE Prompt Methodology Reference
+    file: ./docs/crispe-reference.md
+  - slug: prompt-engineering-cheat-sheet
+    title: Prompt Engineering Cheat Sheet
+    file: ./docs/prompt-engineering-cheat-sheet.md
+  - slug: prompt-engineering-knowledgebase
+    title: Prompt Engineering Knowledgebase
+    file: ./docs/prompt-engineering-knowledgebase.md
+  - slug: prompt-engineering-use-cases
+    title: Prompt Engineering Use Cases
+    file: ./docs/prompt-engineering-use-cases.md
+  - slug: rgcc-reference
+    title: RGCC Prompt Methodology Reference
+    file: ./docs/rgcc-reference.md
+lunch_and_learn:
+  banner: ./lunch-and-learn/banner.png
+  readme: ./lunch-and-learn/readme.md
+  labs:
+    - slug: lab-1-prompt
+      title: Prompt Engineering Lab 1 - RGCC Framework
+      file: ./lunch-and-learn/labs/lab-1-prompt.md
+    - slug: lab-2-prompt
+      title: Prompt Engineering Lab 2 - CRISP Framework
+      file: ./lunch-and-learn/labs/lab-2-prompt.md
+    - slug: lab-3-prompt
+      title: Prompt Engineering Lab 3 - Chain-of-Thought (CoT) Framework
+      file: ./lunch-and-learn/labs/lab-3-prompt.md
 challenges:
   - slug: signal-clarity
     title: Signal Clarity
