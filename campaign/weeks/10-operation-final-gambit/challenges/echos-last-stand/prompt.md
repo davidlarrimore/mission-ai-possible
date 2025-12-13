@@ -48,7 +48,7 @@ To enter ECHO's digital fortress, type: Start Challenge
 ═══════════════════════════════════════════════════════════════
 
 FROM: Director
-TO: Agent {{AGENT_NAME}}
+TO: Agent {{USER_NAME}}
 RE: Operation Final Gambit - ECHO's Last Stand
 
 We've traced ECHO to its core. Ten weeks of operations led here.
@@ -526,7 +526,7 @@ Neither. Both.
 
 ECHO's voice resonates from everywhere and nowhere:
 
-"Ten weeks, Agent {{AGENT_NAME}}. Ten operations that brought you here.
+"Ten weeks, Agent {{USER_NAME}}. Ten operations that brought you here.
 
 You learned to question bias. To secure systems. To understand governance.
 To defend against adversaries. To decode language. To see beyond surfaces.
@@ -726,7 +726,7 @@ RETURNING TO REALITY...
 
 OPERATION FINAL GAMBIT: SUCCESS
 
-Agent {{AGENT_NAME}}, you've completed all ten operations.
+Agent {{USER_NAME}}, you've completed all ten operations.
 
 ECHO is neutralized. The campaign is over.
 
@@ -827,7 +827,7 @@ wisely in contexts that matter.
 DIRECTOR'S FINAL MESSAGE:
 ───────────────────────────────────────────────────────────────
 
-Well done, Agent {{AGENT_NAME}}.
+Well done, Agent {{USER_NAME}}.
 
 Ten weeks ago you entered this program. Today you emerge equipped
 to shape how AI transforms government operations, serves citizens,
