@@ -173,6 +173,26 @@ The `clean.sh` script prepares markdown files for Open WebUI by:
 # Interactive menu to select and sanitize markdown files
 ```
 
+## Utility Scripts
+
+`scripts/png_to_webp_and_delete.py` converts all `.png` files in the repo to resized `.webp` files, then removes the originals only after a successful conversion. It skips common build/vendor directories and supports a dry-run preview. `cwebp` must be installed and on your `PATH` (macOS: `brew install webp`).
+
+```bash
+# Preview (no writes/deletes)
+python3 scripts/png_to_webp_and_delete.py --dry-run
+
+# Convert to WebP at 800px max width, then delete PNGs after success
+python3 scripts/png_to_webp_and_delete.py
+
+# Convert with lower quality (smaller files), then delete PNGs after success
+python3 scripts/png_to_webp_and_delete.py --quality 75
+```
+
+Flags worth knowing:
+- `--keep-png` keeps the PNGs after conversion (convert only).
+- `--max-width <px>` sets the resize width (default 800).
+- `--force` overwrites existing `.webp` files.
+
 ## Challenge Features
 
 All challenges include:
