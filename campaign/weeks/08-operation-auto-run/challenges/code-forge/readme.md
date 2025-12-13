@@ -1,5 +1,5 @@
 # Code Forge - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Code Forge  

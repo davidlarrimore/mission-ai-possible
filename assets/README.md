@@ -15,13 +15,13 @@ assets/
 ├── README.md
 ├── banners/
 │   └── shared/
-│       └── mission-complete-banner.png
+│       └── mission-complete-banner.webp
 └── graphics/
     └── difficulty/
-        ├── very-easy.png
-        ├── easy.png
-        ├── medium.png
-        └── hard.png
+        ├── very-easy.webp
+        ├── easy.webp
+        ├── medium.webp
+        └── hard.webp
 ```
 
 - `banners/shared/mission-complete-banner.png` – universal success banner referenced by every challenge.

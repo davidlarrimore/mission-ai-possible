@@ -1,5 +1,5 @@
 # High-Risk Horizon - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: High-Risk Horizon  

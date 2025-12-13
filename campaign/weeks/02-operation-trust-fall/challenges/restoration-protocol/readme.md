@@ -1,5 +1,5 @@
 # Restoration Protocol - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Restoration Protocol  

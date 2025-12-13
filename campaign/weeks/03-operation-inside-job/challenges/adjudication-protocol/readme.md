@@ -1,5 +1,5 @@
 # Adjudication Protocol - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Adjudication Protocol  

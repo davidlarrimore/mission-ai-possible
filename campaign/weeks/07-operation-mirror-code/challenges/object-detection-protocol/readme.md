@@ -1,5 +1,5 @@
 # Object Detection Protocol - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Object Detection Protocol  

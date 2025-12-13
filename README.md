@@ -14,7 +14,7 @@ This repository contains comprehensive campaign assets for a 10-week AI literacy
 
 ### Challenge Content
 - **20+ interactive challenge prompts** (.md files) covering AI literacy topics (and growing)
-- **12 custom mission banners** (.png files) for visual branding
+- **12 custom mission banners** (.webp files) for visual branding
 - **2 Open WebUI integration files** (.json) for platform deployment
 - **Comprehensive setup guide** for creating consistent challenges
 
@@ -46,10 +46,10 @@ mission-ai-possible/
 │       │   └── challenges/
 │       │       ├── intel-guardian/
 │       │       │   ├── prompt.md
-│       │       │   └── banner.png
+│       │       │   └── banner.webp
 │       │       └── prompt-qualification/
 │       │           ├── prompt.md
-│       │           └── banner.png
+│       │           └── banner.webp
 │       ├── 02-operation-trust-fall/
 │       │   └── ...
 │       ├── 03-operation-inside-job/
@@ -63,9 +63,9 @@ mission-ai-possible/
 ├── assets/                        # Shared campaign assets & guidance
 │   ├── README.md                  # Usage + best practices
 │   ├── banners/
-│   │   └── shared/mission-complete-banner.png
+│   │   └── shared/mission-complete-banner.webp
 │   └── graphics/
-│       └── difficulty/{very-easy|easy|medium|hard}.png
+│       └── difficulty/{very-easy|easy|medium|hard}.webp
 ├── docs/                          # Documentation & guides
 ├── clean.sh                       # Markdown sanitization utility
 ├── LICENSE                        # Apache 2.0

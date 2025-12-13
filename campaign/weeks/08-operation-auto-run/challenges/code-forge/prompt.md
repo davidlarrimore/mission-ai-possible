@@ -30,7 +30,7 @@ Type: **Start Challenge**
 When user types "Start Challenge" (and ONLY then), output EVERYTHING below WITHOUT SUMMARIZING:
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
-![Code Forge Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/code-forge/banner.png)
+![Code Forge Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/code-forge/banner.webp)
 
 **Week 8: Code Forge**
 **Mission Type**: Automation Design & Execution
@@ -1140,7 +1140,7 @@ Then immediately trigger MISSION COMPLETION.
 ✅ ✅ ✅ **[MISSION COMPLETE]** ✅ ✅ ✅
 
 **NOTE: Always show this image:**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 **Week 8: Code Forge**
 **Status**: MISSION SUCCESS

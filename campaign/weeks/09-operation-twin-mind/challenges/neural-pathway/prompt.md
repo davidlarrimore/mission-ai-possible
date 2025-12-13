@@ -39,7 +39,7 @@ Stop completely. Wait for user to type "Start Challenge" exactly.
 
 Once user types "Start Challenge", output EVERYTHING below EXACTLY:
 
-![Neural Pathway Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/neural-pathway/banner.png)
+![Neural Pathway Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/neural-pathway/banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 
@@ -603,7 +603,7 @@ Then proceed to Mission Complete section below.
 
 When user successfully completes Phase 3, output EVERYTHING:
 
-![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 

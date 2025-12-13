@@ -1,5 +1,5 @@
 # Neural Pathway Challenge - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 
@@ -141,8 +141,8 @@ Both scenarios are realistic, drawn from actual government contracting contexts.
 Create and upload these banner images to GitHub:
 
 ```
-/weeks/09-operation-twin-mind/challenges/neural-pathway/banner.png
-/weeks/09-operation-twin-mind/challenges/neural-pathway/mission-complete.png
+/weeks/09-operation-twin-mind/challenges/neural-pathway/banner.webp
+/weeks/09-operation-twin-mind/challenges/neural-pathway/mission-complete.webp
 ```
 
 Banner specifications:

@@ -1,5 +1,5 @@
 # Red Light Protocol - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Red Light Protocol  

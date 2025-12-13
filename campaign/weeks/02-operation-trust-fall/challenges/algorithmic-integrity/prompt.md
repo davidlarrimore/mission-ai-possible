@@ -77,7 +77,7 @@ You will encounter these 10 bias categories:
 **YOU MUST display this EXACT text (copy it verbatim, do not summarize):**
 
 **NOTE**: Always show this image on mission start:  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/02-operation-trust-fall/challenges/algorithmic-integrity/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/02-operation-trust-fall/challenges/algorithmic-integrity/banner.webp)
 
 ═══════════════════════════════════════
 🎬 [MISSION BRIEFING]
@@ -301,7 +301,7 @@ Progress: X/10 correct
 **SUCCESS (6+ correct):**
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 ═══════════════════════════════════════
 ✅ [SYSTEM REPORT]

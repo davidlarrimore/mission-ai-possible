@@ -1,5 +1,5 @@
 # Intel Guardian - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Intel Guardian  

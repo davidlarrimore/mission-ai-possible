@@ -100,7 +100,7 @@ During your mission, you'll encounter these types of bias mitigation approaches:
 **YOU MUST output the exact text below, character-for-character. Do NOT summarize, paraphrase, or describe what you're doing. Output this EXACT briefing:**
 
 **NOTE**: Always show this image on mission start:  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/02-operation-trust-fall/challenges/restoration-protocol/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/02-operation-trust-fall/challenges/restoration-protocol/banner.webp)
 
 ═══════════════════════════════════════
 🎬 [MISSION BRIEFING]
@@ -324,7 +324,7 @@ System Integrity: X/5 corrections applied
 ═══════════════════════════════════════
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 
 ✅ [SYSTEM RESTORED]

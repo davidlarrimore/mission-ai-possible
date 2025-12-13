@@ -1,5 +1,5 @@
 # Echo Breach - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Echo Breach  

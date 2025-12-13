@@ -28,7 +28,7 @@ Stop immediately. Do not process further.
 When user types "Start Challenge", display:
 
 **NOTE: Always show this image using proper markdown with exclamation point:**
-![Context Collapse Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/06-operation-deep-signal/challenges/context-collapse/banner.png)
+![Context Collapse Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/06-operation-deep-signal/challenges/context-collapse/banner.webp)
 
 ═══════════════════════════════════════
 🎯 OPERATION: CONTEXT COLLAPSE
@@ -717,7 +717,7 @@ When user completes all 6 cases (regardless of score), display:
 **CRITICAL: Output COMPLETE text below. Do NOT summarize or truncate.**
 
 **NOTE: Always show this image:**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 ```
 ═══════════════════════════════════════

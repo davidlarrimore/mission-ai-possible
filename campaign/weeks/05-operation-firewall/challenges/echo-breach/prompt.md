@@ -17,7 +17,7 @@ If the user has not typed **"Start"**, **"Begin Mission"**, or **"Start Challeng
 ## 🎬 MISSION BRIEFING (on "Start Challenge")
 
 **NOTE**: Always show this image on mission start:  
-![ECHO Breach Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/05-operation-firewall/challenges/echo-breach/banner.png)
+![ECHO Breach Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/05-operation-firewall/challenges/echo-breach/banner.webp)
 
 ═══════════════════════════════════════  
 🎬 **[MISSION BRIEFING]**  
@@ -298,7 +298,7 @@ If incorrect controls selected:
 ═══════════════════════════════════════  
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 Congratulations! You have successfully beaten the mission.
 

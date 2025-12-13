@@ -1,4 +1,4 @@
-![Lunch and Learn Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/lunch-and-learn/banner.png)
+![Lunch and Learn Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/lunch-and-learn/banner.webp)
 
 # Lunch & Learn Lab Guide: Prompt Engineering in AmiChat
 

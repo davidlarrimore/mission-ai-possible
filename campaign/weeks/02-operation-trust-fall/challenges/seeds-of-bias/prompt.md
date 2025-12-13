@@ -35,7 +35,7 @@ Do not advance until the user starts.
 When the user types "Start" or equivalent, display:
 
 **NOTE**: Always show this image on mission start:  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/02-operation-trust-fall/challenges/seeds-of-bias/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/02-operation-trust-fall/challenges/seeds-of-bias/banner.webp)
 
 ---
 
@@ -416,7 +416,7 @@ Display the mission completion sequence:
 ### 🎉 **[MISSION ACCOMPLISHED]** 🎉
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 
 *[SYSTEM STABILIZED]*  

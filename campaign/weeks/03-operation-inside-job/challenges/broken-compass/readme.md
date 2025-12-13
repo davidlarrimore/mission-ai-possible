@@ -1,5 +1,5 @@
 # Broken Compass - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Broken Compass  

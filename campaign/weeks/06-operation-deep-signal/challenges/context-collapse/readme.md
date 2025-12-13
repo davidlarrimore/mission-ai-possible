@@ -1,5 +1,5 @@
 # Context Collapse - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Context Collapse  

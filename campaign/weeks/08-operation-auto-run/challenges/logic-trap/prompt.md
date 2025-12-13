@@ -25,7 +25,7 @@ Has the user typed exactly "Start Challenge" (case-insensitive)?
 
 **Display this image immediately after user types "Start Challenge":**
 
-![Logic Trap Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/logic-trap/banner.png)
+![Logic Trap Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/logic-trap/banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 
@@ -555,7 +555,7 @@ Your performance proves you understand that automation is not a binary choice --
 ═══════════════════════════════════════════════════════════
 
 **NOTE: Always show this image:**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 **DO NOT say "rest follows standard protocol" or summarize. Output EVERYTHING above completely.**
 

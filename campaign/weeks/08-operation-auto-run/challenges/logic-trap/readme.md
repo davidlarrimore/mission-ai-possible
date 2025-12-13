@@ -1,5 +1,5 @@
 # Logic Trap - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Logic Trap  

@@ -57,7 +57,7 @@ One mistake resets the field. Four flawless calls to win.
 ---
 
 **NOTE**: Always show this image on mission start:  
-![Challenge Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/red-light-protocol/banner.png)
+![Challenge Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/red-light-protocol/banner.webp)
 
 ---
 
@@ -140,7 +140,7 @@ Display exactly the following block (no paraphrasing):
 ═══════════════════════════════════════  
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 🎧 *Sound fades to silence; then a calm voice:*  
 > “The Game Master nods once. You may proceed.”  

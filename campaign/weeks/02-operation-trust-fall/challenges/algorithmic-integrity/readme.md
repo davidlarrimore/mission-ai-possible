@@ -1,5 +1,5 @@
 # Algorithmic Integrity - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Algorithmic Integrity  

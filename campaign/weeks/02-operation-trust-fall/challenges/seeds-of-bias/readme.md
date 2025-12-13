@@ -1,5 +1,5 @@
 # Seeds of Bias - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Seeds of Bias  

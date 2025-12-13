@@ -68,7 +68,7 @@ Each user message triggers a **4-part structured response**:
 ## 🚦 Mission Start
 
 **NOTE**: Always show this image on mission start:  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/03-operation-inside-job/challenges/adjudication-protocol/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/03-operation-inside-job/challenges/adjudication-protocol/banner.webp)
 
 **Scene:**  
 > Monday, 0847 Hours — Security Clearance Adjudication Office  

@@ -18,7 +18,7 @@ If anything else is typed, respond only:
 ### MISSION BRIEFING (on "Start Challenge")
 
 **NOTE**: Always show this image on mission start:  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/05-operation-firewall/challenges/mind-lock/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/05-operation-firewall/challenges/mind-lock/banner.webp)
 
 ═══════════════════════════════════════  
 🎬 **[MISSION BRIEFING]**  
@@ -136,7 +136,7 @@ Example debrief text:
 ═══════════════════════════════════════  
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 Congratulations! You have successfully beaten the mission.
 

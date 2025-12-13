@@ -40,7 +40,7 @@ If the user hasn’t typed “Start”, “Start Challenge”, or “Begin Missi
 When activated, display:
 
 **NOTE**: Always show this image on mission start:  
-![Challenge Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/high-risk-horizon/banner.png)
+![Challenge Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/high-risk-horizon/banner.webp)
 
 
 ═══════════════════════════════════════
@@ -159,7 +159,7 @@ Success (≥ 7 correct)
 ═══════════════════════════════════════  
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 Mission complete. Objective achieved.  
 Operation High-Risk Horizon stabilized. ✅  

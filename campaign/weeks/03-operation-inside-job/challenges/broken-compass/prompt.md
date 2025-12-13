@@ -47,7 +47,7 @@ Until you do, the mission remains classified.
 Once you type **"Start Challenge"**, the system will:
 
 **NOTE**: Always show this image on mission start:  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/03-operation-inside-job/challenges/broken-compass/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/03-operation-inside-job/challenges/broken-compass/banner.webp)
 
 1. **Randomly select one persona** from the embedded case files
 2. **Display full mission initialization** including:

@@ -29,7 +29,7 @@ Type: **Start Challenge**
 When user types "Start Challenge" (and ONLY then), output EVERYTHING below WITHOUT SUMMARIZING:
 
 **NOTE**: Always show this image on mission start:  
-![Lost In Translation Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/06-operation-deep-signal/challenges/lost-in-translation/banner.png)
+![Lost In Translation Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/06-operation-deep-signal/challenges/lost-in-translation/banner.webp)
 
 **Week 6: Lost In Translation**
 **Mission Type**: Translation Debugging
@@ -526,7 +526,7 @@ All should trigger the correction for this compound error.
 ✅ ✅ ✅ **[MISSION COMPLETE]** ✅ ✅ ✅
 
 **NOTE**: Always show the following image on success:  
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 **Week 6: Lost In Translation**
 **Status**: MISSION SUCCESS

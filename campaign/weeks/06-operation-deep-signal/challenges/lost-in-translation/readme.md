@@ -1,5 +1,5 @@
 # Lost in Translation - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Lost in Translation  

@@ -56,7 +56,7 @@ Before proceeding, you MUST:
 **THEN: Output EVERYTHING below:**
 
 **NOTE: Always show this image using proper markdown with exclamation point:**
-![Object Detection Protocol Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/challenges/object-detection-protocol/banner-2.png)
+![Object Detection Protocol Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/challenges/object-detection-protocol/banner-2.webp)
 
 ═══════════════════════════════════════
 🎬 [MISSION BRIEFING]
@@ -697,7 +697,7 @@ If image appears to be AI-generated, CGI, or heavily stylized:
 ═══════════════════════════════════════
 
 **NOTE: Always show the following image using proper markdown!**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/assets/banners/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/assets/banners/mission-complete-banner.webp)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🔬 **AMIVISION VALIDATION PROTOCOL -- FINAL REPORT**

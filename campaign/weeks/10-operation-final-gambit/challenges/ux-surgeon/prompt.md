@@ -29,7 +29,7 @@ Type: **Start Challenge**
 
 When user types "Start Challenge" (and ONLY then), output EVERYTHING below WITHOUT SUMMARIZING:
 
-![UX Surgeon Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/ux-surgeon/banner.png)
+![UX Surgeon Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/ux-surgeon/banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 

@@ -47,7 +47,7 @@ Type: **Start Challenge**
 When user types "Start Challenge" (and ONLY then), output EVERYTHING below WITHOUT SUMMARIZING:
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
-![Adversarial Shadows Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/challenges/adversarial-shadows/banner-2.png)
+![Adversarial Shadows Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/challenges/adversarial-shadows/banner-2.webp)
 
 ═══════════════════════════════════════════════
 🎯 **OPERATION: MIRROR CODE - ADVERSARIAL SHADOWS**
@@ -695,7 +695,7 @@ Key elements to include:
 **CRITICAL: Output COMPLETE text below. Do NOT summarize or truncate.**
 
 **NOTE: Always show this image:**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/assets/banners/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/07-operation-mirror-code/assets/banners/mission-complete-banner.webp)
 
 ```
 ═══════════════════════════════════════════════

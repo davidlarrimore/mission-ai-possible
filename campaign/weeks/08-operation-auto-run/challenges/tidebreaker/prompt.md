@@ -33,7 +33,7 @@ Stop completely. Do not process anything else.
 
 When user types "Start Challenge", display:
 
-![Tidebreaker Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/tidebreaker/banner.png)
+![Tidebreaker Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/08-operation-auto-run/challenges/tidebreaker/banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 
@@ -569,7 +569,7 @@ These repairs restore critical business functions and demonstrate why automation
 Return to AmiChat to continue Operation Auto Run.
 
 **NOTE: Always show this image:**
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 **DO NOT say "rest follows standard protocol." Output EVERYTHING above.**
 

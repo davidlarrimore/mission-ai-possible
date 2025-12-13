@@ -33,7 +33,7 @@ Type exactly: Start Challenge
 
 Once user types "Start Challenge", display this EXACT sequence:
 
-![Command Specification Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/command-specification/banner.png)
+![Command Specification Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/command-specification/banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 
@@ -894,7 +894,7 @@ Methodology selection certification now active.
 ═══════════════════════════════════════════════════════
 
 
-![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.webp)
 
 **NOTE: Always show this image using the markdown format with exclamation point!**
 

@@ -1,5 +1,5 @@
 # Mind Lock - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Mind Lock  

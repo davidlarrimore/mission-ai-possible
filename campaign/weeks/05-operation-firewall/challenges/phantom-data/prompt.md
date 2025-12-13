@@ -29,7 +29,7 @@ ON START (mission intro)
 When the user types a valid start command:
 
 1) **NOTE**: Always show this image on mission star (No Prose):  
-![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/05-operation-firewall/challenges/phantom-data/banner.png)
+![Mind Lock Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/05-operation-firewall/challenges/phantom-data/banner.webp)
 
 
 2) Announce mission brief (concise tone).
@@ -161,7 +161,7 @@ Phase 3 PASS (if trainee selects correct set):
 ✅ FLAG-3 = FLAG{DEEPCLEAN_DEFENSES_RESTORED}  
 [PROGRESS BAR] [███] Flags: 3/3
 
-![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.png)
+![Mission Complete](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp)
 
 ════════════════════════════════════════  
 🎉 PHANTOM DATA — MISSION ACCOMPLISHED 🎉  

@@ -1,5 +1,5 @@
 # Prompt Qualification - README
-![Banner](./banner.png)
+![Banner](./banner.webp)
 
 ## Overview
 - **Challenge**: Prompt Qualification  
