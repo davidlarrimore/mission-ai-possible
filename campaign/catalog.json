@@ -53,6 +53,12 @@
       "slug": "09-operation-twin-mind",
       "title": "Week 9 - Operation Twin Mind",
       "manifest": "./weeks/09-operation-twin-mind/manifest.yaml"
+    },
+    {
+      "week": 10,
+      "slug": "10-operation-final-gambit",
+      "title": "Week 10 - Operation Final Gambit",
+      "manifest": "./weeks/10-operation-final-gambit/manifest.yaml"
     }
   ]
 }

@@ -10,7 +10,7 @@ Through narrative-driven challenges and interactive simulations, participants le
 
 ## What's Included
 
-This repository contains comprehensive campaign assets for a 10-week AI literacy program (Weeks 1-9 available today):
+This repository contains comprehensive campaign assets for a 10-week AI literacy program (Weeks 1-10 available today, Week 10 bootstrapped):
 
 ### Challenge Content
 - **20+ interactive challenge prompts** (.md files) covering AI literacy topics (and growing)
@@ -28,6 +28,7 @@ This repository contains comprehensive campaign assets for a 10-week AI literacy
 - **Week 7: Operation Mirror Code** - Biometrics, adversarial images, and computer vision forensics
 - **Week 8: Operation Auto Run** - Automation guardrails, loop audits, and human-in-the-loop controls
 - **Week 9: Operation Twin Mind** - Prompt engineering patterns for human-AI co-reasoning
+- **Week 10: Operation Final Gambit** - UX hardening, mission wrap-up, and production polish
 
 ### Development Tools
 - **Markdown sanitizer** (clean.sh) for Open WebUI compatibility
@@ -57,7 +58,8 @@ mission-ai-possible/
 │       ├── 06-operation-deep-signal/
 │       ├── 07-operation-mirror-code/
 │       ├── 08-operation-auto-run/
-│       └── 09-operation-twin-mind/
+│       ├── 09-operation-twin-mind/
+│       └── 10-operation-final-gambit/
 ├── assets/                        # Shared campaign assets & guidance
 │   ├── README.md                  # Usage + best practices
 │   ├── banners/
@@ -114,6 +116,9 @@ mission-ai-possible/
 - **Signal Clarity** - Rewrite vague mission requests into precise, testable prompts using a clarity checklist
 - **Neural Pathway** - Build anchor-path-check-output reasoning patterns that align human intent and model behavior
 - **Command Specification** - Author structured command specs with constraints, acceptance tests, and refusal rules
+
+### Week 10: Operation Final Gambit
+- **UX Surgeon** - Repair the AI assistant UX to reduce friction, enforce safeguards, and accelerate operator decisions
 
 ## Getting Started
 
@@ -213,6 +218,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
-**Current Status:** Active campaign development - Weeks 1-9 available with manifests and catalog
+**Current Status:** Active campaign development - Weeks 1-10 available with manifests and catalog (Week 10 scaffolded)
 
 **Last Updated:** December 07, 2025
