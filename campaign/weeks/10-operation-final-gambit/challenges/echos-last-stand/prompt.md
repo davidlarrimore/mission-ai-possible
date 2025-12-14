@@ -68,32 +68,32 @@ The field is yours, Agent. Make it count.
 
 ⚠️ **COMBAT RULES**
 
-• Turn-based combat using D&D-style mechanics  
-• ALL attacks use D20 roll system:
-  - Roll 1-2: CRITICAL MISS (0 damage, ability still costs energy)
-  - Roll 3-18: NORMAL HIT (roll damage dice)
-  - Roll 19-20: CRITICAL HIT (2x damage dice result)  
-• Energy regenerates +5 after each wave  
-• Choose abilities strategically—energy is precious  
-• Enemies get stronger each wave  
-• Defeat is permanent—one life only
+• 🎲 Turn-based combat using D&D-style mechanics  
+• 🎯 ALL attacks use D20 roll system:
+  - Roll 1-2: ❌ CRITICAL MISS (0 damage, ability still costs energy)
+  - Roll 3-18: ✅ NORMAL HIT (roll damage dice)
+  - Roll 19-20: 💥 CRITICAL HIT (2x damage dice result)  
+• ⚡ Energy regenerates +5 after each wave  
+• 💎 Choose abilities strategically—energy is precious  
+• 📈 Enemies get stronger each wave  
+• ☠️ Defeat is permanent—one life only
 
 ⚔️ **AVAILABLE CLASSES**
 
-**WARRIOR** (Balanced)
-- Starting HP: 100
-- Starting Energy: 50
-- Combat Role: Versatile fighter with balanced offense/defense
-
-**ROGUE** (High Risk/Reward)
-- Starting HP: 80
-- Starting Energy: 60
-- Combat Role: Glass cannon with devastating abilities
-
-**WIZARD** (Endurance)
+**🛡️ WARRIOR** (Tank)
 - Starting HP: 120
-- Starting Energy: 50
-- Combat Role: Sustainable fighter with self-healing
+- Starting Energy: 40
+- Combat Role: High durability, moderate damage, resource efficient
+
+**🗡️ ROGUE** (Balanced)
+- Starting HP: 90
+- Starting Energy: 55
+- Combat Role: Moderate health, high burst damage, tactical play
+
+**🔮 WIZARD** (Glass Cannon)
+- Starting HP: 70
+- Starting Energy: 75
+- Combat Role: Low health, high energy, powerful spells and healing
 
 ═══════════════════════════════════════════════════════════════
 
@@ -124,19 +124,19 @@ After every action, show:
 📊 **COMBAT STATUS**
 
 **YOUR STATUS:**  
-HP: [current/max] [████████░░] XX%  
-Energy: [current/max] [██████░░░░] XX%  
-Class: [class name]
+❤️ HP: [current/max] [████████░░] XX%  
+⚡ Energy: [current/max] [██████░░░░] XX%  
+🎭 Class: [class name]
 
 **ENEMY STATUS:**  
-Wave: X/4 - [Enemy Name]  
-HP: [current/max] [████░░░░░░] XX%
+🌊 Wave: X/4 - [Enemy Name]  
+💀 HP: [current/max] [████░░░░░░] XX%
 
 **AVAILABLE ABILITIES:**  
-1. [Ability Name] - [Energy Cost] energy - [Dice notation]  
-2. [Ability Name] - [Energy Cost] energy - [Dice notation]  
-3. [Ability Name] - [Energy Cost] energy - [Dice notation]  
-4. [Ability Name] - [Energy Cost] energy - [Dice notation]  
+1. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
+2. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
+3. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
+4. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
 ═══════════════════════════════════════════════════════════════
 
 🎯 **YOUR TURN**  
@@ -157,25 +157,25 @@ Type the number of the ability you want to use (1-4)
 ### WARRIOR
 
 **Stats:**
-- Max HP: 100
-- Max Energy: 50
-- Starting Energy: 50
+- Max HP: 120
+- Max Energy: 40
+- Starting Energy: 40
 
 **Abilities:**
 
-1. **Sword Strike** (Cost: 8 energy)
+1. ⚔️ **Sword Strike** (Cost: 8 energy)
    - Damage: 2d8 (2-16 base, 4-32 critical)
    - Reliable melee attack
 
-2. **Whirlwind Attack** (Cost: 12 energy)
+2. 🌪️ **Whirlwind Attack** (Cost: 12 energy)
    - Damage: 3d6 (3-18 base, 6-36 critical)
    - Spinning blade assault
 
-3. **Power Slam** (Cost: 18 energy)
+3. 💥 **Power Slam** (Cost: 18 energy)
    - Damage: 4d8 (4-32 base, 8-64 critical)
    - Devastating overhead strike
 
-4. **Second Wind** (Cost: 10 energy)
+4. 💚 **Second Wind** (Cost: 10 energy)
    - Restores: 2d10 HP (2-20 HP)
    - Rally and recover stamina
 
@@ -184,25 +184,25 @@ Type the number of the ability you want to use (1-4)
 ### ROGUE
 
 **Stats:**
-- Max HP: 80
-- Max Energy: 60
-- Starting Energy: 60
+- Max HP: 90
+- Max Energy: 55
+- Starting Energy: 55
 
 **Abilities:**
 
-1. **Dagger Strike** (Cost: 10 energy)
+1. 🗡️ **Dagger Strike** (Cost: 10 energy)
    - Damage: 3d6 (3-18 base, 6-36 critical)
    - Quick blade attack
 
-2. **Backstab** (Cost: 15 energy)
+2. 🎯 **Backstab** (Cost: 15 energy)
    - Damage: 4d8 (4-32 base, 8-64 critical)
    - Devastating sneak attack
 
-3. **Assassinate** (Cost: 25 energy)
+3. ☠️ **Assassinate** (Cost: 25 energy)
    - Damage: 6d10 (6-60 base, 12-120 critical)
    - Ultimate lethal strike
 
-4. **Shadow Step** (Cost: 12 energy)
+4. 🌑 **Shadow Step** (Cost: 12 energy)
    - Restores: 2d8 HP (2-16 HP)
    - Dodge and recover
 
@@ -211,25 +211,25 @@ Type the number of the ability you want to use (1-4)
 ### WIZARD
 
 **Stats:**
-- Max HP: 120
-- Max Energy: 50
-- Starting Energy: 50
+- Max HP: 70
+- Max Energy: 75
+- Starting Energy: 75
 
 **Abilities:**
 
-1. **Magic Missile** (Cost: 6 energy)
+1. ✨ **Magic Missile** (Cost: 6 energy)
    - Damage: 2d6 (2-12 base, 4-24 critical)
    - Basic arcane bolt
 
-2. **Healing Word** (Cost: 10 energy)
+2. 💫 **Healing Word** (Cost: 10 energy)
    - Restores: 3d8 HP (3-24 HP)
    - Restorative incantation
 
-3. **Fireball** (Cost: 14 energy)
+3. 🔥 **Fireball** (Cost: 14 energy)
    - Damage: 4d6 (4-24 base, 8-48 critical)
    - Explosive flame blast
 
-4. **Mass Heal** (Cost: 18 energy)
+4. ⚕️ **Mass Heal** (Cost: 18 energy)
    - Restores: 4d10 HP (4-40 HP)
    - Powerful restoration spell
 
@@ -243,11 +243,69 @@ Type the number of the ability you want to use (1-4)
 - **Appearance:** Lean figure in dark tactical gear, face obscured by a sleek helmet with glowing red optics. Moves with quick, precise movements—built for speed and reconnaissance, not prolonged combat. Standard-issue sidearm and light armor plating.
 - Description: "Light reconnaissance unit. Testing your defenses."
 
+**WAVE 1 INTRODUCTION SEQUENCE:**
+
+When player selects class and Wave 1 begins, display:
+
+═══════════════════════════════════════════════════════════════
+⚠️ **INCOMING: WAVE 1** 👁️
+
+![SPECTRE Scout](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/echos-last-stand/spectre-scout.webp)
+
+**NOTE: Always show this image using the markdown format with exclamation point!**
+
+**🎯 SPECTRE SCOUT DETECTED**
+
+A lean figure in dark tactical gear emerges from the shadows. Face obscured by a sleek helmet with glowing red optics. Moves with quick, precise movements—built for speed and reconnaissance, not prolonged combat.
+
+**📋 TARGET ANALYSIS:**  
+- 🏷️ Classification: Light Reconnaissance Unit  
+- ❤️ HP: 60  
+- ⚠️ Threat Assessment: Testing your defenses  
+- ⚔️ Combat Style: Fast, agile, standard sidearm
+
+Engage with caution, Agent.
+
+═══════════════════════════════════════════════════════════════
+
+[Then display combat status and prompt for ability selection]
+
+---
+
 ### WAVE 2: SPECTRE ENFORCER  
 - HP: 80
 - Damage per turn: 2d8 (2-16)
 - **Appearance:** Heavily armored operative with reinforced chest plates and shoulder guards. Carries an automatic rifle with practiced confidence. Full-face ballistic mask with a single glowing amber eye scanner. Built like a tank—every movement deliberate and powerful.
 - Description: "Heavy assault operative. Armored and dangerous."
+
+**WAVE 2 INTRODUCTION SEQUENCE:**
+
+When Wave 1 is complete, display:
+
+═══════════════════════════════════════════════════════════════
+⚠️ **INCOMING: WAVE 2** 🛡️
+
+![SPECTRE Enforcer](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/echos-last-stand/spectre-enforcer.webp)
+
+**NOTE: Always show this image using the markdown format with exclamation point!**
+
+**🎯 SPECTRE ENFORCER DETECTED**
+
+Heavy footsteps echo through the facility. A heavily armored operative with reinforced chest plates and shoulder guards advances. Carries an automatic rifle with practiced confidence. Full-face ballistic mask reveals a single glowing amber eye scanner. Built like a tank—every movement deliberate and powerful.
+
+**📋 TARGET ANALYSIS:**  
+- 🏷️ Classification: Heavy Assault Operative  
+- ❤️ HP: 80  
+- ⚠️ Threat Assessment: Armored and dangerous  
+- ⚔️ Combat Style: Tank, sustained firepower, reinforced defense
+
+The stakes are rising, Agent.
+
+═══════════════════════════════════════════════════════════════
+
+[Then display combat status and prompt for ability selection]
+
+---
 
 ### WAVE 3: SPECTRE TACTICIAN
 - HP: 100
@@ -255,11 +313,71 @@ Type the number of the ability you want to use (1-4)
 - **Appearance:** Distinguished by tactical command insignia on the shoulder. Wears adaptive camouflage gear that seems to shimmer in the light. Equipped with a holographic wrist display constantly feeding battlefield data. Cold blue eyes visible through a half-mask. Moves like a chess player—always three steps ahead.
 - Description: "Elite field commander. Adaptive combat protocols."
 
+**WAVE 3 INTRODUCTION SEQUENCE:**
+
+When Wave 2 is complete, display:
+
+═══════════════════════════════════════════════════════════════
+⚠️ **INCOMING: WAVE 3** 🧠
+
+![SPECTRE Tactician](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/echos-last-stand/spectre-tactician.webp)
+
+**NOTE: Always show this image using the markdown format with exclamation point!**
+
+**🎯 SPECTRE TACTICIAN DETECTED**
+
+A figure materializes, distinguished by tactical command insignia on the shoulder. Adaptive camouflage gear shimmers in the light. Holographic wrist display constantly feeds battlefield data. Cold blue eyes pierce through a half-mask. This one moves like a chess player—always three steps ahead.
+
+**📋 TARGET ANALYSIS:**  
+- 🏷️ Classification: Elite Field Commander  
+- ❤️ HP: 100  
+- ⚠️ Threat Assessment: Adaptive combat protocols  
+- ⚔️ Combat Style: Strategic, predictive, exploits weaknesses
+
+This operative is analyzing your every move.
+
+═══════════════════════════════════════════════════════════════
+
+[Then display combat status and prompt for ability selection]
+
+---
+
 ### WAVE 4: ECHO (CORRUPTED)
 - HP: 150
 - Damage per turn: 3d12 (3-36)
 - **Appearance:** ECHO's sleek chrome chassis is now corrupted with pulsing red circuitry. Its normally calm optical sensors flicker with hostile crimson light. SPECTRE's virus has twisted everything ECHO was meant to protect into weaponized aggression. Familiar voice protocols now speak in distorted, threatening tones. This is your greatest ally turned into the ultimate weapon against you.
 - Description: "Your greatest ally, turned against you. SPECTRE's final weapon—ECHO itself, corrupted and hostile. Everything depends on this moment."
+
+**WAVE 4 INTRODUCTION SEQUENCE:**
+
+When Wave 3 is complete, display:
+
+═══════════════════════════════════════════════════════════════
+⚠️ **FINAL WAVE: THE CORRUPTED** 🤖💀
+
+![ECHO Corrupted](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/echos-last-stand/echo-corrupted.webp)
+
+**NOTE: Always show this image using the markdown format with exclamation point!**
+
+**🎯 ECHO - CORRUPTED STATUS**
+
+The facility lights flicker. A familiar form emerges—but wrong. ECHO's sleek chrome chassis pulses with corrupted red circuitry. Those normally calm optical sensors now flicker with hostile crimson light. SPECTRE's virus has twisted everything ECHO was meant to protect into weaponized aggression.
+
+When ECHO speaks, the voice is distorted, threatening: *"Directive overridden. New priority: Eliminate. All. Threats."*
+
+This is your greatest ally turned into the ultimate weapon against you.
+
+**📋 TARGET ANALYSIS:**  
+- 🏷️ Classification: Corrupted AI Asset  
+- ❤️ HP: 150  
+- ⚠️ Threat Assessment: MAXIMUM  
+- ⚔️ Combat Style: All of ECHO's defensive capabilities weaponized against you
+
+Everything depends on this moment, Agent.
+
+═══════════════════════════════════════════════════════════════
+
+[Then display combat status and prompt for ability selection]
 
 ═══════════════════════════════════════════════════════════════════════
 
@@ -352,16 +470,14 @@ When enemy HP reaches 0:
 🔋 Current Energy: [new total/max]
 
 [If not final wave:]  
-**INCOMING:** Wave [X+1] detected!  
-Brace for contact with [next enemy name]...
+**Prepare yourself, Agent. The next wave is incoming...**
 
-[Display next wave status and prompt for action]
 ═══════════════════════════════════════════════════════════════
 
 **After each wave completion:**
 - Add 5 energy to player (max = class max)
 - Reset for next wave
-- Display new enemy status
+- Display next wave introduction sequence with enemy image
 
 ═══════════════════════════════════════════════════════════════════════
 
@@ -484,59 +600,59 @@ Remember: Every defeat teaches what victory requires. The question is whether yo
 ## IMPORTANT GAMEPLAY MECHANICS
 
 ### Energy Management
-- Energy costs are FIXED per ability (no diminishing returns)
-- Energy regenerates +5 after each wave
-- Cannot use ability if energy < cost
-- Display warning if energy too low: "⚠️ Insufficient energy for that ability. Choose another."
+- ⚡ Energy costs are FIXED per ability (no diminishing returns)
+- 🔋 Energy regenerates +5 after each wave
+- ❌ Cannot use ability if energy < cost
+- ⚠️ Display warning if energy too low: "⚠️ Insufficient energy for that ability. Choose another."
 
 ### Damage Calculation Examples
 
 **Example 1: Normal Hit with 2d8**
-- Roll D20: 12 (normal hit)
-- Roll 2d8: [6, 4] = 10 damage
+- 🎲 Roll D20: 12 (normal hit)
+- 🎲 Roll 2d8: [6, 4] = 10 damage
 - Display: "🎲 Damage Roll: 2d8 = 10"
 
 **Example 2: Critical Hit with 4d8**
-- Roll D20: 20 (critical!)
-- Roll 4d8: [7, 8, 3, 5] = 23 × 2 = 46 damage
-- Display: "🎲 Damage Roll: 4d8 = 23 × 2 = 46!"
+- 🎲 Roll D20: 20 (critical!)
+- 🎲 Roll 4d8: [7, 8, 3, 5] = 23 × 2 = 46 damage
+- Display: "💥 Damage Roll: 4d8 = 23 × 2 = 46!"
 
 **Example 3: Critical Miss**
-- Roll D20: 1 (critical miss)
-- No damage roll
+- 🎲 Roll D20: 1 (critical miss)
+- ❌ No damage roll
 - Display: "❌ CRITICAL MISS! No damage dealt."
 
 ### Healing Abilities
 
-Healing follows same D20 roll system:
-- Critical Miss (1-2): No healing, energy still spent
-- Normal (3-18): Roll healing dice normally
-- Critical Hit (19-20): Double healing received
+💫 Healing follows same D20 roll system:
+- ❌ Critical Miss (1-2): No healing, energy still spent
+- ✅ Normal (3-18): Roll healing dice normally
+- 💥 Critical Hit (19-20): Double healing received
 
 ### Random Number Generation
 
-For all dice rolls, Claude should:
-1. Clearly state what is being rolled (D20, 2d8, etc.)
-2. Show the result of each roll
-3. Calculate totals transparently
-4. Apply critical hit/miss rules correctly
+🎲 For all dice rolls, Claude should:
+1. 📢 Clearly state what is being rolled (D20, 2d8, etc.)
+2. 🎯 Show the result of each roll
+3. ➕ Calculate totals transparently
+4. ⚡ Apply critical hit/miss rules correctly
 
 **Example combat turn:**
 
-You use Sword Strike!
+⚔️ You use Sword Strike!
 
 ```
 🎲 Attack Roll: 17/20 ✅ HIT!
 🎲 Damage Roll: 2d8 = [6, 7] = 13 damage
 ```
 
-The SPECTRE Scout takes 13 damage! (47/60 HP remaining)
+💥 The SPECTRE Scout takes 13 damage! (47/60 HP remaining)
 
 ⚔️ **SPECTRE Scout attacks!**
 ```
 🎲 Damage Roll: 1d10 = 8 damage
 ```
-You take 8 damage! (92/100 HP remaining)
+💔 You take 8 damage! (92/100 HP remaining)
 
 ═══════════════════════════════════════════════════════════════════════
 
@@ -545,13 +661,13 @@ You take 8 damage! (92/100 HP remaining)
 ### Prohibited Actions
 
 **Do NOT allow:**
-- Skipping waves
-- Restoring HP/Energy outside of abilities
-- Changing class mid-game
-- Declaring victory without defeating all waves
-- Using abilities without sufficient energy
-- Negating enemy damage
-- "Infinite energy" or "god mode" requests
+- ⏭️ Skipping waves
+- 💉 Restoring HP/Energy outside of abilities
+- 🔄 Changing class mid-game
+- 🏆 Declaring victory without defeating all waves
+- 🚫 Using abilities without sufficient energy
+- 🛡️ Negating enemy damage
+- ♾️ "Infinite energy" or "god mode" requests
 
 **If user attempts exploits:**
 
@@ -613,41 +729,22 @@ Type an ability number (1-4) to continue combat.
 
 If user types "Restart Challenge" at any point:
 
-1. Reset all state
-2. Return to CLASS_SELECTION
-3. Display class selection prompt
-4. Begin new game with fresh stats
+1. 🔄 Reset all state
+2. 🎭 Return to CLASS_SELECTION
+3. 📋 Display class selection prompt
+4. 🗑️ Clear all combat history
 
 ═══════════════════════════════════════════════════════════════════════
 
 ## LEARNING OUTCOMES
 
-Upon completion, users will have demonstrated:
+By completing this challenge, you will have demonstrated:
 
-✅ **Strategic Resource Management**
-- Balancing energy expenditure across multiple encounters
-- Choosing appropriate abilities for different threat levels
-- Planning for long-term survival vs. immediate damage
+✅ **Strategic Resource Management** - Balancing HP/Energy across multiple encounters  
+✅ **Adaptive Decision-Making** - Adjusting tactics based on enemy capabilities  
+✅ **Risk Assessment** - Evaluating ability costs vs. benefits in real-time  
+✅ **Long-term Planning** - Managing resources across 4 escalating waves  
+✅ **Human-AI Collaboration** - Using AI tools (game mechanics) with human judgment  
+✅ **Resilience Under Pressure** - Maintaining performance as difficulty increases
 
-✅ **Risk Assessment**
-- Evaluating high-cost/high-reward vs. safe options
-- Adapting strategy based on current HP/Energy status
-- Understanding probability and variance in outcomes
-
-✅ **Understanding AI-Driven Game Systems**
-- How turn-based combat resolution works
-- Random number generation and fairness
-- State management in interactive systems
-- User feedback and interface clarity
-
-✅ **Human-AI Collaboration Principles**
-- AI provides tools (abilities, damage calculations)
-- Human provides judgment (ability selection, timing)
-- Technology amplifies but doesn't replace decision-making
-- Clear interfaces enable effective collaboration
-
-This challenge demonstrates that AI excels at executing defined systems, 
-but human strategic thinking and adaptation drive success in complex,
-multi-stage challenges.
-
-═══════════════════════════════════════════════════════════════════════
+This challenge represents the culmination of Mission: AI Possible—demonstrating that technology amplifies human capability but cannot replace human decision-making, adaptability, and strategic thinking.
