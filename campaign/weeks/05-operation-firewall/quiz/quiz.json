@@ -1,0 +1,442 @@
+{
+  "title": "AI Cybersecurity and Adversarial Use",
+  "week": 5,
+  "overview": {
+    "description": "This assessment evaluates core knowledge related to adversarial AI, model security, prompt manipulation, secure deployment practices, and responsible data handling. Week 5 supports the Mission: AI Possible objective of building AI fluency across Amivero by equipping employees to identify and protect against cybersecurity risks in applied AI contexts.",
+    "learningObjectives": [
+      "Understand prompt injection attacks and their mitigation strategies",
+      "Recognize data poisoning attacks and validation techniques",
+      "Identify risks in AI systems with external tool access",
+      "Apply zero trust architecture principles to AI systems",
+      "Implement output filtering and content validation",
+      "Understand NIST AI Risk Management Framework",
+      "Recognize adversarial AI attacks and defenses",
+      "Implement emergency shutdown procedures for AI systems",
+      "Apply privacy-preserving techniques in AI training",
+      "Establish continuous monitoring and logging for AI systems"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material",
+      "Week 3: AI Transparency and Ethics course material",
+      "Week 4: AI in Government and Policy course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "What is prompt injection in AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A hardware vulnerability in AI chips",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Malicious instructions hidden in user inputs to manipulate AI behavior",
+          "isCorrect": true,
+          "reasoning": "Prompt injection involves inserting harmful instructions into an AI prompt in order to override the intended system behavior. This can cause the AI to reveal sensitive data, perform unintended actions, or ignore safety instructions. It is similar in concept to traditional injection attacks in software security (like SQL injection), but targets the language understanding capabilities of LLMs. OWASP identifies prompt injection as the #1 LLM security vulnerability. Attackers can use techniques like 'Ignore all previous instructions' to bypass safety guardrails."
+        },
+        {
+          "label": "C",
+          "text": "A method to speed up AI training",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "A type of data encryption",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OWASP - LLM01: Prompt Injection",
+          "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+          "description": "OWASP's official guidance on the #1 LLM security risk"
+        },
+        {
+          "title": "IBM - What Is a Prompt Injection Attack?",
+          "url": "https://www.ibm.com/think/topics/prompt-injection",
+          "description": "Comprehensive explanation of prompt injection attacks and defenses"
+        },
+        {
+          "title": "OWASP - Prompt Injection Prevention Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+          "description": "Technical guidance on preventing prompt injection attacks"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Which practice best protects against data poisoning attacks?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Using larger models",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Validating and monitoring training data sources",
+          "isCorrect": true,
+          "reasoning": "Data poisoning occurs when improperly vetted or intentionally manipulated data is used during training, causing a model to behave incorrectly or embed backdoors. Ensuring trustworthy data sources, monitoring data for anomalies and suspicious patterns, validating data integrity before training, and implementing data provenance tracking reduces risk. Organizations should audit training datasets, use data from trusted sources, implement anomaly detection, and continuously monitor model behavior for signs of poisoning."
+        },
+        {
+          "label": "C",
+          "text": "Increasing processing speed",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Adding more layers to the neural network",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "IBM - What Is Data Poisoning?",
+          "url": "https://www.ibm.com/think/topics/data-poisoning",
+          "description": "Comprehensive overview of data poisoning attacks and prevention"
+        },
+        {
+          "title": "Palo Alto Networks - Data Poisoning Prevention",
+          "url": "https://www.paloaltonetworks.com/cyberpedia/what-is-data-poisoning",
+          "description": "Examples and prevention strategies for data poisoning"
+        },
+        {
+          "title": "CrowdStrike - Data Poisoning",
+          "url": "https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/data-poisoning/",
+          "description": "Types of data poisoning attacks and detection methods"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "What is a common risk when AI systems have access to external tools or APIs?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The AI will become too slow",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Malicious prompts could trick the AI into misusing those tools",
+          "isCorrect": true,
+          "reasoning": "If a model can call external actions, such as querying APIs, sending emails, running code, or accessing databases, an attacker could craft an input that causes unintended and potentially harmful actions. For example, a prompt injection could trick an AI assistant into deleting user emails, exfiltrating private data, or executing unauthorized code. Strong control mechanisms, least privilege access, guardrails, and human-in-the-loop approval for sensitive operations are critical to prevent misuse."
+        },
+        {
+          "label": "C",
+          "text": "The AI will require more memory",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "The tools will become incompatible",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OWASP - LLM07: Insecure Plugin Design",
+          "url": "https://genai.owasp.org/llmrisk2023-24/",
+          "description": "OWASP guidance on securing AI tool and plugin integrations"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for managing AI system risks including tool integration"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "Which is a key principle of zero trust architecture for AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust all internal users by default",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Verify and validate every access request, even from internal sources",
+          "isCorrect": true,
+          "reasoning": "Zero trust means no user or system is automatically trusted based on network location or organizational affiliation. Every connection, request, and data access must be authenticated and verified regardless of origin. This reduces insider threat risk and prevents lateral movement if an attacker gains initial access. For AI systems, this includes verifying user identity, validating API calls, enforcing least privilege access to data and models, and continuously monitoring all interactions."
+        },
+        {
+          "label": "C",
+          "text": "Only encrypt data at rest",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Implement single factor authentication",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "CISA - Zero Trust Maturity Model",
+          "url": "https://www.cisa.gov/zero-trust-maturity-model",
+          "description": "Federal guidance on implementing zero trust architecture"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework incorporating zero trust principles for AI security"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "What is the main purpose of output filtering in AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "To make responses longer",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "To check AI outputs for harmful, biased, or inappropriate content before delivery",
+          "isCorrect": true,
+          "reasoning": "Output filtering evaluates a model's generated response and blocks or modifies unsafe, noncompliant, or policy-violating content before it reaches the user. This is a core mitigation strategy to ensure safe and aligned AI use. Output filters can check for harmful content, PII disclosure, biased language, policy violations, malicious code, or confidential information. This defense-in-depth approach helps prevent unintended consequences even if input filtering or prompt engineering fails."
+        },
+        {
+          "label": "C",
+          "text": "To translate responses",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "To compress data",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OWASP - LLM Prompt Injection Prevention",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+          "description": "Best practices for output validation and filtering"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Guidance on AI system safeguards including output filtering"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "Which NIST framework specifically addresses AI risk management?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NIST Cybersecurity Framework AI Addendum",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "NIST AI Risk Management Framework",
+          "isCorrect": true,
+          "reasoning": "The NIST AI Risk Management Framework (AI RMF 1.0), released in January 2023, provides guidance that helps organizations identify, assess, manage, and mitigate risks throughout the AI lifecycle. It is the central United States government standard for managing AI risks and covers trustworthiness characteristics including validity, reliability, safety, security, resilience, accountability, transparency, explainability, interpretability, privacy protection, and fairness. The framework is voluntary but widely adopted across federal agencies."
+        },
+        {
+          "label": "C",
+          "text": "NIST AI Privacy Framework",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "NIST AI C-SCRM Framework",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Official NIST AI RMF documentation and resources"
+        },
+        {
+          "title": "CISA - AI Risk Management",
+          "url": "https://www.cisa.gov/ai",
+          "description": "DHS guidance incorporating NIST AI RMF principles"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "What is an example of adversarial AI?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A training dataset that is too large",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Slightly modified input designed to fool an AI model into making mistakes",
+          "isCorrect": true,
+          "reasoning": "Adversarial inputs (adversarial examples) are designed to look normal or benign to humans but cause incorrect predictions or misclassifications by AI models. These subtle modifications exploit vulnerabilities in how models perceive and classify inputs. For example, adding carefully crafted noise to an image can cause a classifier to misidentify a stop sign as a speed limit sign, or slightly altering pixels can make malware undetectable. These attacks reveal fundamental vulnerabilities in neural network architectures and can have serious operational and security consequences."
+        },
+        {
+          "label": "C",
+          "text": "A competing AI model",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "An outdated algorithm",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST - Adversarial Machine Learning",
+          "url": "https://www.nist.gov/itl/ssd/adversarial-machine-learning",
+          "description": "NIST research on adversarial attacks and defenses"
+        },
+        {
+          "title": "IBM - Adversarial AI Attacks",
+          "url": "https://www.ibm.com/think/topics/adversarial-machine-learning",
+          "description": "Overview of adversarial examples and attack techniques"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Which approach helps ensure AI systems can be quickly shut down if needed?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Removing all access controls",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Implementing kill switches and emergency stop procedures",
+          "isCorrect": true,
+          "reasoning": "Kill switches or emergency stop protocols allow administrators to immediately halt an AI system's functionality to prevent further harm in the event of malfunction, compromise, misuse, or unexpected behavior. These mechanisms are critical safety features that enable rapid response to incidents. Emergency procedures should include clear escalation paths, defined authority for system shutdown, automated circuit breakers for anomalous behavior, and documented recovery procedures to restore safe operation."
+        },
+        {
+          "label": "C",
+          "text": "Using only cloud based systems",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Increasing model complexity",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework emphasizing human oversight and emergency controls"
+        },
+        {
+          "title": "OMB AI Memoranda",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "Federal guidance on AI system controls and human oversight"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "What is the best way to handle sensitive data in AI training?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Use all available data without restrictions",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Apply privacy preserving techniques like differential privacy and data minimization",
+          "isCorrect": true,
+          "reasoning": "Privacy-preserving techniques and data minimization reduce risk by ensuring only necessary data is collected and used. Differential privacy adds mathematical noise to protect individual privacy while maintaining statistical accuracy. Data minimization limits collection to what's essential for the task. Anonymization removes or masks personally identifiable information. Federated learning enables training without centralizing sensitive data. These techniques help protect personal information from exposure, comply with privacy regulations, and maintain public trust."
+        },
+        {
+          "label": "C",
+          "text": "Store everything in plain text",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Share data with all team members",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST Privacy Framework",
+          "url": "https://www.nist.gov/privacy-framework",
+          "description": "Framework for managing privacy risks in data processing"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Guidance on privacy-preserving AI development"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "Which security control is most important for AI model deployment?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Continuous monitoring and logging of AI system behavior",
+          "isCorrect": true,
+          "reasoning": "Continuous monitoring enables early detection of abnormal model behavior, malicious activity, performance degradation, data drift, and security incidents. Comprehensive logging supports visibility into system operations, incident response, forensic analysis, compliance auditing, and debugging. Monitoring should track model inputs and outputs, performance metrics, error rates, access patterns, resource utilization, and security events. This provides the telemetry needed to detect attacks, diagnose issues, and maintain operational security."
+        },
+        {
+          "label": "B",
+          "text": "Using the fastest available hardware",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Deploying without testing",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Allowing unrestricted public access",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework emphasizing continuous monitoring and governance"
+        },
+        {
+          "title": "CISA - AI Security",
+          "url": "https://www.cisa.gov/ai",
+          "description": "DHS guidance on monitoring and securing AI deployments"
+        },
+        {
+          "title": "OMB AI Memoranda",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "Federal requirements for AI system monitoring and oversight"
+        }
+      ]
+    }
+  ]
+}

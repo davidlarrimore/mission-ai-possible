@@ -1,0 +1,453 @@
+{
+  "title": "AI in Government and Policy",
+  "week": 4,
+  "overview": {
+    "description": "This assessment evaluates agents' understanding of federal AI policy frameworks, executive orders, and governance structures that shape artificial intelligence implementation across government agencies. The quiz covers key executive orders, memoranda, risk management frameworks, and leadership roles that define how the United States federal government approaches AI adoption, safety, and oversight. Successful completion demonstrates comprehension of the regulatory landscape governing AI in government operations.",
+    "learningObjectives": [
+      "Understand the evolution of federal AI executive orders and their requirements",
+      "Identify key AI policy frameworks and governance structures",
+      "Recognize the roles of federal agencies in AI safety and oversight",
+      "Understand AI procurement policies and their objectives",
+      "Learn about the NIST AI Risk Management Framework",
+      "Recognize the importance of the U.S. AI Safety Institute",
+      "Understand the coordination mechanisms for national AI strategy"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material",
+      "Week 3: AI Transparency and Ethics course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "Which Executive Order first required agencies to keep public inventories of federal AI use cases?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Executive Order 13960 – \"Promoting the Use of Trustworthy Artificial Intelligence in the Federal Government\"",
+          "isCorrect": true,
+          "reasoning": "Executive Order 13960, signed in December 2020 by President Trump, was the first to mandate that federal agencies maintain and publicly share inventories of their AI use cases. This transparency requirement established baseline visibility into how AI was being deployed across government operations and set the foundation for subsequent AI governance frameworks. The order required agencies to document their AI systems and share these inventories with both other government agencies and the public."
+        },
+        {
+          "label": "B",
+          "text": "Executive Order 2025½ – \"Galactic Artificial Intelligence Independence Day\"",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Executive Order 14179 – \"Accelerating the Nation's Use of Artificial Intelligence\"",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Executive Order 14110 – \"Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence\"",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Federal Register - Executive Order 13960",
+          "url": "https://www.federalregister.gov/documents/2020/12/08/2020-27065/promoting-the-use-of-trustworthy-artificial-intelligence-in-the-federal-government",
+          "description": "Full text of EO 13960 requiring AI use case inventories"
+        },
+        {
+          "title": "NIST - Implementing EO 13960",
+          "url": "https://www.nist.gov/artificial-intelligence/EO13960",
+          "description": "NIST guidance on implementing trustworthy AI principles and inventory requirements"
+        },
+        {
+          "title": "CISA - Recent U.S. AI Policy Efforts",
+          "url": "https://www.cisa.gov/ai/recent-efforts",
+          "description": "Overview of federal AI executive orders and policy developments"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "What is the purpose of the \"America's AI Action Plan\" (July 2025)?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Accelerate adoption while reducing administrative burden and supporting innovation",
+          "isCorrect": true,
+          "reasoning": "America's AI Action Plan aims to accelerate responsible AI adoption across federal agencies by reducing unnecessary administrative barriers while maintaining appropriate oversight and supporting innovation. The plan emphasizes streamlining governance processes to enable agencies to deploy AI solutions more rapidly while ensuring safety, security, and ethical standards are maintained. It represents a shift toward enabling AI deployment rather than creating additional bureaucratic hurdles."
+        },
+        {
+          "label": "B",
+          "text": "Consolidate all AI in one agency",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Halt federal AI pilots",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Replace NIST's AI RMF",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Voluntary framework for managing AI risks that informs federal policy"
+        },
+        {
+          "title": "OMB AI Policy Guidance",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "OMB memoranda on federal AI governance and implementation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "The Executive Order 14179 – \"Accelerating the Nation's Use of Artificial Intelligence\" (January 2025) primarily aimed to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Remove barriers and streamline governance to speed AI use",
+          "isCorrect": true,
+          "reasoning": "Executive Order 14179 focuses on removing bureaucratic obstacles and streamlining governance mechanisms to accelerate the responsible deployment of AI across federal agencies. Rather than adding new layers of complexity, this order seeks to make it easier for agencies to adopt AI technologies while maintaining necessary safeguards and oversight. It represents a deliberate effort to reduce friction in AI adoption processes that may have been hindering innovation."
+        },
+        {
+          "label": "B",
+          "text": "Create a new civil-service job series",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Centralize all agency data at OSTP",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Pause federal AI acquisitions",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework supporting streamlined yet responsible AI deployment"
+        },
+        {
+          "title": "CISA - AI Security Guidance",
+          "url": "https://www.cisa.gov/ai",
+          "description": "DHS guidance on secure and efficient AI implementation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "The OMB Memorandum M-25-21 – \"Accelerating Federal Use of Artificial Intelligence through Innovation, Governance, and Public Trust\" instructs agencies to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stop publishing AI inventories",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Designate Chief AI Officers and run risk-based governance",
+          "isCorrect": true,
+          "reasoning": "OMB Memorandum M-25-21 directs federal agencies to establish clear AI governance structures, including the designation of Chief AI Officers who are responsible for implementing risk-based governance frameworks. This approach ensures that AI deployment is managed strategically with appropriate oversight while building public trust through transparent and accountable practices. Chief AI Officers serve as the central point of authority and accountability for AI initiatives within their agencies."
+        },
+        {
+          "label": "C",
+          "text": "Use only U.S.-built large language models",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Replace all Chief Data Officers with Chief AI Officers",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework that Chief AI Officers use for risk-based governance"
+        },
+        {
+          "title": "OMB AI Memoranda",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "OMB guidance on federal AI governance structures"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "The OMB Memorandum M-25-22 – \"Driving Efficient Acquisition of Artificial Intelligence in Government\" focuses on:",
+      "options": [
+        {
+          "label": "A",
+          "text": "State and local AI funding",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Defining export controls",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Efficient AI acquisition (competition, data/model rights, portability, lifecycle oversight)",
+          "isCorrect": true,
+          "reasoning": "OMB Memorandum M-25-22 provides guidance on procuring AI systems efficiently and effectively. It emphasizes promoting competition among vendors to ensure the government gets the best value, ensuring appropriate data and model rights are retained by the government to avoid vendor lock-in, maintaining system portability so agencies can switch providers if needed, and establishing lifecycle oversight to manage AI systems from acquisition through retirement. These principles help agencies make smart procurement decisions."
+        },
+        {
+          "label": "D",
+          "text": "Closing AI programs",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB AI Procurement Guidance",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "Federal guidance on efficient AI acquisition practices"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework informing lifecycle AI risk management"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "What is the goal of federal AI procurement policy overall?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Encourage responsible innovation while maintaining transparency, fair competition, and oversight",
+          "isCorrect": true,
+          "reasoning": "Federal AI procurement policy seeks to balance innovation with accountability. The overarching goal is to enable agencies to adopt cutting-edge AI capabilities while ensuring transparency in how systems are acquired and used, maintaining fair and open competition in the marketplace to prevent monopolies and ensure taxpayer value, and providing appropriate oversight to protect public interests and maintain ethical standards. This balanced approach supports both technological advancement and responsible governance."
+        },
+        {
+          "label": "B",
+          "text": "Delay new AI projects until 2030",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Limit AI purchases to domestic hardware only",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Require every contract to include a chatbot",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB AI Memoranda",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "Federal AI procurement policy and governance guidance"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework supporting responsible AI acquisition and deployment"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "Which framework is the government's go-to reference for managing AI risk?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Another chatbot platform above",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "ISO 27001",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "FIPS 199",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "NIST AI Risk Management Framework (AI RMF)",
+          "isCorrect": true,
+          "reasoning": "The NIST AI Risk Management Framework (AI RMF) is the federal government's primary reference for identifying, assessing, and managing risks associated with AI systems. Released by the National Institute of Standards and Technology in January 2023, this voluntary framework provides a structured approach to managing AI risks throughout the system lifecycle and has been widely adopted across federal agencies. It provides guidance on trustworthy AI characteristics including being valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful biases managed."
+        },
+        {
+          "label": "E",
+          "text": "FedRAMP",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Official NIST AI RMF framework and resources"
+        },
+        {
+          "title": "CISA - AI Security",
+          "url": "https://www.cisa.gov/ai",
+          "description": "DHS guidance incorporating NIST AI RMF principles"
+        },
+        {
+          "title": "U.S. AI Safety Institute",
+          "url": "https://www.nist.gov/artificial-intelligence-safety-institute",
+          "description": "NIST's institute advancing AI safety science and evaluation"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Which institute leads AI safety testing and guidance for the U.S. government?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The U.S. AI Safety Institute at NIST",
+          "isCorrect": true,
+          "reasoning": "The U.S. AI Safety Institute (US AISI), established within NIST in 2024 following Executive Order 14110, serves as the federal government's lead organization for AI safety research, testing, and guidance. This institute develops standards, conducts safety evaluations of advanced AI models, provides authoritative guidance to help agencies deploy AI systems safely and securely, and coordinates with international AI safety institutes. It houses the AI Safety Institute Consortium (AISIC) with over 290 member organizations from industry, academia, and civil society."
+        },
+        {
+          "label": "B",
+          "text": "U.S. Digital Service",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "DHS Office of the Inspector General",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "FCC",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "U.S. AI Safety Institute at NIST",
+          "url": "https://www.nist.gov/artificial-intelligence-safety-institute",
+          "description": "Official US AISI mission, vision, and activities"
+        },
+        {
+          "title": "AI Safety Institute Consortium",
+          "url": "https://www.nist.gov/artificial-intelligence/artificial-intelligence-safety-institute-consortium-aisic",
+          "description": "Consortium supporting AI safety research and standards development"
+        },
+        {
+          "title": "NIST AI Safety Research",
+          "url": "https://www.nist.gov/news-events/news/2024/08/us-ai-safety-institute-signs-agreements-regarding-ai-safety-research",
+          "description": "US AISI agreements with AI companies for safety testing"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "Which group of entities helps coordinate national AI strategy and advice across agencies?",
+      "options": [
+        {
+          "label": "A",
+          "text": "NSF",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "OSTP + National AI Initiative Office (NAIIO) + National AI Advisory Committee (NAIAC)",
+          "isCorrect": true,
+          "reasoning": "National AI coordination is managed through a collaborative structure involving the Office of Science and Technology Policy (OSTP), the National AI Initiative Office (NAIIO), and the National AI Advisory Committee (NAIAC). OSTP provides White House-level science and technology policy leadership and coordination. NAIIO coordinates federal AI research and development activities across agencies. NAIAC provides independent advice and recommendations on AI policy, research priorities, and workforce issues. Together, these entities work to coordinate AI strategy, research priorities, and policy recommendations across the federal government."
+        },
+        {
+          "label": "C",
+          "text": "Only the DoD CIO",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Department of Commerce",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "National AI Initiative",
+          "url": "https://www.ai.gov/",
+          "description": "Coordination hub for federal AI research and policy initiatives"
+        },
+        {
+          "title": "OSTP AI Policy",
+          "url": "https://www.whitehouse.gov/ostp/",
+          "description": "White House Office of Science and Technology Policy leadership on AI"
+        },
+        {
+          "title": "NIST AI Programs",
+          "url": "https://www.nist.gov/artificial-intelligence",
+          "description": "NIST AI research, standards, and safety initiatives"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "Which statement best describes key AI leadership roles in the federal government?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Each agency designates a Chief AI Officer; OSTP provides White House science/tech leadership; NIST via the AI Safety Institute leads AI safety work",
+          "isCorrect": true,
+          "reasoning": "Federal AI leadership operates through a distributed model where each agency designates its own Chief AI Officer to manage agency-specific AI initiatives and ensure responsible implementation. At the executive level, the Office of Science and Technology Policy (OSTP) provides strategic direction and policy coordination from the White House, setting government-wide AI priorities. NIST, through its U.S. AI Safety Institute, provides technical leadership on AI safety standards, testing methodologies, and evaluation frameworks. This structure balances agency autonomy with centralized coordination and safety oversight."
+        },
+        {
+          "label": "B",
+          "text": "There is a single national Chief AI Officer over all agencies",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "State governors set federal AI policy",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Only contractors lead AI policy",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB AI Governance Memoranda",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/",
+          "description": "Guidance on Chief AI Officer roles and responsibilities"
+        },
+        {
+          "title": "OSTP AI Leadership",
+          "url": "https://www.whitehouse.gov/ostp/",
+          "description": "White House AI policy coordination and strategic direction"
+        },
+        {
+          "title": "U.S. AI Safety Institute",
+          "url": "https://www.nist.gov/artificial-intelligence-safety-institute",
+          "description": "NIST's technical leadership on AI safety and standards"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+{
+  "title": "Bias and Responsible AI Use",
+  "week": 2,
+  "overview": {
+    "description": "This quiz assesses understanding of algorithmic bias, responsible AI use, and ethical considerations in AI system development and deployment. It directly supports Week 2's Operation Trust Fall theme by testing knowledge of bias identification, mitigation strategies, and real-world examples of AI systems that failed to meet ethical standards. Participants will demonstrate comprehension of key bias types, fairness principles, and accountability frameworks essential for responsible AI implementation in government contexts.",
+    "learningObjectives": [
+      "Understand that complete elimination of bias in AI systems is practically impossible",
+      "Identify real-world examples of AI bias controversies and their impacts",
+      "Recognize which types of AI systems are most prone to algorithmic bias",
+      "Distinguish between different types of bias (algorithmic, cognitive, sampling, etc.)",
+      "Understand concepts like disparate impact in AI systems",
+      "Apply best practices for responsible training data use",
+      "Recognize shared responsibility for ethical AI across stakeholders",
+      "Identify core principles of responsible AI (fairness, accountability, explainability)"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "true-false",
+      "text": "AI systems can be completely free from all forms of bias if designed carefully enough.",
+      "options": [
+        {
+          "label": "True",
+          "text": "True",
+          "isCorrect": false
+        },
+        {
+          "label": "False",
+          "text": "False",
+          "isCorrect": true,
+          "reasoning": "No AI system can be completely free from bias. AI systems inherit biases from training data, which reflects historical human decisions and societal inequities. Additionally, bias can be introduced through algorithm design choices, feature selection, and deployment contexts. Even with careful design, complete elimination of bias is practically impossible; the goal is continuous monitoring, mitigation, and transparency about limitations."
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for identifying and managing AI risks including bias throughout the lifecycle"
+        },
+        {
+          "title": "Partnership on AI - AI and Machine Learning Glossary",
+          "url": "https://partnershiponai.org/",
+          "description": "Comprehensive terminology and concepts for understanding AI bias and fairness"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Which of the following companies faced a major bias-related controversy over its AI hiring or screening software?",
+      "options": [
+        {
+          "label": "A",
+          "text": "X (formerly Twitter) — for an investigation into algorithmic distortions in its content-recommendation system",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Workday, Inc. — for age and disability bias in its screening algorithms",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "HireVue — for alleged bias based on gender, race, and neurological differences in interview assessments",
+          "isCorrect": true,
+          "reasoning": "HireVue specifically became prominent for bias concerns in its AI-powered video interviewing platform. The company faced criticism and regulatory scrutiny for potential discrimination based on facial expressions, speech patterns, and other factors that could disadvantage candidates based on gender, race, disability, or neurodivergence. In 2019, EPIC filed a complaint with the FTC, and HireVue eventually discontinued using facial analysis in its assessments in 2021 in response to these concerns."
+        },
+        {
+          "label": "D",
+          "text": "All of the above",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "EPIC - In re HireVue",
+          "url": "https://epic.org/documents/in-re-hirevue/",
+          "description": "FTC complaint detailing bias concerns in HireVue's AI assessment platform"
+        },
+        {
+          "title": "MIT Technology Review - Emotion AI Researchers",
+          "url": "https://www.technologyreview.com/2020/02/14/844765/ai-emotion-recognition-affective-computing-hirevue-regulation-ethics/",
+          "description": "Analysis of HireVue's technology and the controversy around AI hiring tools"
+        },
+        {
+          "title": "Fortune - HireVue Stops Using Facial Expressions",
+          "url": "https://fortune.com/2021/01/19/hirevue-drops-facial-monitoring-amid-a-i-algorithm-audit/",
+          "description": "Coverage of HireVue's decision to discontinue facial analysis amid bias concerns"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "Typically, which type of AI system is most likely to exhibit algorithmic bias?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Weather prediction models",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Astronomical object detection systems",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Language translation apps",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Facial recognition systems",
+          "isCorrect": true,
+          "reasoning": "Facial recognition systems are particularly prone to algorithmic bias because they are trained on datasets that often underrepresent certain demographic groups. Research, including the landmark Gender Shades study by Joy Buolamwini and Timnit Gebru, has consistently shown that facial recognition systems exhibit significantly higher error rates for women, people of color, and other underrepresented groups—with error rates up to 34.7% for darker-skinned women compared to less than 1% for lighter-skinned men. These systems make decisions about human identity with significant social consequences, making their biases particularly impactful compared to systems analyzing natural phenomena like weather or astronomical objects."
+        }
+      ],
+      "references": [
+        {
+          "title": "MIT News - Gender and Skin-Type Bias Study",
+          "url": "https://news.mit.edu/2018/study-finds-gender-skin-type-bias-artificial-intelligence-systems-0212",
+          "description": "Joy Buolamwini's Gender Shades research revealing facial recognition bias"
+        },
+        {
+          "title": "Harvard Science Policy - Racial Discrimination in Face Recognition",
+          "url": "https://sciencepolicy.hsites.harvard.edu/blog/racial-discrimination-face-recognition-technology",
+          "description": "Comprehensive analysis of racial bias in facial recognition technology"
+        },
+        {
+          "title": "ACLU - How Face Recognition is Racist",
+          "url": "https://www.aclu.org/news/privacy-technology/how-is-face-recognition-surveillance-technology-racist",
+          "description": "Analysis of racial bias and disparate impacts in facial recognition systems"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "What is the term for bias that occurs when a model reflects the prejudices present in the data it was trained on?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Confirmation bias",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Algorithmic bias",
+          "isCorrect": true,
+          "reasoning": "Algorithmic bias (also called machine learning bias or AI bias) refers to systematic errors in AI systems that reflect prejudices present in training data or design choices. When historical data contains discriminatory patterns or underrepresents certain groups, the trained model perpetuates and sometimes amplifies these biases. This is distinct from cognitive bias (human mental shortcuts), confirmation bias (preferring information that confirms beliefs), and selection bias (non-representative sampling)."
+        },
+        {
+          "label": "C",
+          "text": "Cognitive bias",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Selection bias",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Federal framework defining and addressing algorithmic bias in AI systems"
+        },
+        {
+          "title": "Partnership on AI - Glossary",
+          "url": "https://partnershiponai.org/",
+          "description": "Comprehensive definitions of bias types in AI and machine learning"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "What is the name of the phenomenon where AI systems perform worse for certain demographic groups?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Overfitting",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Fairness disparity",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Bias amplification",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Disparate impact",
+          "isCorrect": true,
+          "reasoning": "Disparate impact (also called adverse impact) occurs when an AI system's decisions disproportionately affect certain protected demographic groups, even if the system doesn't explicitly use protected characteristics. This legal concept, originating from employment discrimination law, applies when a facially neutral practice results in significantly different outcomes for different groups. Unlike overfitting (model memorizing training data) or bias amplification (magnifying existing biases), disparate impact specifically addresses differential performance across demographic groups."
+        }
+      ],
+      "references": [
+        {
+          "title": "EEOC - Artificial Intelligence and Algorithmic Fairness",
+          "url": "https://www.eeoc.gov/ai",
+          "description": "EEOC guidance on disparate impact in AI employment systems"
+        },
+        {
+          "title": "Harvard Science Policy - Racial Discrimination in Face Recognition",
+          "url": "https://sciencepolicy.hsites.harvard.edu/blog/racial-discrimination-face-recognition-technology",
+          "description": "Analysis of disparate impact in facial recognition technology"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "Which of the following best supports responsible and unbiased use of training data in AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Assuming public data sources are automatically unbiased",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Removing all demographic data to avoid bias completely",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Prioritizing data diversity, representativeness, and documentation of potential biases",
+          "isCorrect": true,
+          "reasoning": "Responsible training data practices require prioritizing diversity, representativeness, and transparent documentation of potential biases. Simply removing demographic information ('fairness through unawareness') often fails because proxies for protected attributes remain in the data. Public data sources frequently contain historical biases. Using historical data without modification perpetuates existing inequities. Best practices include diverse data collection, bias documentation, regular audits, and maintaining fairness metrics throughout the AI lifecycle."
+        },
+        {
+          "label": "D",
+          "text": "Using as much historical data as possible without modification",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Best practices for data management and bias mitigation in AI systems"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Analysis of responsible AI practices and data governance"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "Who shares responsibility for ensuring that an AI system behaves ethically?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The data scientists and developers who build the system",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "The organizations and leaders who deploy and govern the system",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "The users who apply AI outputs in real-world decisions",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "All of the above",
+          "isCorrect": true,
+          "reasoning": "Ethical AI is a shared responsibility across the entire ecosystem. Developers must implement fairness-aware algorithms and conduct bias testing. Organizations must establish governance frameworks, policies, and accountability mechanisms. Leaders must allocate resources for ethical AI initiatives. End users must critically evaluate AI outputs and understand system limitations. This multi-stakeholder approach ensures that ethical considerations are integrated throughout the AI lifecycle, from design through deployment and monitoring."
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework emphasizing shared responsibility for AI risk management"
+        },
+        {
+          "title": "OECD AI Principles",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "International principles on responsible AI stewardship and accountability"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Which of the following best represents a core principle of responsible AI?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Maximizing automation to reduce human oversight",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Prioritizing speed of deployment over transparency",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Allowing algorithms to self-correct without governance",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Ensuring fairness, accountability, and explainability in AI systems",
+          "isCorrect": true,
+          "reasoning": "Fairness, accountability, and explainability (along with transparency) form the cornerstone principles of responsible AI. These principles ensure AI systems treat all individuals equitably, that clear lines of responsibility exist for AI decisions, and that stakeholders can understand how decisions are made. Responsible AI requires human oversight, careful governance, and sometimes accepting slower deployment to ensure thorough testing and transparency—the opposite of maximizing automation or speed at the expense of ethical considerations."
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Comprehensive guidance on responsible AI principles and practices"
+        },
+        {
+          "title": "OECD AI Principles",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "International framework for trustworthy AI emphasizing fairness and accountability"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "Which of the following are recognized types of algorithmic bias commonly found in AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sampling Bias",
+          "isCorrect": true,
+          "reasoning": "Sampling bias and measurement bias are both recognized types of algorithmic bias. Sampling bias occurs when training data doesn't represent the target population, leading to poor model performance for underrepresented groups. Measurement bias arises when data collection methods systematically favor certain outcomes or groups. Anchoring bias and confirmation bias are cognitive biases affecting human decision-making but are not standard categories of algorithmic bias, though they can influence how humans design and evaluate AI systems."
+        },
+        {
+          "label": "B",
+          "text": "Measurement Bias",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Anchoring Bias",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Confirmation Bias",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Classification and definitions of algorithmic bias types"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Technical analysis of bias types in AI systems"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "Which of these is a type of bias that occurs when the training data is not representative of the real-world scenario?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Framing bias",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Hindsight bias",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Sampling bias",
+          "isCorrect": true,
+          "reasoning": "Sampling bias occurs when training data fails to represent the diversity and distribution of the real-world population or scenarios where the AI will be deployed. This creates models that perform well on training data but poorly in production, particularly for underrepresented groups. For example, if facial recognition training data predominantly features one demographic, the system will underperform for others. Framing, hindsight, and anchoring biases are cognitive biases affecting human judgment, not data representativeness issues."
+        },
+        {
+          "label": "D",
+          "text": "Anchoring bias",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "MIT News - Gender and Skin-Type Bias Study",
+          "url": "https://news.mit.edu/2018/study-finds-gender-skin-type-bias-artificial-intelligence-systems-0212",
+          "description": "Research demonstrating sampling bias effects in facial recognition systems"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for identifying and mitigating sampling bias in AI training data"
+        }
+      ]
+    }
+  ]
+}

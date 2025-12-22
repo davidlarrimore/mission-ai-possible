@@ -1,0 +1,441 @@
+{
+  "title": "AI Transparency and Ethics",
+  "week": 3,
+  "overview": {
+    "description": "This assessment evaluates understanding of Amivero's AI capabilities, deployments, and solutions across federal agencies. Week 3 focuses on how Amivero implements transparent, ethical AI systems that support mission-critical operations while maintaining accountability and trust. Participants will demonstrate knowledge of specific AI platforms, frameworks, and real-world applications deployed by Amivero for agencies including DHS, USCIS, CBP, and ICE.",
+    "learningObjectives": [
+      "Understand Amivero's mission and approach to AI solutions",
+      "Identify specific AI platforms and frameworks used by Amivero",
+      "Recognize key AI/ML technologies and their applications",
+      "Understand architectural approaches like RAG for federal AI systems",
+      "Learn about Amivero's solutions across different federal agencies",
+      "Recognize the importance of transparency and ethics in AI deployment"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "What does \"Aiuto\" mean in Italian, reflecting Amivero's approach to AI solutions?",
+      "options": [
+        {
+          "label": "A",
+          "text": "An Italian dessert Olivia used to have every Sunday",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Help",
+          "isCorrect": true,
+          "reasoning": "\"Aiuto\" translates to \"help\" in Italian, reflecting Amivero's mission to provide AI solutions that assist and support federal agencies in achieving their objectives. This naming convention emphasizes the company's human-centered, assistive approach to AI deployment, focusing on augmenting human capabilities rather than replacing them."
+        },
+        {
+          "label": "C",
+          "text": "Intelligence",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Innovation",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework emphasizing human-centered AI that assists rather than replaces human decision-making"
+        },
+        {
+          "title": "OECD AI Principles",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "International principles on human-centered AI values and inclusive growth"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Verdati™ is Amivero's solution designed primarily for which mission area?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Financial transaction processing",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Identity document validation and fraud detection",
+          "isCorrect": true,
+          "reasoning": "Verdati™ is Amivero's specialized solution for identity document validation and fraud detection, supporting agencies like USCIS and DHS in their vetting and verification missions. The platform uses AI/ML to analyze identity documents and detect fraudulent submissions, ensuring secure and accurate identity verification for immigration and security processes."
+        },
+        {
+          "label": "C",
+          "text": "Legal document automation",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Voice recognition systems",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "CISA - Artificial Intelligence Security",
+          "url": "https://www.cisa.gov/ai",
+          "description": "DHS cybersecurity guidance on securing AI systems for federal deployments"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Federal guidance for trustworthy AI in high-stakes applications like identity verification"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "What AI/ML platform does Amivero use for the ICE Voice Bot?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Microsoft Bot Framework",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "AmiChat",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "AWS Alexa for Business",
+          "isCorrect": true,
+          "reasoning": "Amivero leverages AWS Alexa for Business for the ICE Voice Bot implementation, utilizing Amazon's enterprise voice AI platform to create conversational interfaces for mission-specific applications. This aligns with Amivero's AWS Select-Tier Public Sector Partnership and takes advantage of AWS's secure, scalable infrastructure designed for government workloads."
+        },
+        {
+          "label": "D",
+          "text": "IBM Watson Assistant",
+          "isCorrect": false
+        },
+        {
+          "label": "E",
+          "text": "Google Dialogflow",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "AWS Government AI/ML Solutions",
+          "url": "https://aws.amazon.com/government-education/government/ai-ml/",
+          "description": "AWS AI/ML services for federal environments including voice AI capabilities"
+        },
+        {
+          "title": "OMB Memorandum M-24-10",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-advancing-governance-innovation-and-risk-management-for-agency-use-of-artificial-intelligence/",
+          "description": "Federal policy on AI governance and implementation practices"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "The CBP OCC Litigation LLM uses which core AI architectural approach?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Retrieval-Augmented Generation (RAG)",
+          "isCorrect": true,
+          "reasoning": "Retrieval-Augmented Generation (RAG) combines large language models with document retrieval systems to provide contextually accurate responses grounded in specific source materials. This approach is critical for legal and compliance applications where accuracy and source attribution are essential. RAG enables the LLM to access relevant legal documents and case files, ensuring responses are factually grounded and traceable to authoritative sources."
+        },
+        {
+          "label": "B",
+          "text": "Basic document storage",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Simple chatbot interface",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Traditional database queries",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "IBM Research - What is RAG?",
+          "url": "https://research.ibm.com/blog/retrieval-augmented-generation-RAG",
+          "description": "Technical explanation of RAG architecture and its benefits for accuracy"
+        },
+        {
+          "title": "AWS - What is Retrieval-Augmented Generation?",
+          "url": "https://aws.amazon.com/what-is/retrieval-augmented-generation/",
+          "description": "Overview of RAG for building reliable, source-grounded AI applications"
+        },
+        {
+          "title": "Databricks - RAG Guide",
+          "url": "https://www.databricks.com/glossary/retrieval-augmented-generation-rag",
+          "description": "Comprehensive guide to RAG architecture for enterprise AI applications"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "Aiuto™ is described as Amivero's framework for what type of AI deployment?",
+      "options": [
+        {
+          "label": "A",
+          "text": "AI/ML at the edge",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Simple data analysis tools",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Secure, scalable LLM deployment for federal operations",
+          "isCorrect": true,
+          "reasoning": "Aiuto™ is Amivero's flagship AI framework designed specifically for secure, scalable deployment of large language models in federal government environments. It addresses security, compliance, and operational requirements unique to government AI implementations, ensuring that LLM deployments meet federal standards for data protection, auditability, and mission-critical reliability."
+        },
+        {
+          "label": "D",
+          "text": "Basic Chatbots",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB Memorandum M-24-10",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-advancing-governance-innovation-and-risk-management-for-agency-use-of-artificial-intelligence/",
+          "description": "Federal requirements for AI governance, security, and deployment"
+        },
+        {
+          "title": "CISA - AI Security",
+          "url": "https://www.cisa.gov/ai",
+          "description": "Cybersecurity guidance for secure AI system deployment in federal agencies"
+        },
+        {
+          "title": "AWS Government AI/ML Solutions",
+          "url": "https://aws.amazon.com/government-education/government/ai-ml/",
+          "description": "Secure, compliant AI/ML deployment patterns for government"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "What is the name of the UiPath AI/ML technology Amivero uses to rapidly develop document ingestion workflows?",
+      "options": [
+        {
+          "label": "A",
+          "text": "UiPath Document Chat",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "UiPath Task Capture",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "UiPath Document Understanding",
+          "isCorrect": true,
+          "reasoning": "UiPath Document Understanding is an AI-powered capability that enables rapid development of intelligent document processing workflows. It combines machine learning models with robotic process automation to extract, classify, and validate information from unstructured documents. This technology is essential for automating document-heavy processes in federal agencies, improving accuracy and efficiency while reducing manual processing time."
+        },
+        {
+          "label": "D",
+          "text": "UiPath Intelligence Platform",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "UiPath Document Understanding",
+          "url": "https://www.uipath.com/product/document-understanding",
+          "description": "Official documentation on UiPath's intelligent document processing capabilities"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for managing AI/ML systems in automated document processing"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "What is Aether, one of Amivero's AI capabilities?",
+      "options": [
+        {
+          "label": "A",
+          "text": "One of the Infinity Stones",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "A graph database analytics framework for network analysis",
+          "isCorrect": true,
+          "reasoning": "Aether is Amivero's graph database analytics framework designed for network analysis and relationship mapping. Graph databases excel at revealing complex relationships and patterns in interconnected data, making them valuable for intelligence analysis, threat detection missions, fraud detection, and understanding complex organizational or network structures. Unlike traditional relational databases, graph databases store relationships as first-class data structures, enabling efficient multi-hop traversals and pattern detection."
+        },
+        {
+          "label": "C",
+          "text": "A voice recognition system",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Another chatbot platform above",
+          "isCorrect": false
+        },
+        {
+          "label": "E",
+          "text": "A document processing tool",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Neo4j - Graph Databases for Network Analysis",
+          "url": "https://neo4j.com/use-cases/network-and-it-operations/",
+          "description": "Use cases for graph databases in network analysis and relationship mapping"
+        },
+        {
+          "title": "Graph Database - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Graph_database",
+          "description": "Overview of graph database technology and applications"
+        },
+        {
+          "title": "SAP - What is a Graph Database?",
+          "url": "https://www.sap.com/resources/graph-database",
+          "description": "Enterprise applications of graph databases for complex relationship analysis"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "ASAP addresses which key challenge facing government agencies in personnel security adjudications?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Inadequate physical security measures",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Lack of qualified cybersecurity professionals",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Insufficient budget allocation for technology upgrades",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Fragmented legacy systems and manual document review processes",
+          "isCorrect": true,
+          "reasoning": "The Automated Security Adjudication Platform (ASAP) addresses the critical challenge of fragmented legacy systems and time-consuming manual document review in personnel security clearance processes. By automating data aggregation and analysis across multiple disparate systems, ASAP accelerates adjudication timelines while maintaining security standards. This reduces the backlog of security clearance applications and improves the efficiency of the entire personnel security process."
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB Memorandum M-24-10",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-advancing-governance-innovation-and-risk-management-for-agency-use-of-artificial-intelligence/",
+          "description": "Federal guidance on AI for improving government operations and efficiency"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for trustworthy AI in sensitive applications like security adjudications"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "What type of training simulation did Amivero develop for USCIS to help refugee and asylum officers practice their interview skills?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Computer-based testing systems",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Video-based training modules",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Virtual reality environments",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "AI-powered chatbot that simulates realistic applicant interviews",
+          "isCorrect": true,
+          "reasoning": "Amivero developed an AI-powered chatbot training simulation that allows USCIS refugee and asylum officers to practice interview scenarios with realistic virtual applicants. This approach provides safe, repeatable training environments where officers can develop and refine their interview skills without risk to actual applicants. The AI can simulate various applicant responses, cultural contexts, and complex scenarios, helping officers prepare for real-world situations."
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Guidelines for responsible AI use in training and human capacity building"
+        },
+        {
+          "title": "OMB Memorandum M-24-10",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-advancing-governance-innovation-and-risk-management-for-agency-use-of-artificial-intelligence/",
+          "description": "Federal AI policy supporting human-centered AI applications"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "true-false",
+      "text": "Has Amivero successfully deployed AI solutions for multiple Federal Agencies?",
+      "options": [
+        {
+          "label": "Yes",
+          "text": "Yes",
+          "isCorrect": true,
+          "reasoning": "Amivero has successfully deployed AI solutions across multiple federal agencies including DHS, USCIS, CBP, ICE, and others. The company's portfolio includes immigration portal support, AI data modernization, threat monitoring, identity verification, document processing automation, and various mission-critical AI applications. These deployments demonstrate Amivero's expertise in implementing secure, scalable, and ethical AI systems tailored to federal government requirements."
+        },
+        {
+          "label": "No",
+          "text": "No",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "AWS Government AI/ML Solutions",
+          "url": "https://aws.amazon.com/government-education/government/ai-ml/",
+          "description": "AWS partner solutions for federal AI/ML deployments"
+        },
+        {
+          "title": "OMB Memorandum M-24-10",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-advancing-governance-innovation-and-risk-management-for-agency-use-of-artificial-intelligence/",
+          "description": "Federal policy framework guiding AI implementation across agencies"
+        },
+        {
+          "title": "CISA - AI Security",
+          "url": "https://www.cisa.gov/ai",
+          "description": "DHS guidance on secure AI deployment for federal agencies"
+        }
+      ]
+    }
+  ]
+}

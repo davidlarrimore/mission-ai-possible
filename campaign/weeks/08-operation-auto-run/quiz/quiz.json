@@ -1,0 +1,451 @@
+{
+  "title": "Automation and Intelligent Workflows",
+  "week": 8,
+  "overview": {
+    "description": "This assessment evaluates understanding of automation principles, intelligent workflows, and responsible AI implementation in enterprise environments. It covers the spectrum from basic scripting to advanced agentic systems, emphasizing the importance of data quality, guardrails, and human oversight. This quiz directly supports Week 8's focus on automation technologies that empower rather than replace human decision-making.",
+    "learningObjectives": [
+      "Understand the difference between manual and automated workflows",
+      "Recognize appropriate use cases for basic scripting",
+      "Learn when to use RPA and low-code tools versus scripts",
+      "Understand GenAI applications in intelligent workflows",
+      "Recognize ML capabilities in data pipelines (normalization, OCR)",
+      "Understand agentic workflows and autonomous decision-making",
+      "Learn the human role in mature automated systems",
+      "Recognize the critical importance of data quality",
+      "Understand effective guardrails for AI-augmented workflows",
+      "Apply responsible automation implementation strategies"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material",
+      "Week 3: AI Transparency and Ethics course material",
+      "Week 4: AI in Government and Policy course material",
+      "Week 5: AI Cybersecurity and Adversarial Use course material",
+      "Week 6: Natural Language Processing course material",
+      "Week 7: Computer Vision and Biometrics course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "Which of the following best describes the difference between a manual workflow and an automated workflow?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Manual workflows are always more accurate than automated ones",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Automated workflows follow predefined rules or logic with minimal human intervention",
+          "isCorrect": true,
+          "reasoning": "Automated workflows execute predefined logic with minimal human intervention, while manual workflows rely on people performing each step. Automation follows consistent rules, reducing manual effort and human error for repetitive tasks. However, automation does not eliminate the need for human oversight—humans remain essential for exception handling, quality assurance, governance, and continuous improvement. The key distinction is that automated workflows execute tasks systematically according to programmed instructions, while manual workflows depend on human judgment and action at each step."
+        },
+        {
+          "label": "C",
+          "text": "Manual workflows require AI, while automated workflows do not",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Automated workflows never require any human review",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Business Process Automation Overview",
+          "url": "https://www.gartner.com/en/information-technology/glossary/business-process-automation-bpa",
+          "description": "Gartner's definition and framework for business process automation"
+        },
+        {
+          "title": "NIST Cybersecurity Workforce Framework",
+          "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/resources/nice-cybersecurity-workforce-framework",
+          "description": "Competency frameworks for automation and workflow optimization in secure environments"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Basic scripting (e.g., PowerShell, Python) is usually the best first step when you want to automate:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Complex decision-making that requires judgment and context",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Repetitive, well-defined tasks like file movement, email parsing, or simple transformations",
+          "isCorrect": true,
+          "reasoning": "Scripts excel at repetitive, well-defined, rule-based tasks such as file handling, data parsing, log analysis, and simple transformations. These automation candidates have clear inputs, outputs, and logic paths, making them ideal for scripting solutions before investing in more complex automation platforms. Scripting is cost-effective, flexible, and requires minimal infrastructure. Common scripting use cases include: batch file operations, scheduled data extraction, report generation, system monitoring, backup automation, and data transformation. Scripts are best suited for tasks with deterministic logic, stable inputs, and predictable outcomes."
+        },
+        {
+          "label": "C",
+          "text": "Legal approvals and contract negotiations",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "High-level business strategy planning",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "PowerShell Documentation",
+          "url": "https://docs.microsoft.com/en-us/powershell/",
+          "description": "Microsoft's task automation and configuration management framework"
+        },
+        {
+          "title": "Python Automation Guide",
+          "url": "https://docs.python.org/3/",
+          "description": "Python documentation for automation scripting"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "When would you typically choose RPA (Robotic Process Automation) or low-code tools instead of just scripts?",
+      "options": [
+        {
+          "label": "A",
+          "text": "When all systems already have perfect APIs",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "When tasks involve interacting with user interfaces (clicking buttons, filling forms) or legacy/locked-down systems",
+          "isCorrect": true,
+          "reasoning": "RPA and low-code platforms are ideal when automation must interact with user interfaces or legacy systems that lack robust APIs. RPA bots can simulate human interaction with applications by clicking buttons, filling forms, copying/pasting data, and navigating through UI elements—mimicking what humans do with keyboards and mice. This is particularly valuable for legacy systems that lack modern integration capabilities, locked-down applications where API access is restricted, or third-party systems beyond your control. RPA acts as a workaround for integration challenges, enabling automation without requiring changes to underlying systems. Low-code platforms additionally provide visual development tools that enable citizen developers to build automations without extensive programming knowledge."
+        },
+        {
+          "label": "C",
+          "text": "When you want to reduce compliance and auditability",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "When you want to avoid documenting your process",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "UiPath RPA Overview",
+          "url": "https://www.uipath.com/rpa/robotic-process-automation",
+          "description": "Comprehensive guide to RPA technology and applications"
+        },
+        {
+          "title": "Gartner RPA Market Guide",
+          "url": "https://www.gartner.com/reviews/market/robotic-process-automation",
+          "description": "Industry analysis of RPA platforms and use cases"
+        },
+        {
+          "title": "Low-Code vs RPA Comparison",
+          "url": "https://www.outsystems.com/blog/posts/robotic-process-automation-low-code/",
+          "description": "When to use RPA versus low-code development platforms"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "What is a common and appropriate use of GenAI in an intelligent workflow?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Automatically changing financial records without approval",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Generating natural-language summaries, explanations, or recommendations based on structured data",
+          "isCorrect": true,
+          "reasoning": "GenAI excels at converting structured data into natural-language narratives, insights, and recommendations. This capability enhances human decision-making by making complex data more accessible and understandable. Common applications include: generating executive summaries from reports, creating customer-facing explanations of technical processes, drafting personalized communications based on data templates, synthesizing insights from multiple data sources, and providing context-aware recommendations. GenAI adds value by transforming data into digestible narratives while maintaining appropriate controls and human oversight for critical actions. This use case leverages GenAI's language generation strengths without delegating final decision authority to automated systems."
+        },
+        {
+          "label": "C",
+          "text": "Replacing all access controls with open sharing",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Running operating system updates on all machines",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for managing AI risks including GenAI in workflows"
+        },
+        {
+          "title": "Generative AI in Enterprise Workflows",
+          "url": "https://www.gartner.com/en/topics/generative-ai",
+          "description": "Best practices for integrating GenAI into business processes"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "In a data pipeline, traditional Machine Learning (ML) typically adds value by enabling things like: (Select two)",
+      "options": [
+        {
+          "label": "A",
+          "text": "Automatically normalizing inconsistent headers and fields from different data sources",
+          "isCorrect": true,
+          "reasoning": "ML models can learn to normalize inconsistent data formats, headers, and field names across diverse sources. This capability is essential in data pipelines that integrate information from multiple systems with varying schemas, naming conventions, and data structures. ML-based normalization can identify semantic equivalence (e.g., recognizing that 'DOB', 'Birth_Date', and 'DateOfBirth' refer to the same concept) and standardize data without requiring manual mapping rules for every variation. This makes pipelines more resilient to schema changes and new data sources."
+        },
+        {
+          "label": "B",
+          "text": "Performing OCR (Optical Character Recognition) on PDFs or images to extract tables or text",
+          "isCorrect": true,
+          "reasoning": "OCR powered by ML (particularly deep learning models like CNNs) can extract text, tables, and structured information from unstructured sources like PDFs, scanned documents, images, and handwritten forms. Modern ML-based OCR goes beyond simple character recognition to understand document layouts, table structures, form fields, and even handwriting. This capability expands data pipelines beyond structured databases to include documents, invoices, receipts, contracts, and other visual information sources. Advanced OCR systems can handle poor image quality, varied fonts, and complex layouts that traditional rule-based OCR struggles with."
+        },
+        {
+          "label": "C",
+          "text": "Writing the entire company's strategy with no human input",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Ensuring all employees follow vacation policy",
+          "isCorrect": false
+        },
+        {
+          "label": "E",
+          "text": "Removing the need to resolve errors or exceptions",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ML in Data Pipelines",
+          "url": "https://www.tensorflow.org/",
+          "description": "Machine learning frameworks for data processing and transformation"
+        },
+        {
+          "title": "Document AI and OCR",
+          "url": "https://cloud.google.com/document-ai",
+          "description": "ML-powered document processing and OCR technologies"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "Which statement best describes an agentic workflow (AI agents / \"copilot\" style automation)?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A single script that runs at midnight every day",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "A rules engine that can only follow a fixed sequence of steps",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "A system that can break down a high-level goal into subtasks, decide which tools/steps to use, and coordinate them",
+          "isCorrect": true,
+          "reasoning": "Agentic workflows represent advanced automation that can decompose high-level goals into subtasks, select appropriate tools and methods, and orchestrate their execution autonomously. Unlike traditional rule-based automation that follows predetermined paths, agentic systems exhibit autonomous decision-making, dynamic planning, and adaptive behavior. Key characteristics include: goal decomposition (breaking complex objectives into achievable subtasks), tool selection (choosing appropriate APIs, functions, or services), execution orchestration (coordinating multi-step processes), error recovery (handling exceptions and retrying), and iterative refinement (learning from outcomes). These 'copilot' systems augment human capabilities by handling complex workflows with minimal supervision while maintaining transparency and human oversight for critical decisions."
+        },
+        {
+          "label": "D",
+          "text": "A workflow that can only be triggered by a human pressing \"Run\"",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "AI Agents and Agentic Workflows",
+          "url": "https://www.anthropic.com/",
+          "description": "Research on autonomous AI agents and workflow automation"
+        },
+        {
+          "title": "Microsoft Copilot Architecture",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/copilot",
+          "description": "Enterprise agentic AI systems and copilot technologies"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "In a mature, fully automated workflow with guardrails, what is the primary role of humans?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Manually clicking every step of the process",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Overriding system logs to hide errors",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Governing and monitoring the system, handling exceptions, and approving high-risk or ambiguous cases",
+          "isCorrect": true,
+          "reasoning": "In mature automated systems, humans transition from execution to a governance role focused on: (1) Monitoring performance - tracking metrics, identifying anomalies, and ensuring quality standards; (2) Exception handling - addressing edge cases, errors, and scenarios outside automated rules; (3) High-risk approvals - reviewing and authorizing decisions with significant business impact or ambiguity; (4) Continuous improvement - analyzing workflows, identifying optimization opportunities, and refining automation logic; (5) Audit and compliance - ensuring systems operate within regulatory and organizational requirements. This shift from 'doing the work' to 'overseeing the work' ensures that automation serves organizational goals while maintaining accountability, ethical standards, and quality control. Humans provide judgment, context, and strategic direction that automated systems cannot replicate."
+        },
+        {
+          "label": "D",
+          "text": "Rebuilding the automation pipeline from scratch each week",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Human-in-the-Loop AI Systems",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "NIST guidance on human oversight in automated systems"
+        },
+        {
+          "title": "Automation Governance Best Practices",
+          "url": "https://www.gartner.com/",
+          "description": "Enterprise governance frameworks for automated workflows"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Why are data quality and standardization critical dependencies for automation and intelligent workflows?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Automation tools only work with perfect visual design",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Poor data quality can cause scripts, RPA, ML, and GenAI components to fail or produce misleading outputs",
+          "isCorrect": true,
+          "reasoning": "Poor data quality undermines all forms of automation across the technology spectrum: Scripts fail when encountering unexpected formats or missing fields; RPA bots malfunction when UI elements change or data doesn't match expected patterns; ML models produce inaccurate predictions when trained on inconsistent or biased data; GenAI generates misleading or nonsensical outputs based on poor-quality inputs (garbage in, garbage out). Data quality issues include: incomplete records, inconsistent formats, duplicate entries, incorrect values, missing fields, and unstandardized naming conventions. Standardization ensures that automated systems can reliably process, interpret, and act on data. Without high-quality, standardized data, automation investments yield unreliable results, requiring extensive manual intervention and undermining the value proposition of automation."
+        },
+        {
+          "label": "C",
+          "text": "Data quality only matters for graphics, not reports or decisions",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Standardization is only a concern for the security team",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Data Quality Management",
+          "url": "https://www.iso.org/standard/27001",
+          "description": "ISO standards for data quality and information management"
+        },
+        {
+          "title": "NIST Data Quality Framework",
+          "url": "https://www.nist.gov/",
+          "description": "Federal standards for data quality in automated systems"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "Which of the following is an example of a good guardrail when using GenAI and ML in a workflow that supports business decisions?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Allowing the AI to send decisions to customers without any record",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Logging all AI-generated outputs, applying confidence thresholds, and requiring human review when confidence is low or anomalies are detected",
+          "isCorrect": true,
+          "reasoning": "Effective guardrails for AI-augmented workflows include: (1) Comprehensive logging - recording all inputs, outputs, decisions, and reasoning for auditability and debugging; (2) Confidence thresholds - flagging predictions or outputs below acceptable certainty levels for human review; (3) Anomaly detection - identifying unusual patterns, outliers, or behaviors that deviate from expected norms; (4) Mandatory human review - requiring human approval for high-risk decisions, low-confidence cases, or outcomes with significant business impact; (5) Version control - tracking model versions and rule changes; (6) Automated testing - validating outputs against known cases; (7) Rollback capabilities - reverting to previous states when issues arise. These controls ensure transparency, accountability, and alignment with organizational standards while preserving the efficiency benefits of automation."
+        },
+        {
+          "label": "C",
+          "text": "Preventing any monitoring to avoid \"slowing the system down\"",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Giving every user unrestricted access to production data",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Federal framework for AI governance and guardrails"
+        },
+        {
+          "title": "OWASP ML Security Top 10",
+          "url": "https://owasp.org/www-project-machine-learning-security-top-10/",
+          "description": "Security risks and controls for ML systems"
+        },
+        {
+          "title": "OMB M-21-31 Incident Response",
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2021/08/M-21-31-Improving-the-Federal-Governments-Investigative-and-Remediation-Capabilities-Related-to-Cybersecurity-Incidents.pdf",
+          "description": "Federal guidance on automation monitoring and logging requirements"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "You're planning to introduce automation into a critical business process. Which approach best reflects a responsible implementation strategy?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Automate everything at once",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Start with low-risk, repetitive tasks; test thoroughly in a safe environment; add monitoring and rollback options before scaling up",
+          "isCorrect": true,
+          "reasoning": "Responsible automation implementation follows an incremental, risk-managed approach: (1) Start small - begin with low-risk, high-volume, repetitive tasks that have clear success criteria and limited business impact if failures occur; (2) Test thoroughly - validate automation in non-production environments with realistic data and scenarios before production deployment; (3) Implement monitoring - establish logging, alerting, and performance tracking from the start; (4) Build rollback capabilities - ensure ability to quickly revert to manual processes or previous automation versions if issues arise; (5) Document processes - maintain clear documentation of automation logic, dependencies, and operating procedures; (6) Pilot before scaling - run limited pilots to validate performance and identify issues; (7) Train stakeholders - ensure users understand automation capabilities, limitations, and exception procedures; (8) Iterate and improve - gradually expand scope based on lessons learned. This strategy minimizes risk while building organizational confidence and capability, avoiding the 'big bang' approach that can lead to costly failures."
+        },
+        {
+          "label": "C",
+          "text": "Skip documentation since the automation \"just works\"",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Start with the highest priority and most complex automation first",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "CISA Cybersecurity Performance Goals",
+          "url": "https://www.cisa.gov/cpg",
+          "description": "Secure automation practices for critical infrastructure"
+        },
+        {
+          "title": "MITRE ATT&CK for ICS",
+          "url": "https://attack.mitre.org/matrices/ics/",
+          "description": "Security considerations for automated industrial control systems"
+        },
+        {
+          "title": "ISO 27001 Information Security",
+          "url": "https://www.iso.org/standard/27001",
+          "description": "International standards for secure automated processing"
+        }
+      ]
+    }
+  ]
+}

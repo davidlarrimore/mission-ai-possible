@@ -1,0 +1,534 @@
+{
+  "title": "Computer Vision & Biometrics AI",
+  "week": 7,
+  "overview": {
+    "description": "This assessment evaluates foundational understanding of Computer Vision AI, Biometrics AI, and the Department of Homeland Security's use of facial recognition technologies. The quiz covers basic computer vision concepts, common biometric authentication methods, and practical applications of these technologies in federal security environments. This knowledge supports Operation: Mirror Code's focus on understanding how AI systems process visual and biometric information to enable secure identity verification.",
+    "learningObjectives": [
+      "Understand the breakthrough role of ImageNet and deep learning in Computer Vision",
+      "Recognize common Computer Vision applications in daily life",
+      "Understand how autonomous vehicles use Computer Vision",
+      "Learn about image segmentation and its applications",
+      "Recognize Computer Vision in medical imaging",
+      "Understand biometric authentication methods",
+      "Learn about fingerprint recognition and minutiae points",
+      "Understand behavioral biometrics and keystroke dynamics",
+      "Recognize multimodal biometric systems advantages",
+      "Learn DHS privacy protections and system performance"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material",
+      "Week 3: AI Transparency and Ethics course material",
+      "Week 4: AI in Government and Policy course material",
+      "Week 5: AI Cybersecurity and Adversarial Use course material",
+      "Week 6: Natural Language Processing course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "What major development in the 2010s significantly improved Computer Vision accuracy?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Faster internet speeds",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Large datasets like ImageNet combined with deep learning",
+          "isCorrect": true,
+          "reasoning": "The combination of large-scale datasets like ImageNet with deep learning techniques, particularly Convolutional Neural Networks (CNNs), dramatically improved Computer Vision accuracy in the 2010s. The watershed moment was September 30, 2012, when AlexNet won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) with a top-5 error rate of 15.3%, more than 10 percentage points better than the runner-up. This demonstrated that deep CNNs trained on large datasets could achieve human-level or better accuracy for image recognition tasks. The success combined three key factors: massive training data (ImageNet's 14+ million annotated images), deep neural network architecture (AlexNet's 8 layers and 60 million parameters), and GPU parallel processing enabling practical training times."
+        },
+        {
+          "label": "C",
+          "text": "Smaller, more precise camera sensors",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Cloud computing platforms",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ImageNet Classification with Deep CNNs (AlexNet Paper)",
+          "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+          "description": "Krizhevsky, Sutskever, and Hinton's 2012 breakthrough paper introducing AlexNet"
+        },
+        {
+          "title": "ImageNet - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/ImageNet",
+          "description": "History of ImageNet dataset and ILSVRC competition impact on computer vision"
+        },
+        {
+          "title": "Stanford CS231n Course",
+          "url": "https://cs231n.github.io/",
+          "description": "Comprehensive deep learning course for visual recognition by Fei-Fei Li et al."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Which of the following is a common application of Computer Vision in everyday life?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Email spam filtering",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Facial recognition for phone unlocking",
+          "isCorrect": true,
+          "reasoning": "Facial recognition for unlocking smartphones is a widely deployed Computer Vision application used by millions daily. Modern smartphones use facial biometric systems that analyze distinctive facial features (eyes, nose, mouth positioning, facial structure) to verify identity. These systems typically use depth sensors or multiple cameras to create 3D facial maps, making them resistant to simple photo-based spoofing attempts. Apple's Face ID and Android face unlock features represent practical implementations of CV technology that combine convenience with security, operating in real-time with high accuracy rates."
+        },
+        {
+          "label": "C",
+          "text": "Voice-activated assistants",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Text translation",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Apple Face ID Technology",
+          "url": "https://support.apple.com/en-us/HT208108",
+          "description": "Technical overview of facial recognition in consumer devices"
+        },
+        {
+          "title": "NIST Face Recognition Overview",
+          "url": "https://www.nist.gov/programs-projects/face-recognition-overview",
+          "description": "NIST research on face recognition technology applications"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "What do autonomous vehicles use Computer Vision to identify?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Radio signals from other vehicles",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Pedestrians, lane markings, and obstacles",
+          "isCorrect": true,
+          "reasoning": "Autonomous vehicles rely heavily on Computer Vision to detect and identify pedestrians, lane markings, obstacles, traffic signs, traffic lights, and other vehicles in real-time. Using multiple cameras and sensors, CV algorithms perform object detection, classification, semantic segmentation, and depth estimation to build a comprehensive understanding of the driving environment. This visual perception capability is essential for path planning, collision avoidance, and safe navigation. Systems process video streams at high frame rates, identifying potential hazards, tracking moving objects, predicting trajectories, and enabling appropriate vehicle responses within milliseconds."
+        },
+        {
+          "label": "C",
+          "text": "GPS satellite coordinates",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Traffic light timing patterns",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Computer Vision for Autonomous Vehicles",
+          "url": "https://www.sciencedirect.com/topics/computer-science/autonomous-vehicle",
+          "description": "Overview of CV techniques in autonomous driving systems"
+        },
+        {
+          "title": "Stanford Autonomous Vehicle Research",
+          "url": "https://cars.stanford.edu/",
+          "description": "Research on perception and decision-making in autonomous vehicles"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "In Computer Vision, what does image segmentation help accomplish?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Making images smaller for storage",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Dividing images into meaningful regions for analysis",
+          "isCorrect": true,
+          "reasoning": "Image segmentation divides an image into multiple segments or regions, assigning labels to different parts based on visual characteristics. This pixel-level classification enables precise identification and separation of objects or areas within images. Semantic segmentation labels each pixel with a class (e.g., road, building, person), while instance segmentation distinguishes individual objects of the same class. Applications include medical imaging (tumor identification, organ delineation), autonomous driving (drivable area detection), satellite imagery analysis, and video processing. Advanced techniques use deep learning models like U-Net, Mask R-CNN, and transformer-based architectures."
+        },
+        {
+          "label": "C",
+          "text": "Converting color images to black and white",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Removing unwanted objects from photos",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Image Segmentation Overview",
+          "url": "https://cs231n.github.io/",
+          "description": "Stanford CS231n materials on image segmentation techniques"
+        },
+        {
+          "title": "Medical Image Segmentation",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4890616/",
+          "description": "Applications of deep learning for medical image segmentation"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "What type of technology is used in medical imaging to detect tumors or fractures?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Voice recognition",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Gait analysis",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Computer Vision algorithms",
+          "isCorrect": true,
+          "reasoning": "Computer Vision algorithms are extensively used in healthcare to analyze medical images like X-rays, CT scans, MRI, ultrasound, and pathology slides, helping detect tumors, fractures, lesions, and other anomalies. Deep learning models trained on large medical image datasets can identify subtle patterns that may escape human observation, segment anatomical structures, measure disease progression, and assist radiologists with diagnosis. These systems enhance diagnostic accuracy, reduce interpretation time, and enable earlier disease detection. FDA-approved AI medical imaging systems now assist with detecting conditions ranging from diabetic retinopathy to lung nodules to bone fractures."
+        },
+        {
+          "label": "D",
+          "text": "Bio-marker algorithms",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "AI in Medical Imaging - FDA",
+          "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices",
+          "description": "FDA-authorized AI medical imaging applications"
+        },
+        {
+          "title": "Deep Learning for Medical Imaging",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4890616/",
+          "description": "Research on CNNs for computer-aided medical diagnosis"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "Which technology allows robots and augmented reality systems to understand their environment?",
+      "options": [
+        {
+          "label": "A",
+          "text": "GPS navigation",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Computer Vision",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "NFC Communication",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Radio frequency identification",
+          "isCorrect": false
+        },
+        {
+          "label": "E",
+          "text": "LIDAR and other sensors",
+          "isCorrect": false
+        },
+        {
+          "label": "F",
+          "text": "All of the above",
+          "isCorrect": true,
+          "reasoning": "Robots and augmented reality systems use multiple complementary technologies to understand their environment. Computer Vision provides visual scene understanding through cameras. LIDAR (Light Detection and Ranging) creates 3D point clouds for spatial mapping and obstacle detection. GPS navigation enables outdoor positioning and route planning. RFID and NFC enable identification of tagged objects and location markers. Ultrasonic sensors detect proximity. IMUs (inertial measurement units) track orientation and movement. This sensor fusion approach combines data from multiple sources, each with different strengths and limitations, to build robust environmental awareness. The integration enables navigation, manipulation, and interaction in complex real-world settings."
+        }
+      ],
+      "references": [
+        {
+          "title": "Sensor Fusion for Robotics",
+          "url": "https://www.robotics.org/",
+          "description": "Overview of multi-sensor integration in robotic systems"
+        },
+        {
+          "title": "Computer Vision for AR/VR",
+          "url": "https://research.facebook.com/",
+          "description": "Research on visual understanding for augmented reality"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "What unique physical characteristic does fingerprint recognition use?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Overall finger length",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Skin temperature patterns",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Ridge endings and bifurcations called minutiae points",
+          "isCorrect": true,
+          "reasoning": "Fingerprint recognition analyzes unique patterns in fingerprints, specifically the ridge endings (where a ridge line terminates) and bifurcations (where a ridge splits into two branches) known as minutiae points. These distinctive features, along with ridge patterns (loops, whorls, arches), create a unique identifier for each person. The uniqueness and permanence of fingerprints have made them valuable for identification since the 1880s. Modern automated fingerprint identification systems (AFIS) detect and match minutiae points using sophisticated algorithms, with typical fingerprints containing 25-80 minutiae points. The technology is widely deployed in law enforcement, border control, smartphones, and access control systems."
+        },
+        {
+          "label": "D",
+          "text": "Reflection from blood vessels",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST Fingerprint Technology Overview",
+          "url": "https://www.nist.gov/itl/iad/image-group/fingerprint-technology",
+          "description": "NIST research and standards for fingerprint recognition"
+        },
+        {
+          "title": "FBI IAFIS - Fingerprint Identification",
+          "url": "https://www.fbi.gov/services/cjis/fingerprints-and-other-biometrics",
+          "description": "FBI's Integrated Automated Fingerprint Identification System"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Which biometric method analyzes patterns in how someone types on a keyboard?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Liveness detection",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "WPM Analysis using the \"Shuler\" method",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Behavioral biometrics",
+          "isCorrect": true,
+          "reasoning": "Behavioral biometrics includes methods like keystroke dynamics, which analyzes typing rhythm, timing patterns, key hold duration, and intervals between keystrokes. Unlike physical biometrics (fingerprints, iris, face) that measure static physiological traits, behavioral biometrics measure how a person performs actions. Keystroke dynamics can provide continuous authentication throughout a computing session without requiring additional hardware. Other behavioral biometrics include gait analysis (walking patterns), mouse movement dynamics, touchscreen interaction patterns, and signature dynamics. These methods are valuable for continuous authentication, fraud detection, and bot detection, though they generally provide lower accuracy than physical biometrics."
+        },
+        {
+          "label": "D",
+          "text": "Voice authentication",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST Digital Identity Guidelines (SP 800-63-3)",
+          "url": "https://pages.nist.gov/800-63-3/",
+          "description": "Federal guidance on authentication including behavioral biometrics"
+        },
+        {
+          "title": "Behavioral Biometrics Research",
+          "url": "https://www.nist.gov/",
+          "description": "NIST research on behavioral authentication methods"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "Why are multimodal biometric systems considered more secure?",
+      "options": [
+        {
+          "label": "A",
+          "text": "They are faster than single-method systems",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "They combine multiple biometric traits for higher accuracy",
+          "isCorrect": true,
+          "reasoning": "Multimodal biometric systems combine multiple traits such as face, fingerprint, iris, and voice to significantly increase accuracy and security. Using multiple independent factors makes systems more resilient against spoofing attacks, as an attacker would need to successfully forge multiple biometric traits simultaneously. Multimodal systems also provide better coverage across diverse populations and environmental conditions - if one modality fails (e.g., fingerprint reader struggles with dry skin), another can succeed. They reduce false acceptance rates (FAR) and false rejection rates (FRR) through fusion of multiple authentication factors. Common multimodal approaches include face + voice, fingerprint + iris, and face + fingerprint combinations used in high-security applications."
+        },
+        {
+          "label": "C",
+          "text": "They require less computing power",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "They are less expensive to implement",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST Biometric Standards",
+          "url": "https://www.nist.gov/programs-projects/biometric-standards",
+          "description": "Standards for multimodal biometric systems"
+        },
+        {
+          "title": "DHS Biometrics Program",
+          "url": "https://www.dhs.gov/science-and-technology/biometrics",
+          "description": "DHS research on multimodal biometric technologies"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "What privacy protection does DHS implement for U.S. citizen photos?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Photos are stored indefinitely in encrypted databases",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Photos are deleted within 12 hours",
+          "isCorrect": true,
+          "reasoning": "According to DHS protocols established by CBP, U.S. citizen encounter photos in the Traveler Verification Service (TVS) are deleted within 12 hours of the identity verification process as a privacy protection measure. This policy applies to photos taken for biometric entry-exit processing at airports, seaports, and land borders. The 12-hour retention allows for continuity of operations and system troubleshooting while limiting data retention to protect citizen privacy. In contrast, photos of non-U.S. citizens are enrolled in the DHS Biometric Identity Management System (IDENT) and retained for up to 75 years to serve as biometric confirmation of entry or departure. This demonstrates DHS's commitment to differential privacy protections for citizens versus foreign nationals."
+        },
+        {
+          "label": "C",
+          "text": "Photos are shared with state agencies",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Photos require annual renewal",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "CBP Biometric Privacy Policy",
+          "url": "https://www.cbp.gov/travel/biometrics/biometric-privacy-policy",
+          "description": "Official CBP policy on biometric data retention and privacy"
+        },
+        {
+          "title": "DHS Privacy Impact Assessments - Biometrics",
+          "url": "https://www.dhs.gov/privacy-documents-biometric-systems",
+          "description": "Comprehensive privacy documentation for DHS biometric systems"
+        },
+        {
+          "title": "DHS Biometric Technology Update 2024",
+          "url": "https://www.dhs.gov/archive/news/2025/01/16/2024-update-dhss-use-face-recognition-face-capture-technologies",
+          "description": "Latest DHS performance testing and privacy practices for face recognition"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "text": "What accuracy rate do mature DHS biometric systems achieve for face matching?",
+      "options": [
+        {
+          "label": "A",
+          "text": "About 75%",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "About 85%",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "About 99%",
+          "isCorrect": true,
+          "reasoning": "DHS testing demonstrates that mature biometric systems like CBP Simplified Arrival and TSA CAT-2 (Credential Authentication Technology with camera) achieve approximately 99% face matching success rates. According to DHS's 2024 performance reviews, fully operational FR/FC (Face Recognition/Face Capture) systems worked more than 99% of the time for diverse demographic groups, with the lowest success rate for any demographic group at 97%. These high accuracy rates ensure reliable identity verification while maintaining efficient traveler processing at airports and ports of entry. The systems perform real-time biometric matching in seconds, comparing live photos against passport or visa photos stored in the Traveler Verification Service (TVS)."
+        },
+        {
+          "label": "D",
+          "text": "About 65%",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "DHS 2024 Biometric Technology Update",
+          "url": "https://www.dhs.gov/archive/news/2025/01/16/2024-update-dhss-use-face-recognition-face-capture-technologies",
+          "description": "Latest DHS performance testing results for face recognition systems"
+        },
+        {
+          "title": "GAO Report: Facial Recognition Technology",
+          "url": "https://www.gao.gov/products/gao-20-568",
+          "description": "Government accountability assessment of CBP and TSA facial recognition deployment"
+        },
+        {
+          "title": "NIST Face Recognition Vendor Test (FRVT)",
+          "url": "https://www.nist.gov/programs-projects/face-recognition-vendor-test-frvt",
+          "description": "Independent evaluation of face recognition algorithm accuracy"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "text": "Which DHS system allows Global Entry members to verify identity using a mobile app?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Biometric Exit system",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "TSA PreCheck terminals",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Global Entry Mobile App",
+          "isCorrect": true,
+          "reasoning": "The Global Entry Mobile App (formerly Mobile Passport Control) allows trusted travelers enrolled in Global Entry to verify their identity using a selfie taken upon landing at participating airports. After completing customs declaration questions in the app and taking a facial photo, travelers receive a digital receipt with a QR code that they present to CBP officers, enabling them to skip the traditional passport control kiosk line. This mobile biometric solution demonstrates how facial recognition technology enhances traveler convenience while maintaining security through 1:1 biometric verification against the traveler's passport photo stored in CBP systems. The app streamlines the arrival process for pre-vetted low-risk travelers."
+        },
+        {
+          "label": "D",
+          "text": "Simplified Arrival kiosks",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "CBP Global Entry Program",
+          "url": "https://www.cbp.gov/travel/trusted-traveler-programs/global-entry",
+          "description": "Official information on Global Entry and mobile app capabilities"
+        },
+        {
+          "title": "CBP Mobile Passport Control",
+          "url": "https://www.cbp.gov/travel/us-citizens/mobile-passport-control",
+          "description": "CBP's mobile biometric verification solution for travelers"
+        }
+      ]
+    }
+  ]
+}

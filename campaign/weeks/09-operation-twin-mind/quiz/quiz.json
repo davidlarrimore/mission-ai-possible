@@ -1,0 +1,516 @@
+{
+  "title": "Prompt Engineering",
+  "week": 9,
+  "overview": {
+    "description": "This assessment evaluates understanding of structured prompt engineering frameworks including CRISPE, RGCC, Chain-of-Thought (CoT), and ReAct methodologies. These techniques are fundamental to effective AI communication and align with Week 9's theme of mastering prompt engineering to achieve reliable, predictable AI outputs. The quiz reinforces best practices for structuring prompts, avoiding common anti-patterns, and selecting appropriate frameworks for different task types.",
+    "learningObjectives": [
+      "Understand CRISPE framework components and their functions",
+      "Recognize Chain-of-Thought prompting for multi-step reasoning",
+      "Learn RGCC framework structure (Role, Goal, Constraints, Context)",
+      "Apply appropriate prompting frameworks to specific task types",
+      "Understand how CRISPE prevents unclear instructions",
+      "Recognize the benefits of structured prompting for consistency",
+      "Identify Chain-of-Thought anti-patterns",
+      "Learn when to use ReAct for tool-using tasks",
+      "Understand how RGCC and CoT frameworks complement each other",
+      "Master prompt engineering best practices for production systems"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material",
+      "Week 3: AI Transparency and Ethics course material",
+      "Week 4: AI in Government and Policy course material",
+      "Week 5: AI Cybersecurity and Adversarial Use course material",
+      "Week 6: Natural Language Processing course material",
+      "Week 7: Computer Vision and Biometrics course material",
+      "Week 8: Automation and Intelligent Workflows course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "In the CRISPE framework, which part tells the model the background it needs?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Role",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Context",
+          "isCorrect": true,
+          "reasoning": "In CRISPE (Capacity, Role, Insight, Statement, Personality, Experiment), the Context component provides the background information and situational awareness the AI needs to understand the task environment. Context establishes the scenario, setting, and relevant information that frames the request. Role defines who the AI should act as (e.g., 'expert analyst', 'technical writer'), Preferences sets output formatting expectations (tone, style, structure), and Steps are typically part of the instruction statement rather than a distinct CRISPE component. Proper context enables the AI to tailor its response appropriately to the situation."
+        },
+        {
+          "label": "C",
+          "text": "Preferences",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Steps",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Anthropic Prompt Engineering Guide",
+          "url": "https://docs.anthropic.com/claude/docs/prompt-engineering",
+          "description": "Best practices for structured prompting including role and context definition"
+        },
+        {
+          "title": "OpenAI Prompt Engineering Guide",
+          "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+          "description": "Comprehensive resource on structured prompting frameworks"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "What does Chain-of-Thought (CoT) help the AI do?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Format outputs",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Think step-by-step",
+          "isCorrect": true,
+          "reasoning": "Chain-of-Thought prompting explicitly instructs the AI to break down complex reasoning into intermediate steps, making the logic visible and dramatically improving accuracy on multi-step problems. This technique was formalized in groundbreaking 2022 research by Wei et al. at Google Research, demonstrating 20-30 percentage point improvements on arithmetic, commonsense, and symbolic reasoning tasks. CoT enables models to decompose complex problems into manageable subtasks, show their work, identify errors in reasoning, and produce more reliable outputs by avoiding jumping to conclusions. The visible reasoning chain also enhances interpretability and debugging."
+        },
+        {
+          "label": "C",
+          "text": "Choose a writing tone",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Call external tools",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Chain-of-Thought Prompting Paper (Wei et al. 2022)",
+          "url": "https://arxiv.org/abs/2201.11903",
+          "description": "Foundational research demonstrating CoT improves LLM reasoning by 20-30%"
+        },
+        {
+          "title": "Google Research Blog - Chain-of-Thought",
+          "url": "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/",
+          "description": "Explanation of how CoT enables step-by-step reasoning in language models"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "In RGCC, which part explains who the AI should act as?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Goal",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Constraints",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Role",
+          "isCorrect": true,
+          "reasoning": "In the RGCC framework (Role, Goal, Constraints, Context), the Role component explicitly defines the persona, expertise level, or identity the AI should adopt when responding. Role establishes the perspective and knowledge domain for the interaction (e.g., 'You are a cybersecurity analyst', 'Act as a technical documentation writer'). This differs from Goal (what the AI should accomplish), Constraints (boundaries and limitations), and Context (background situational information). Clear role definition helps the AI calibrate its language, depth, assumptions, and approach to match the intended expertise and perspective."
+        },
+        {
+          "label": "D",
+          "text": "Context",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Prompt Engineering Best Practices",
+          "url": "https://www.promptengineering.org/",
+          "description": "Framework comparison including RGCC methodology"
+        },
+        {
+          "title": "Anthropic Prompt Engineering Documentation",
+          "url": "https://docs.anthropic.com/claude/docs/prompt-engineering",
+          "description": "Role definition and structured prompting techniques"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "When should you use Chain-of-Thought?",
+      "options": [
+        {
+          "label": "A",
+          "text": "For simple answers",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "For multi-step reasoning",
+          "isCorrect": true,
+          "reasoning": "Chain-of-Thought is most effective for tasks requiring complex, multi-step reasoning such as mathematical problems, logical deduction, multi-hop question answering, or analysis with multiple considerations. Research demonstrates that CoT significantly improves accuracy on reasoning-heavy tasks (e.g., improving math word problem accuracy from 17% to 58% on GSM8K benchmark) while adding unnecessary overhead to simple queries. For simple lookups or straightforward questions, CoT adds latency and cost without improving accuracy. CoT shines when problems require: breaking down complex logic, tracking multiple variables, performing sequential operations, or handling ambiguity through structured analysis."
+        },
+        {
+          "label": "C",
+          "text": "For creative stories",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "For document formatting",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Chain-of-Thought Prompting Research",
+          "url": "https://arxiv.org/abs/2201.11903",
+          "description": "Empirical evaluation showing CoT effectiveness on reasoning tasks"
+        },
+        {
+          "title": "Google AI Blog - CoT Applications",
+          "url": "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/",
+          "description": "When and how to apply Chain-of-Thought prompting"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "Which problem does CRISPE help prevent?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unclear instructions",
+          "isCorrect": true,
+          "reasoning": "CRISPE provides a structured framework that ensures all essential elements of a prompt are included, preventing ambiguity and unclear instructions. By systematically addressing Capacity (what the AI can do), Role (who it should act as), Insight (background context), Statement (clear instructions), Personality (tone/style), and Experiment (iterative refinement), CRISPE eliminates common sources of confusion in AI interactions. The framework acts as a checklist ensuring prompts are complete, unambiguous, and provide necessary context. This structure is particularly valuable for beginners who might otherwise omit critical information, leading to vague or off-target responses."
+        },
+        {
+          "label": "B",
+          "text": "Too many examples",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Excessive formatting",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Short responses",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Structured Prompting Frameworks",
+          "url": "https://www.promptengineering.org/",
+          "description": "How frameworks like CRISPE improve prompt clarity and completeness"
+        },
+        {
+          "title": "OpenAI Prompt Engineering Best Practices",
+          "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+          "description": "Techniques for writing clear, effective prompts"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "In RGCC, which part sets rules and limitations the AI must follow?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Context",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Constraints",
+          "isCorrect": true,
+          "reasoning": "The Constraints component in RGCC explicitly defines boundaries, limitations, rules, and restrictions the AI must respect. Constraints include: format requirements (length, structure, output type), prohibited topics or content, ethical guidelines that must be followed, scope limitations (what not to include), technical restrictions (no external calls, read-only access), and quality thresholds. Constraints differ from Context (situational background), Role (who the AI acts as), and Goal (desired outcome). Well-defined constraints prevent unwanted behaviors, ensure compliance with organizational policies, and guide the AI toward acceptable solutions within defined boundaries."
+        },
+        {
+          "label": "C",
+          "text": "Role",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Goal",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "RGCC Framework Documentation",
+          "url": "https://www.promptengineering.org/",
+          "description": "Detailed explanation of Role, Goal, Constraints, Context components"
+        },
+        {
+          "title": "Anthropic Constitutional AI",
+          "url": "https://docs.anthropic.com/claude/docs/prompt-engineering",
+          "description": "Setting constraints and guardrails in AI systems"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "What is one big benefit of using structured prompts like CRISP/CRISPE?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The AI uses fewer tokens",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Responses become more consistent",
+          "isCorrect": true,
+          "reasoning": "Structured prompting frameworks create predictable, repeatable patterns that lead to more consistent AI outputs across similar tasks. This consistency is essential for production environments, automation workflows, quality assurance, and team collaboration. When multiple people use the same structured approach, results become comparable and reliable. While structured prompts may initially use more tokens to ensure completeness and clarity, the consistency benefit far outweighs this cost—reducing rework, debugging time, and variability. Consistency enables effective A/B testing, performance monitoring, and continuous improvement of AI-powered systems."
+        },
+        {
+          "label": "C",
+          "text": "It turns on Chain-of-Thought",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "It speeds up typing",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Prompt Engineering for Production Systems",
+          "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+          "description": "Best practices for consistent, reliable AI outputs"
+        },
+        {
+          "title": "Anthropic Prompt Engineering Guide",
+          "url": "https://docs.anthropic.com/claude/docs/prompt-engineering",
+          "description": "Achieving consistency through structured prompting"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Which of these is a bad Chain-of-Thought practice?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Numbering steps",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Showing reasoning",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Ask for the answer up-front",
+          "isCorrect": true,
+          "reasoning": "Providing the final answer before working through the reasoning defeats the purpose of Chain-of-Thought. CoT requires showing the intermediate steps first, allowing the model to 'think through' the problem before reaching conclusions. When you ask for or provide the answer upfront, you create an anchoring bias that constrains the reasoning process and reduces the model's ability to explore alternative paths or identify errors. Proper CoT follows the pattern: Question → Step 1 → Step 2 → Step 3 → Conclusion, not Question → Answer → Post-hoc Justification. Premature conclusions undermine the self-correction and exploration benefits that make CoT effective."
+        },
+        {
+          "label": "D",
+          "text": "Explaining tradeoffs",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Chain-of-Thought Best Practices",
+          "url": "https://arxiv.org/abs/2201.11903",
+          "description": "Research on effective CoT prompting techniques"
+        },
+        {
+          "title": "CoT Anti-patterns",
+          "url": "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/",
+          "description": "Common mistakes in Chain-of-Thought implementation"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "When is ReAct prompting most useful?",
+      "options": [
+        {
+          "label": "A",
+          "text": "When the task needs tools or external lookups",
+          "isCorrect": true,
+          "reasoning": "ReAct (Reasoning + Acting) combines reasoning traces with action execution, making it ideal for tasks requiring external tool use, API calls, database queries, web searches, or environment interaction. Introduced in 2022 research by Yao et al. (Princeton/Google), ReAct allows the AI to: reason about what information it needs, take action to retrieve that information through tools, observe the results, reason about those results, and iterate as needed. This interleaved reasoning-action-observation cycle overcomes hallucination issues in pure reasoning approaches by grounding responses in external data. ReAct outperforms pure reasoning (CoT) and pure acting approaches on tasks like question answering (HotpotQA), fact verification (Fever), and interactive decision-making (WebShop, ALFWorld)."
+        },
+        {
+          "label": "B",
+          "text": "When writing short summaries",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "When editing grammar",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "When choosing a tone",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ReAct Paper (Yao et al. 2022)",
+          "url": "https://arxiv.org/abs/2210.03629",
+          "description": "Synergizing reasoning and acting in language models for tool use"
+        },
+        {
+          "title": "Google Research - ReAct Framework",
+          "url": "https://research.google/blog/react-synergizing-reasoning-and-acting-in-language-models/",
+          "description": "How ReAct combines reasoning with external actions"
+        },
+        {
+          "title": "ReAct Project Site",
+          "url": "https://react-lm.github.io/",
+          "description": "Examples and implementation of ReAct prompting"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "If you add RGCC to a CoT Prompt, what will the RGCC (Role, Goal, Context, Constraint) mainly provide?",
+      "options": [
+        {
+          "label": "A",
+          "text": "The step-by-step reasoning",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "The rules, role, and structure",
+          "isCorrect": true,
+          "reasoning": "When combining RGCC with Chain-of-Thought, RGCC establishes the foundational framework that defines WHO is reasoning (Role), WHY they're reasoning (Goal), what BOUNDARIES exist (Constraints), and what BACKGROUND applies (Context). CoT then provides the step-by-step reasoning methodology within that framework. This combination is powerful: RGCC sets up the parameters (act as a security analyst, goal is to assess risk, constraints are 500-word limit and no speculation, context is a network vulnerability report), then CoT directs the reasoning process (step 1: identify vulnerabilities, step 2: assess severity, step 3: recommend mitigations). RGCC provides structure and guardrails; CoT provides the reasoning engine."
+        },
+        {
+          "label": "C",
+          "text": "The math calculations",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "The final answer",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Combining Prompting Frameworks",
+          "url": "https://www.promptengineering.org/",
+          "description": "How to combine RGCC structure with CoT reasoning"
+        },
+        {
+          "title": "Advanced Prompt Engineering",
+          "url": "https://docs.anthropic.com/claude/docs/prompt-engineering",
+          "description": "Multi-framework approaches for complex tasks"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "text": "Which is an example of a CoT \"anti-pattern\"?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Listing steps",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Calling out uncertainty",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Giving conclusions with no reasoning",
+          "isCorrect": true,
+          "reasoning": "Presenting conclusions without showing the reasoning process violates the fundamental principle of Chain-of-Thought. CoT anti-patterns include: jumping to conclusions without intermediate steps, skipping critical reasoning phases, hiding the reasoning chain from view, providing post-hoc justifications for predetermined answers, and rushing to final answers without exploration. These practices negate the primary benefits of CoT: transparency in logic, error detection through visible reasoning, improved accuracy through step-by-step analysis, and interpretability for debugging. Proper CoT always shows the work before the answer, making the reasoning process explicit and auditable."
+        },
+        {
+          "label": "D",
+          "text": "Explaining logic",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Chain-of-Thought Research Paper",
+          "url": "https://arxiv.org/abs/2201.11903",
+          "description": "Proper methodology for Chain-of-Thought prompting"
+        },
+        {
+          "title": "CoT Common Mistakes",
+          "url": "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/",
+          "description": "What to avoid when implementing Chain-of-Thought"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "text": "Why is CRISPE helpful for beginners?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It removes all rules",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "It creates predictable structure",
+          "isCorrect": true,
+          "reasoning": "CRISPE provides a clear, repeatable template that beginners can follow to ensure they include all essential prompt elements. This structure reduces cognitive load, prevents common mistakes (like omitting context or forgetting to specify role), and builds confidence through consistent results. The framework serves as training wheels that guide novices through prompt construction systematically: What capacity does the AI need? What role should it adopt? What context is relevant? What's the specific request? What tone/style is appropriate? Should I iterate? As users gain expertise, they can adapt or abbreviate the framework, but the foundational structure helps beginners avoid the most common pitfalls and achieve reliable results from the start."
+        },
+        {
+          "label": "C",
+          "text": "It writes final answers automatically",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "It prevents the model from asking questions",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Prompt Engineering for Beginners",
+          "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+          "description": "Structured frameworks for learning effective prompting"
+        },
+        {
+          "title": "CRISPE Framework Guide",
+          "url": "https://www.promptengineering.org/",
+          "description": "How structured prompts help beginners achieve consistent results"
+        }
+      ]
+    }
+  ]
+}

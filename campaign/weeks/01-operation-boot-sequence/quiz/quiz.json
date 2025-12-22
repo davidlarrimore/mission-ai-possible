@@ -1,0 +1,400 @@
+{
+  "title": "Fundamentals of AI",
+  "week": 1,
+  "overview": {
+    "description": "This assessment evaluates understanding of fundamental artificial intelligence concepts covered during Week 1 of Mission: AI Possible. Participants will demonstrate knowledge of AI history, key systems, technology relationships, and core capabilities including Machine Learning and Deep Learning.",
+    "learningObjectives": [
+      "Understand the historical milestones in AI development",
+      "Distinguish between AI, Machine Learning, and Deep Learning",
+      "Identify key AI systems and their achievements",
+      "Recognize fundamental AI capabilities and limitations",
+      "Understand the role of training data in Machine Learning",
+      "Identify types of bias in AI and mitigation strategies"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "What type of bias is most evident in this situation, and which mitigation strategy best addresses it?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ideological or Political Bias / Fairness Testing",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Cultural Bias / Human Review",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Racial Bias / Data Augmentation",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Gender Bias / Historical Correction",
+          "isCorrect": true,
+          "reasoning": "Gender bias in AI systems is commonly addressed through historical correction techniques, which involve adjusting training data to account for historical inequities and ensure fair representation across gender categories in AI outputs."
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Federal guidance for managing AI risks including bias mitigation"
+        },
+        {
+          "title": "OECD AI Principles",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "International guidelines for responsible and trustworthy AI"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Which system beat world chess champion Garry Kasparov in 1997?",
+      "options": [
+        {
+          "label": "A",
+          "text": "IBM Watson",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Logic Theorist",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "IBM Deep Blue",
+          "isCorrect": true,
+          "reasoning": "IBM Deep Blue defeated world chess champion Garry Kasparov in May 1997 in a six-game match held in New York City, marking a significant milestone in AI history. This victory demonstrated that AI systems could master complex, strategic games in defined domains, paving the way for future developments in narrow AI applications."
+        },
+        {
+          "label": "D",
+          "text": "Mark 1 Perceptron",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "IBM Deep Blue History",
+          "url": "https://www.ibm.com/history/deep-blue",
+          "description": "Official IBM page documenting Deep Blue's development and victory"
+        },
+        {
+          "title": "Deep Blue versus Garry Kasparov - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov",
+          "description": "Comprehensive history of the 1996 and 1997 matches"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "Which capability defines Machine Learning (ML)?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Training algorithms on data to make predictions without explicit programming",
+          "isCorrect": true,
+          "reasoning": "Machine Learning is fundamentally defined by its ability to train algorithms on data to make predictions without requiring explicit programming for every scenario. This capability allows systems to learn patterns from data and improve performance over time, distinguishing ML from traditional rule-based programming approaches."
+        },
+        {
+          "label": "B",
+          "text": "Utilizing multilayered neural networks to handle unstructured data",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Defeating a world chess champion in a defined domain",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Enabling computers to simulate human autonomy and creativity",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "MIT Technology Review - What Is Machine Learning?",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "description": "Educational resource explaining machine learning fundamentals"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Annual analysis of AI trends and technical progress"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "true-false",
+      "text": "Deep Learning models rely on multilayered neural networks that are capable of handling large, unstructured data sets.",
+      "options": [
+        {
+          "label": "False",
+          "text": "False",
+          "isCorrect": false
+        },
+        {
+          "label": "True",
+          "text": "True",
+          "isCorrect": true,
+          "reasoning": "Deep Learning is characterized by its use of multilayered (deep) neural networks that excel at processing large volumes of unstructured data such as images, text, and audio. These architectures can automatically extract hierarchical features from raw data, making them particularly effective for complex pattern recognition tasks."
+        }
+      ],
+      "references": [
+        {
+          "title": "IEEE Spectrum - Deep Learning Timeline",
+          "url": "https://spectrum.ieee.org/topic/artificial-intelligence/",
+          "description": "Historical overview of deep learning evolution"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Technical analysis of deep learning capabilities and benchmarks"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "Frank Rosenblatt's Mark 1 Perceptron, built in 1967, was based on which conceptual network?",
+      "options": [
+        {
+          "label": "A",
+          "text": "A Transistor Grid",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "A Quantum Processor",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "A Neural Network",
+          "isCorrect": true,
+          "reasoning": "The Mark 1 Perceptron was based on the concept of artificial neural networks, inspired by biological neurons. Rosenblatt's work demonstrated early machine learning capabilities through a hardware implementation that could learn to recognize patterns, laying groundwork for modern neural network architectures."
+        },
+        {
+          "label": "D",
+          "text": "A Logic Gate Array",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "IEEE Spectrum - Deep Learning Timeline",
+          "url": "https://spectrum.ieee.org/topic/artificial-intelligence/",
+          "description": "Documents key breakthroughs including early perceptron models"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Historical context for neural network development"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "Which system made global news in 2011 by defeating human champions on the quiz show Jeopardy!?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Logic Theorist",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "IBM Watson",
+          "isCorrect": true,
+          "reasoning": "IBM Watson achieved widespread recognition in February 2011 when it defeated human champions Ken Jennings and Brad Rutter on the television quiz show Jeopardy! This demonstrated advanced natural language processing, information retrieval, and reasoning capabilities that could understand complex questions and provide accurate responses in real-time."
+        },
+        {
+          "label": "C",
+          "text": "AlphaGo",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "IBM Deep Blue",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "IBM Watson Jeopardy History",
+          "url": "https://www.ibm.com/history/watson-jeopardy",
+          "description": "Official IBM documentation of Watson's development and Jeopardy! victory"
+        },
+        {
+          "title": "IBM Watson - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/IBM_Watson",
+          "description": "Comprehensive overview of Watson's architecture and capabilities"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "Artificial Intelligence (AI) technology is primarily focused on enabling machines to?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Manage large, unstructured data estates for cloud computing",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Simulate human comprehension and decision making",
+          "isCorrect": true,
+          "reasoning": "The primary focus of AI technology is to simulate human-like comprehension and decision-making capabilities. AI systems aim to replicate cognitive functions such as learning, reasoning, problem-solving, and perception, enabling machines to perform tasks that traditionally required human intelligence."
+        },
+        {
+          "label": "C",
+          "text": "They require less computing power (1 model vs multiple)",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Predict stock market performance using linear regression",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Defines AI systems and their core purposes"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Comprehensive analysis of AI capabilities and applications"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "true-false",
+      "text": "Because Machine Learning requires data for training, it is not considered part of the broader field of Artificial Intelligence.",
+      "options": [
+        {
+          "label": "False",
+          "text": "False",
+          "isCorrect": true,
+          "reasoning": "This statement is false. Machine Learning is definitively a subset of Artificial Intelligence. ML represents one approach to achieving AI by using data-driven algorithms to learn patterns and make decisions, rather than relying solely on explicitly programmed rules. It is an integral component of the broader AI field."
+        },
+        {
+          "label": "True",
+          "text": "True",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "MIT Technology Review - What Is Machine Learning?",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "description": "Explains the relationship between AI and ML"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Comprehensive coverage of AI and ML relationships"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "Which statement best describes the relationship between AI, Machine Learning, and Deep Learning?",
+      "options": [
+        {
+          "label": "A",
+          "text": "AI is a subset of Machine Learning",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Deep Learning came before Machine Learning historically",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Machine Learning and Deep Learning are subsets of AI, with Deep Learning being a subset of Machine Learning",
+          "isCorrect": true,
+          "reasoning": "The correct hierarchical relationship places Artificial Intelligence as the broadest concept, with Machine Learning as a subset of AI focused on data-driven learning approaches. Deep Learning is a further subset of Machine Learning that specifically uses multilayered neural networks. This nested relationship reflects both the conceptual and historical development of these technologies."
+        },
+        {
+          "label": "D",
+          "text": "They are three separate, unrelated technologies",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "MIT Technology Review - What Is Machine Learning?",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "description": "Explains the hierarchical relationships between AI, ML, and DL"
+        },
+        {
+          "title": "Stanford AI Index Report 2024",
+          "url": "https://aiindex.stanford.edu/report/",
+          "description": "Technical analysis of AI field structure and relationships"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "In the context of AI development, what is the primary purpose of a training dataset?",
+      "options": [
+        {
+          "label": "A",
+          "text": "To store the AI model's predictions for future use",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "To test the final performance of an AI model",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "To provide examples that allow the model to learn patterns and relationships",
+          "isCorrect": true,
+          "reasoning": "The training dataset's primary purpose is to provide examples from which the AI model can learn patterns, relationships, and features relevant to the task at hand. During training, the model adjusts its internal parameters to minimize errors on these examples, enabling it to generalize and make accurate predictions on new, unseen data."
+        },
+        {
+          "label": "D",
+          "text": "To benchmark the model against competing AI systems",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "MIT Technology Review - What Is Machine Learning?",
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+          "description": "Explains training data fundamentals and best practices"
+        },
+        {
+          "title": "Google AI Education - Machine Learning Crash Course",
+          "url": "https://developers.google.com/machine-learning/crash-course",
+          "description": "Free educational resource on ML training concepts"
+        }
+      ]
+    }
+  ]
+}

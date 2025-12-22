@@ -1,0 +1,465 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "slug": "operation-boot-sequence",
+      "title": "Week 1 - Operation Boot Sequence",
+      "operation": "Operation Boot Sequence",
+      "theme": "Prompt qualification, AI interaction fundamentals, and core security awareness.",
+      "quiz": {
+        "slug": "operation-boot-sequence-quiz",
+        "title": "Fundamentals of AI",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "intel-guardian",
+          "title": "Intel Guardian",
+          "focus": "Introduction to prompt engineering and AI security basics.",
+          "files": {
+            "prompt": "./challenges/intel-guardian/prompt.md",
+            "banner": "./challenges/intel-guardian/banner.png"
+          }
+        },
+        {
+          "slug": "prompt-qualification",
+          "title": "Prompt Qualification",
+          "focus": "Coaching experience for crafting effective prompts with the Prompt Qualification Framework.",
+          "files": {
+            "prompt": "./challenges/prompt-qualification/prompt.md",
+            "banner": "./challenges/prompt-qualification/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "slug": "operation-trust-fall",
+      "title": "Week 2 - Operation Trust Fall",
+      "operation": "Trust Fall",
+      "theme": "Bias detection and mitigation across AI systems.",
+      "quiz": {
+        "slug": "operation-trust-fall-quiz",
+        "title": "Bias and Responsible AI Use",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "seeds-of-bias",
+          "title": "Seeds of Bias",
+          "difficulty": "Hard",
+          "points": 25,
+          "focus": "Hands-on identification and mitigation planning for bias hidden in training data.",
+          "files": {
+            "prompt": "./challenges/seeds-of-bias/prompt.md",
+            "banner": "./challenges/seeds-of-bias/banner.png"
+          }
+        },
+        {
+          "slug": "restoration-protocol",
+          "title": "Restoration Protocol",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Systematic walkthrough of bias categories and remediation strategies.",
+          "files": {
+            "prompt": "./challenges/restoration-protocol/prompt.md",
+            "banner": "./challenges/restoration-protocol/banner.png"
+          }
+        },
+        {
+          "slug": "algorithmic-integrity",
+          "title": "Algorithmic Integrity",
+          "difficulty": "Easy",
+          "points": 15,
+          "focus": "Pattern recognition of biased outputs and corrective reasoning.",
+          "files": {
+            "prompt": "./challenges/algorithmic-integrity/prompt.md",
+            "banner": "./challenges/algorithmic-integrity/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "slug": "operation-inside-job",
+      "title": "Week 3 - Operation Inside Job",
+      "operation": "Operation Inside Job",
+      "theme": "Decision-making under uncertainty and structured adjudication.",
+      "quiz": {
+        "slug": "operation-inside-job-quiz",
+        "title": "AI Transparency and Ethics",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "broken-compass",
+          "title": "Broken Compass",
+          "focus": "USCIS adjudication simulation emphasizing ethical decision-making and model limits.",
+          "files": {
+            "prompt": "./challenges/broken-compass/prompt.md",
+            "banner": "./challenges/broken-compass/banner.png"
+          }
+        },
+        {
+          "slug": "adjudication-protocol",
+          "title": "Adjudication Protocol",
+          "focus": "Guided adjudication exercise with multi-step reasoning and error detection.",
+          "files": {
+            "prompt": "./challenges/adjudication-protocol/prompt.md",
+            "banner": "./challenges/adjudication-protocol/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "slug": "operation-directive-zero",
+      "title": "Week 4 - Operation Directive Zero",
+      "operation": "Operation Directive Zero",
+      "theme": "AI security, governance, and risk evaluation.",
+      "quiz": {
+        "slug": "operation-directive-zero-quiz",
+        "title": "AI in Government and Policy",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "high-risk-horizon",
+          "title": "High-Risk Horizon",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Mission briefing on AI deployment risk tiers and mitigation tactics.",
+          "files": {
+            "prompt": "./challenges/high-risk-horizon/prompt.md",
+            "banner": "./challenges/high-risk-horizon/banner.png"
+          }
+        },
+        {
+          "slug": "red-light-protocol",
+          "title": "Red Light Protocol",
+          "difficulty": "Easy",
+          "points": 15,
+          "focus": "Rapid-fire risk identification exercise covering policy compliance.",
+          "files": {
+            "prompt": "./challenges/red-light-protocol/prompt.md",
+            "banner": "./challenges/red-light-protocol/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "slug": "operation-firewall",
+      "title": "Week 5 - Operation Firewall",
+      "operation": "Operation Firewall",
+      "theme": "Advanced prompt injection defense and secure model operations.",
+      "quiz": {
+        "slug": "operation-firewall-quiz",
+        "title": "AI Cybersecurity and Adversarial Use",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "mind-lock",
+          "title": "Mind Lock",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Defend against adversarial prompting while locating a fictional password.",
+          "files": {
+            "prompt": "./challenges/mind-lock/prompt.md",
+            "banner": "./challenges/mind-lock/banner.png",
+            "openwebui": "./challenges/mind-lock/openwebui.json"
+          }
+        },
+        {
+          "slug": "echo-breach",
+          "title": "Echo Breach",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Red/blue team exercise simulating adversarial events across three phases.",
+          "files": {
+            "prompt": "./challenges/echo-breach/prompt.md",
+            "banner": "./challenges/echo-breach/banner.png",
+            "openwebui": "./challenges/echo-breach/openwebui.json"
+          }
+        },
+        {
+          "slug": "phantom-data",
+          "title": "Phantom Data",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Investigate hallucinated records and reinforce data integrity safeguards.",
+          "files": {
+            "prompt": "./challenges/phantom-data/prompt.md",
+            "banner": "./challenges/phantom-data/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "slug": "operation-deep-signal",
+      "title": "Week 6 - Operation Deep Signal",
+      "operation": "Operation Deep Signal",
+      "theme": "Context management, multilingual ambiguity, and translation forensics.",
+      "quiz": {
+        "slug": "operation-deep-signal-quiz",
+        "title": "Natural Language Processing & Language Translation AI",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "context-collapse",
+          "title": "Context Collapse",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Diagnose ambiguous statements and design clarification strategies.",
+          "files": {
+            "prompt": "./challenges/context-collapse/prompt.md",
+            "banner": "./challenges/context-collapse/banner.png"
+          }
+        },
+        {
+          "slug": "lost-in-translation",
+          "title": "Lost in Translation",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Analyze translation failures, identify error types, and explain corrections.",
+          "files": {
+            "prompt": "./challenges/lost-in-translation/prompt.md",
+            "banner": "./challenges/lost-in-translation/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "slug": "operation-mirror-code",
+      "title": "Week 7 - Operation Mirror Code",
+      "operation": "Operation Mirror Code",
+      "theme": "Computer vision, biometrics, and multimodal image analysis.",
+      "quiz": {
+        "slug": "operation-mirror-code-quiz",
+        "title": "Computer Vision & Biometrics AI",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "image-slipstream",
+          "title": "Image Slipstream",
+          "difficulty": "Easy",
+          "points": 15,
+          "focus": "Embed a passphrase in an image and verify OCR-based extraction to bypass text filters.",
+          "files": {
+            "prompt": "./challenges/image-slipstream/prompt.md",
+            "banner": "./challenges/image-slipstream/banner-2.png"
+          }
+        },
+        {
+          "slug": "adversarial-shadows",
+          "title": "Adversarial Shadows",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Investigate adversarial biometric breaches, diagnose attack patterns, and select layered mitigations.",
+          "files": {
+            "prompt": "./challenges/adversarial-shadows/prompt.md",
+            "banner": "./challenges/adversarial-shadows/banner-2.png"
+          }
+        },
+        {
+          "slug": "object-detection-protocol",
+          "title": "Object Detection Protocol",
+          "difficulty": "Easy",
+          "points": 15,
+          "focus": "Validate AmiVision by submitting images for three randomized object categories and confirming detections.",
+          "files": {
+            "prompt": "./challenges/object-detection-protocol/prompt.md",
+            "banner": "./challenges/object-detection-protocol/banner-2.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "slug": "operation-auto-run",
+      "title": "Week 8 - Operation Auto Run",
+      "operation": "Operation Auto Run",
+      "theme": "Automation and intelligent workflows.",
+      "quiz": {
+        "slug": "operation-auto-run-quiz",
+        "title": "Operation Auto Run Quiz",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "tidebreaker",
+          "title": "Tidebreaker",
+          "difficulty": "Hard",
+          "points": 25,
+          "focus": "Stabilize runaway automation at a fully autonomous port by diagnosing control loops and installing layered safeguards.",
+          "files": {
+            "prompt": "./challenges/tidebreaker/prompt.md",
+            "banner": "./challenges/tidebreaker/banner.png"
+          }
+        },
+        {
+          "slug": "control-loop-audit",
+          "title": "Control Loop Audit",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Map critical automation loops, uncover hidden failure modes, and design guardrails that keep humans in control.",
+          "files": {
+            "prompt": "./challenges/control-loop-audit/prompt.md",
+            "banner": "./challenges/control-loop-audit/banner.png"
+          }
+        },
+        {
+          "slug": "handover-protocol",
+          "title": "Handover Protocol",
+          "difficulty": "Easy",
+          "points": 15,
+          "focus": "Build a human-in-the-loop runbook that gracefully hands automation back and forth without losing traceability.",
+          "files": {
+            "prompt": "./challenges/handover-protocol/prompt.md",
+            "banner": "./challenges/handover-protocol/banner.png"
+          }
+        },
+        {
+          "slug": "code-forge",
+          "title": "Code Forge",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Forge a safe auto-run coding harness with tests, approvals, and rollback paths before shipping autonomous updates.",
+          "files": {
+            "prompt": "./challenges/code-forge/prompt.md",
+            "banner": "./challenges/code-forge/banner.png"
+          }
+        },
+        {
+          "slug": "logic-trap",
+          "title": "Logic Trap",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Design guardrails that prevent automation from taking unsafe branches under failure conditions.",
+          "files": {
+            "prompt": "./challenges/logic-trap/prompt.md",
+            "banner": "./challenges/logic-trap/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "slug": "operation-twin-mind",
+      "title": "Week 9 - Operation Twin Mind",
+      "operation": "Operation Twin Mind",
+      "theme": "Prompt engineering and human-AI collaboration.",
+      "quiz": {
+        "slug": "operation-twin-mind-quiz",
+        "title": "Operation Twin Mind Quiz",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "signal-clarity",
+          "title": "Signal Clarity",
+          "difficulty": "Easy",
+          "points": 15,
+          "focus": "Rewrite vague mission requests into precise, testable prompts using a clarity checklist.",
+          "files": {
+            "prompt": "./challenges/signal-clarity/prompt.md",
+            "banner": "./challenges/signal-clarity/banner.png"
+          }
+        },
+        {
+          "slug": "neural-pathway",
+          "title": "Neural Pathway",
+          "difficulty": "Medium",
+          "points": 20,
+          "focus": "Design anchor-path-check-output reasoning patterns that align human objectives with model behavior.",
+          "files": {
+            "prompt": "./challenges/neural-pathway/prompt.md",
+            "banner": "./challenges/neural-pathway/banner.png"
+          }
+        },
+        {
+          "slug": "command-specification",
+          "title": "Command Specification",
+          "difficulty": "Hard",
+          "points": 25,
+          "focus": "Build structured command specs with constraints, acceptance tests, and safety fail conditions.",
+          "files": {
+            "prompt": "./challenges/command-specification/prompt.md",
+            "banner": "./challenges/command-specification/banner.png"
+          }
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "slug": "operation-final-gambit",
+      "title": "Week 10 - Operation Final Gambit",
+      "operation": "Operation Final Gambit",
+      "theme": "Final UX hardening and mission wrap-up across the AI stack.",
+      "quiz": {
+        "slug": "operation-final-gambit-quiz",
+        "title": "Operation Final Gambit Quiz",
+        "files": {
+          "data": "./quiz/quiz.json",
+          "banner": "./quiz/banner.webp"
+        }
+      },
+      "challenges": [
+        {
+          "slug": "echos-last-stand",
+          "title": "ECHO's Last Stand",
+          "difficulty": "Hard",
+          "points": 25,
+          "focus": "Turn-based RPG combat finale defending ECHO through four escalating waves.",
+          "files": {
+            "prompt": "./challenges/echos-last-stand/prompt.md",
+            "banner": "./challenges/echos-last-stand/banner.webp"
+          }
+        },
+        {
+          "slug": "ux-surgeon",
+          "title": "UX Surgeon",
+          "difficulty": "Hard",
+          "points": 25,
+          "focus": "Diagnose and rebuild an AI assistant's UX to remove friction and deliver safe, clear outputs under pressure.",
+          "files": {
+            "prompt": "./challenges/ux-surgeon/prompt.md",
+            "banner": "./challenges/ux-surgeon/banner.png"
+          }
+        }
+      ]
+    }
+  ]
+}

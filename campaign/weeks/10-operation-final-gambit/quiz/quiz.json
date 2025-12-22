@@ -1,0 +1,839 @@
+{
+  "title": "AI-Centered Design (Human-Centered Design + AI)",
+  "week": 10,
+  "overview": {
+    "description": "This assessment evaluates understanding of Human-Centered Design (HCD) principles applied to AI-enabled systems, experiences, and services. Week 10 represents the culmination of Mission: AI Possible, requiring agents to demonstrate mastery of designing AI systems that prioritize human needs, values, and contexts while maintaining accountability and ethical standards. The quiz aligns with ISO 9241-210, NIST AI Risk Management Framework, and federal best practices for responsible AI deployment. Questions cover UX, IX, and CX considerations essential for government contractors developing AI solutions.",
+    "learningObjectives": [
+      "Understand the primary goal of Human-Centered Design for AI systems",
+      "Recognize the importance of human decision authority in high-stakes AI",
+      "Learn why AI systems should communicate uncertainty and confidence",
+      "Apply appropriate evaluation metrics beyond technical accuracy",
+      "Identify HCD anti-patterns in AI experiences",
+      "Understand problem-first versus technology-first design approaches",
+      "Recognize appropriate AI adoption patterns (assistive vs. autonomous)",
+      "Learn how explainability and transparency support trust",
+      "Understand the critical role of human escalation in CX",
+      "Identify scenarios requiring HCD safeguards",
+      "Recognize limitations of accuracy-only evaluation",
+      "Understand AI's supportive role in human-centered systems",
+      "Learn how to support informed user decision-making",
+      "Recognize risks of anthropomorphism in AI",
+      "Apply inclusive design principles",
+      "Understand the importance of human override capability",
+      "Identify CX failure signals in AI systems",
+      "Learn transparency requirements for AI-generated content",
+      "Understand the purpose of feedback mechanisms",
+      "Apply overall HCD philosophy to AI system design"
+    ],
+    "prerequisites": [
+      "Completion of Weeks 1-9 covering AI fundamentals, ethics, security, automation, and prompt engineering"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "What is the primary goal of Human-Centered Design when applied to AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Maximizing model accuracy",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Automating decisions wherever possible",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Ensuring systems meet real human needs, values, and contexts",
+          "isCorrect": true,
+          "reasoning": "Human-Centered Design focuses on understanding users, their goals, and their environments, then shaping AI-enabled systems to support them effectively and responsibly. According to ISO 9241-210, HCD aims to make systems usable and useful by focusing on users, their needs and requirements, applying human factors/ergonomics knowledge. While accuracy is important technically, it does not ensure the system serves human needs. Automation can undermine human agency and accountability when applied inappropriately. Speed is a project management concern, not a design principle. HCD measures success by how well people succeed using systems, not by technical sophistication alone."
+        },
+        {
+          "label": "D",
+          "text": "Reducing development timelines",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210:2019 Human-Centred Design",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "International standard for human-centered design of interactive systems"
+        },
+        {
+          "title": "NIST Human-Centered Design Overview",
+          "url": "https://www.nist.gov/itl/iad/visualization-and-usability-group/human-factors-human-centered-design",
+          "description": "NIST guidance on HCD principles and approaches"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "When AI-enabled systems influence rights, safety, or eligibility, which design principle is essential?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Full automation",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Speed optimization",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Human decision authority built into the workflow",
+          "isCorrect": true,
+          "reasoning": "HCD requires preserving human accountability in high-stakes contexts, ensuring AI supports rather than replaces human judgment. OMB M-24-10 specifically requires human review for rights-impacting and safety-impacting AI systems. Full automation removes necessary human oversight in decisions affecting fundamental rights, safety, or access to critical services. Speed optimization prioritizes efficiency over safety and accountability. Post-deployment monitoring is reactive and insufficient without human-in-the-loop controls during operation. Human decision authority ensures appropriate oversight, appeals mechanisms, and accountability for consequential decisions."
+        },
+        {
+          "label": "D",
+          "text": "Post-deployment monitoring only",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB M-24-10: AI Governance",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-memorandum-for-the-heads-of-executive-departments-and-agencies/",
+          "description": "Federal policy requiring human review for rights-impacting AI"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Guidance emphasizing human oversight and accountability"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "Why should AI-enabled experiences communicate uncertainty or confidence levels to users?",
+      "options": [
+        {
+          "label": "A",
+          "text": "To meet UI standards",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "To discourage use",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "To help users make informed decisions and calibrate trust",
+          "isCorrect": true,
+          "reasoning": "Clear communication of uncertainty supports informed human decision-making, a core HCD principle aligned with ISO 9241-210's emphasis on self-descriptiveness and user understanding. When systems indicate confidence levels (e.g., 'I'm 95% confident' vs 'I'm uncertain about this'), users can appropriately calibrate trust, seek additional verification when needed, and make better-informed decisions. Meeting UI standards is procedural compliance, not user empowerment. Discouraging use contradicts the purpose of deploying the system. While legal risk reduction may be a secondary benefit, the primary purpose is enabling appropriate trust calibration and informed consent."
+        },
+        {
+          "label": "D",
+          "text": "To reduce legal risk",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI RMF - Transparency",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework emphasizing AI system transparency and explainability"
+        },
+        {
+          "title": "Stanford HAI - Human-Centered AI",
+          "url": "https://hai.stanford.edu/",
+          "description": "Research on appropriate trust calibration in AI systems"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "Which metric best reflects a Human-Centered evaluation of an AI-enabled system?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Token usage",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Latency",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Accuracy",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Perceived user control and clarity",
+          "isCorrect": true,
+          "reasoning": "HCD evaluation extends beyond technical metrics to include usability, trust, user understanding, and sense of control—core ISO 9241-210 principles. Perceived user control measures whether people feel they can effectively direct the system, understand what's happening, and intervene when needed. Clarity assesses whether users comprehend outputs and reasoning. Token usage and latency are infrastructure metrics. Accuracy measures technical performance but not whether users can effectively work with the system, understand its outputs, or maintain appropriate oversight. A highly accurate system that confuses users or removes their agency fails HCD principles."
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Evaluation Principles",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "User-centered evaluation methods for interactive systems"
+        },
+        {
+          "title": "NIST Usability and Human Factors",
+          "url": "https://www.nist.gov/itl/iad/visualization-and-usability-group/human-factors-human-centered-design",
+          "description": "Guidance on human-centered evaluation metrics"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "Which is a common Human-Centered Design anti-pattern in AI-enabled experiences?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Providing citations",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Allowing escalation",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Presenting AI outputs without explanation or context",
+          "isCorrect": true,
+          "reasoning": "Opaque systems that provide outputs without explanation undermine trust, usability, and informed decision-making—violating core HCD principles. ISO 9241-210 emphasizes self-descriptiveness (users understanding what's happening) and suitability for the task (users having information they need). 'Black box' AI that presents conclusions without reasoning prevents users from assessing reliability, identifying errors, or understanding when to trust vs. verify outputs. Providing citations, allowing escalation to humans, and enabling corrections are all positive HCD practices that support user understanding, control, and error recovery."
+        },
+        {
+          "label": "D",
+          "text": "Allowing corrections",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OECD AI Principles - Transparency",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "International framework emphasizing AI transparency and explainability"
+        },
+        {
+          "title": "NIST AI RMF - Explainability",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Federal guidance on AI system transparency requirements"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "Why does Human-Centered Design emphasize starting with the problem rather than the AI technology?",
+      "options": [
+        {
+          "label": "A",
+          "text": "AI tools change frequently",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "AI is the last option",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "User needs determine whether and how AI should be applied",
+          "isCorrect": true,
+          "reasoning": "HCD begins with understanding user pain points, workflows, and goals, then selecting appropriate solutions—AI or otherwise. ISO 9241-210 requires design to be based on explicit understanding of users, tasks, and environments before solution selection. Problem-first design prevents 'solution in search of a problem' failures where technology is deployed without addressing real needs. While AI tools do evolve, this is not the primary reason for problem-first design. HCD does not advocate avoiding AI but rather thoughtful, need-driven application. Cost reduction is a potential outcome, not the design rationale. Starting with problems ensures AI serves human needs rather than forcing humans to adapt to technology."
+        },
+        {
+          "label": "D",
+          "text": "It lowers infrastructure costs",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Design Principles",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "User needs and context as foundation for design decisions"
+        },
+        {
+          "title": "Stanford HAI Research",
+          "url": "https://hai.stanford.edu/",
+          "description": "Human-centered approaches to AI system design"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "Which AI-enabled pattern best aligns with early Human-Centered Design adoption?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Fully autonomous systems",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Customer-facing bots without escalation",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Internal tools that assist humans in their work",
+          "isCorrect": true,
+          "reasoning": "Assistive internal systems keep humans in control, allow organizational learning before exposing users to risk, and embody ISO 9241-210's principle of appropriate allocation of functions between humans and technology. Starting with internal tools enables teams to understand AI capabilities and limitations, refine workflows, and build expertise before deploying customer-facing applications. Fully autonomous systems and end-to-end automation remove human oversight prematurely, violating HCD principles of human control. Customer-facing bots without escalation create unacceptable risk for users who need human assistance, contradicting OMB M-24-10 requirements for human review in consequential decisions."
+        },
+        {
+          "label": "D",
+          "text": "End-to-end automation",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI RMF - Deployment Phases",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Phased approach to AI deployment with human oversight"
+        },
+        {
+          "title": "MITRE Human-Centered AI Framework",
+          "url": "https://www.mitre.org/focus-areas/artificial-intelligence",
+          "description": "Practical guidance for responsible AI implementation"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "Which UX feature most directly supports trust in AI-enabled recommendations?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Shorter responses",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Friendly tone",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Clear reasoning and source context",
+          "isCorrect": true,
+          "reasoning": "HCD emphasizes explainability so users understand why a recommendation exists, enabling informed evaluation of advice. Clear reasoning (showing the logic) and source context (where information came from) allow users to assess credibility, identify potential errors, and make independent judgments. This aligns with NIST AI RMF's emphasis on transparency and OECD AI Principles on explainability. Shorter responses can reduce clarity and necessary context. Friendly tone may improve perception but does not build justified trust—it could even create false confidence. Higher response frequency is unrelated to trustworthiness and could overwhelm users."
+        },
+        {
+          "label": "D",
+          "text": "Higher response frequency",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OECD AI Principles - Transparency",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "Framework promoting explainable and understandable AI"
+        },
+        {
+          "title": "NIST AI RMF - Explainability",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Requirements for transparent AI reasoning"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "From a CX perspective, why is human escalation critical in AI-enabled services?",
+      "options": [
+        {
+          "label": "A",
+          "text": "To improve automation metrics",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "To reduce staffing needs",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "To protect users when AI cannot safely resolve an issue",
+          "isCorrect": true,
+          "reasoning": "Human-Centered CX assumes AI will encounter situations beyond its capabilities and designs safe, dignified handoffs to humans who can provide judgment, empathy, and accountability. ISO 9241-210 emphasizes error tolerance and recovery. OMB M-24-10 requires human review for consequential decisions. Escalation protects users from being trapped in unhelpful automated loops, ensures access to human judgment for complex/ambiguous cases, and maintains accountability for important outcomes. Improving automation metrics and reducing staffing prioritize efficiency over user safety and satisfaction. Workflow simplification does not address situations requiring human expertise, empathy, or authority."
+        },
+        {
+          "label": "D",
+          "text": "To simplify workflows",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB M-24-10 Human Review Requirements",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-memorandum-for-the-heads-of-executive-departments-and-agencies/",
+          "description": "Federal requirements for human oversight in AI systems"
+        },
+        {
+          "title": "ISO 9241-210 Error Handling",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "Design principles for error tolerance and recovery"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "Which scenario most clearly requires Human-Centered Design safeguards in an AI-enabled system?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Drafting internal notes",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Summarizing public FAQs",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Determining benefits eligibility",
+          "isCorrect": true,
+          "reasoning": "Decisions affecting rights, safety, and well-being demand human oversight and accountability per OMB M-24-10 requirements for rights-impacting and safety-impacting AI systems. Benefits eligibility directly impacts individuals' access to critical resources, financial stability, and fundamental rights. Such consequential decisions require: human review and appeal mechanisms, transparency in decision rationale, protection against discriminatory outcomes, and clear accountability. Drafting internal notes, summarizing public FAQs, and rewriting emails are lower-stakes activities that do not directly impact individual rights, safety, or access to essential services."
+        },
+        {
+          "label": "D",
+          "text": "Rewriting emails",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB M-24-10 Rights-Impacting AI",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-memorandum-for-the-heads-of-executive-departments-and-agencies/",
+          "description": "Requirements for safeguards in rights-impacting AI systems"
+        },
+        {
+          "title": "NIST AI RMF Risk Categorization",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for identifying high-risk AI applications"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "text": "Why is evaluating AI-enabled systems solely on accuracy insufficient from an HCD perspective?",
+      "options": [
+        {
+          "label": "A",
+          "text": "It increases cost",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "It slows delivery",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "It ignores usability, trust, and real-world impact",
+          "isCorrect": true,
+          "reasoning": "HCD requires evaluating how systems affect people—not just technical outputs. ISO 9241-210 defines usability as effectiveness, efficiency, and satisfaction in specified contexts. A highly accurate system can still fail users if it's confusing, inaccessible, untrustworthy, or creates unintended negative consequences. Critical evaluation dimensions beyond accuracy include: user comprehension, appropriate trust calibration, fairness across demographic groups, real-world task completion, error recovery, and impact on work quality/satisfaction. Cost increase and delivery speed are project management concerns. Reporting complexity is an administrative consideration, not a design principle affecting user welfare."
+        },
+        {
+          "label": "D",
+          "text": "It complicates reporting",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Usability Definition",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "Effectiveness, efficiency, and satisfaction as evaluation criteria"
+        },
+        {
+          "title": "NIST AI RMF - Evaluation",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Comprehensive AI system evaluation beyond technical metrics"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "text": "What role should AI play in a Human-Centered system?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Autonomous decision maker",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Replacement for expensive expertise",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Supportive tool that augments human decision-making",
+          "isCorrect": true,
+          "reasoning": "HCD positions AI as a collaborator that enhances human capabilities rather than replacing human judgment. ISO 9241-210 emphasizes appropriate allocation of functions between humans and technology based on their respective strengths. AI should handle data processing, pattern recognition, and information synthesis, while humans provide judgment, contextual understanding, ethical reasoning, and accountability. Autonomous decision-making authority removes necessary human oversight and accountability. Replacing expertise eliminates valuable human knowledge and accountability. A passive data processor underutilizes AI's potential to actively support and augment human work through insights, recommendations, and assistance."
+        },
+        {
+          "label": "D",
+          "text": "Passive data processor",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OECD AI Principles - Human-Centric Values",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "Framework positioning AI as tool serving human welfare"
+        },
+        {
+          "title": "Stanford HAI Research",
+          "url": "https://hai.stanford.edu/",
+          "description": "Research on human-AI collaboration and augmentation"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "text": "Which design element best helps users decide when to rely on or override AI suggestions?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Hiding confidence indicators",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Showing only final answers",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Combining rationale, sources, and confidence cues",
+          "isCorrect": true,
+          "reasoning": "HCD supports informed user choice through meaningful signals that enable appropriate trust calibration. Combining rationale (why this recommendation), sources (where information came from), and confidence cues (how certain the system is) gives users the information needed to evaluate AI suggestions. This aligns with ISO 9241-210's self-descriptiveness principle and NIST AI RMF's transparency requirements. Hiding confidence indicators prevents appropriate trust calibration. Showing only final answers removes context for evaluation. Increasing verbosity without structure can reduce clarity rather than improving decision support—quality of information matters more than quantity."
+        },
+        {
+          "label": "D",
+          "text": "Increasing verbosity",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "NIST AI RMF - Transparency",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Requirements for explainable AI outputs"
+        },
+        {
+          "title": "Council of Europe AI Framework",
+          "url": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence",
+          "description": "International legal framework emphasizing transparency"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "text": "What is a key risk of making AI-enabled interactions appear too human-like?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Higher compute costs",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Slower responses",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Users may overestimate system authority or capability",
+          "isCorrect": true,
+          "reasoning": "Anthropomorphism can undermine informed consent and appropriate trust calibration. When AI systems appear too human-like, users may incorrectly attribute human-level understanding, empathy, judgment, or authority to systems that lack these capabilities. This can lead to over-reliance on AI advice, failure to exercise appropriate skepticism, emotional manipulation concerns, and inappropriate disclosure of sensitive information. OECD AI Principles and Council of Europe frameworks emphasize transparency about AI nature. Compute costs and response speed are technical concerns. While accessibility is important, anthropomorphism primarily affects trust calibration and informed consent rather than system access."
+        },
+        {
+          "label": "D",
+          "text": "Reduced accessibility",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OECD AI Principles - Transparency",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "Requirements for clear identification of AI systems"
+        },
+        {
+          "title": "Council of Europe AI Framework",
+          "url": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence",
+          "description": "Legal framework addressing anthropomorphism risks"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "text": "Which practice best supports inclusive Human-Centered Design in AI-enabled systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Designing only for experts",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Using one interface for everyone",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Adapting explanations to different user skill levels",
+          "isCorrect": true,
+          "reasoning": "Inclusive HCD accounts for diverse experience levels, literacy, accessibility needs, and contexts per ISO 9241-210 principles. Adaptive explanations provide: technical details for expert users, simplified summaries for novices, visual alternatives for text-heavy content, and multiple modalities for accessibility. This enables each user to understand AI outputs at their comprehension level without excluding anyone. Designing only for experts excludes many users and violates accessibility principles. One-size-fits-all interfaces fail to accommodate diverse needs and cognitive styles. Removing advanced features limits capability rather than improving accessibility—systems should support both novice and expert needs."
+        },
+        {
+          "label": "D",
+          "text": "Removing advanced features",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Accessibility",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "Design for users with widest range of capabilities"
+        },
+        {
+          "title": "NIST Usability and Accessibility",
+          "url": "https://www.nist.gov/itl/iad/visualization-and-usability-group/human-factors-human-centered-design",
+          "description": "Guidance on inclusive design practices"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "text": "Why is the ability for humans to override AI outputs a key HCD requirement?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Improves performance",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Reduces training data",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Preserves human agency and accountability",
+          "isCorrect": true,
+          "reasoning": "HCD ensures humans retain ultimate responsibility for outcomes, especially in consequential decisions. ISO 9241-210 emphasizes user control, and OMB M-24-10 requires human review for rights-impacting AI. Override capability enables: humans to apply contextual judgment AI lacks, correction of AI errors based on domain expertise, ethical intervention when AI recommendations are problematic, and maintenance of accountability chains. Performance improvement from overrides is possible but uncertain. Training data reduction is a technical consideration separate from the user empowerment rationale. Audit simplification is an administrative benefit, not the primary design justification for preserving human agency."
+        },
+        {
+          "label": "D",
+          "text": "Simplifies audits",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB M-24-10 Human Decision Authority",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-memorandum-for-the-heads-of-executive-departments-and-agencies/",
+          "description": "Requirements for human control in AI systems"
+        },
+        {
+          "title": "ISO 9241-210 User Control",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "Principles emphasizing user agency and controllability"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "text": "Which CX signal most strongly suggests an AI-enabled experience is failing users?",
+      "options": [
+        {
+          "label": "A",
+          "text": "High uptime",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Low latency",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Escalations that lack context or continuity",
+          "isCorrect": true,
+          "reasoning": "Poor handoffs break the user experience and violate HCD principles of continuity and error recovery. When users escalate to humans but context is lost (humans must restart the entire interaction), continuity breaks (conversation history unavailable), or the human agent lacks understanding of the AI interaction, it signals fundamental CX failure. ISO 9241-210 emphasizes error tolerance and recovery. Effective escalation requires: preserving conversation context, seamless handoffs, human agents understanding AI capabilities/limitations, and maintaining user trust through consistent service. High uptime, low latency, and high interaction volume are positive or neutral technical metrics that don't indicate user experience quality."
+        },
+        {
+          "label": "D",
+          "text": "High interaction volume",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Error Recovery",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "Design principles for error tolerance and recovery"
+        },
+        {
+          "title": "NIST AI RMF - Human-AI Teaming",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Guidance on effective human-AI collaboration"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "text": "Why should AI-generated content be clearly labeled in government and regulated environments?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Branding consistency",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "UI simplicity",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Transparency, trust, and auditability",
+          "isCorrect": true,
+          "reasoning": "Clear labeling supports informed use, governance, and accountability—core HCD concerns aligned with OMB M-24-10, NIST AI RMF, and OECD AI Principles. Labeling AI-generated content enables: users to apply appropriate scrutiny, auditors to trace decision provenance, regulators to ensure compliance, and accountability when errors occur. Citizens have a right to know when AI influences government decisions affecting them. Transparency builds appropriate trust rather than blind reliance. Branding consistency and UI simplicity are design preferences subordinate to transparency requirements. Reduced interaction time is unrelated to the fundamental need for transparency about AI involvement in consequential decisions."
+        },
+        {
+          "label": "D",
+          "text": "Reduced interaction time",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "OMB M-24-10 Transparency Requirements",
+          "url": "https://www.whitehouse.gov/omb/briefing-room/2024/03/28/m-24-10-memorandum-for-the-heads-of-executive-departments-and-agencies/",
+          "description": "Federal requirements for AI transparency and disclosure"
+        },
+        {
+          "title": "OECD AI Principles - Transparency",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "International framework requiring AI disclosure"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "text": "What is the primary purpose of feedback mechanisms in AI-enabled systems from an HCD perspective?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Improve aesthetics",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Reduce compute usage",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Enable learning, trust calibration, and continuous improvement",
+          "isCorrect": true,
+          "reasoning": "Feedback mechanisms empower users and support iterative, human-centered improvement aligned with ISO 9241-210's emphasis on user-centered evaluation and iterative design. Effective feedback enables: users to correct errors and improve future outputs, organizations to identify failure patterns and edge cases, systems to learn from real-world usage, users to build appropriate trust through visible responsiveness to input, and continuous improvement cycles. Feedback creates accountability by giving users voice in system evolution. Aesthetics improvement and compute reduction are not primary purposes. Feedback complements rather than replaces formal evaluation—both are necessary for responsible AI deployment."
+        },
+        {
+          "label": "D",
+          "text": "Replace formal evaluation",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Iterative Design",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "User feedback in continuous improvement cycles"
+        },
+        {
+          "title": "NIST AI RMF - Continuous Monitoring",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for ongoing AI system evaluation and improvement"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "text": "Which statement best reflects Human-Centered Design applied to AI systems?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Accuracy defines success",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Automation removes humans",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Systems succeed when people succeed using them",
+          "isCorrect": true,
+          "reasoning": "Human-Centered Design measures success by positive human outcomes—effectiveness, efficiency, satisfaction, and well-being—not technical sophistication alone. ISO 9241-210 defines this principle: systems exist to serve human goals and should be evaluated by how well they enable people to accomplish their objectives. Success means: users achieving their goals efficiently, people maintaining agency and control, systems enhancing rather than replacing human capabilities, and technology adapting to human needs (not vice versa). Accuracy is a necessary but insufficient technical metric. Removing humans contradicts HCD principles of human oversight. Requiring users to adapt represents technology-centered, not human-centered, design philosophy."
+        },
+        {
+          "label": "D",
+          "text": "Users must adapt to technology",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ISO 9241-210 Core Philosophy",
+          "url": "https://www.iso.org/standard/77520.html",
+          "description": "Fundamental principles of human-centered design"
+        },
+        {
+          "title": "OECD AI Principles - Human-Centric AI",
+          "url": "https://oecd.ai/en/ai-principles",
+          "description": "Framework emphasizing AI serving human welfare and values"
+        },
+        {
+          "title": "Stanford HAI Mission",
+          "url": "https://hai.stanford.edu/",
+          "description": "Vision for human-centered artificial intelligence"
+        }
+      ]
+    }
+  ]
+}

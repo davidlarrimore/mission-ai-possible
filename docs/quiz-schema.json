@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quiz Schema - Simplified",
+  "description": "Streamlined quiz format for AI literacy training",
+  "type": "object",
+  "required": ["title", "week", "overview", "questions"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Quiz title"
+    },
+    "week": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Week number in the course"
+    },
+    "overview": {
+      "type": "object",
+      "required": ["description"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Overview of what this quiz covers"
+        },
+        "learningObjectives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "What participants should know after completing"
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Required knowledge before taking quiz"
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "text", "options"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Question number"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["multiple-choice", "true-false"],
+            "description": "Question type"
+          },
+          "text": {
+            "type": "string",
+            "description": "The question"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["label", "text", "isCorrect"],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Option label (A, B, C, D, True, False)"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "Option text"
+                },
+                "isCorrect": {
+                  "type": "boolean",
+                  "description": "Whether this is the correct answer"
+                },
+                "reasoning": {
+                  "type": "string",
+                  "description": "Explanation of why this answer is correct (only for correct answers)"
+                }
+              }
+            }
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["title", "url"],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Supporting references specific to this question"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "title": "Natural Language Processing & Language Translation AI",
+  "week": 6,
+  "overview": {
+    "description": "This assessment evaluates understanding of Natural Language Processing (NLP) and language translation AI systems within the context of Mission: AI Possible. Week 6 focuses on how AI optimizes mission workflows through advanced language understanding and translation capabilities. The quiz examines fundamental NLP concepts, translation model architectures, evaluation metrics, and operational risks associated with multilingual AI deployment.",
+    "learningObjectives": [
+      "Understand Natural Language Processing fundamentals",
+      "Recognize transformer architecture as the standard for translation",
+      "Understand tokenization and its role in NLP",
+      "Learn about BLEU score for translation evaluation",
+      "Recognize sequence-to-sequence models and their evolution",
+      "Understand multilingual LLM capabilities",
+      "Identify challenges like code-switching in multilingual contexts",
+      "Apply semantic similarity concepts",
+      "Recognize risks in multilingual AI deployment"
+    ],
+    "prerequisites": [
+      "Week 1: Fundamentals of AI course material",
+      "Week 2: Bias and Responsible AI Use course material",
+      "Week 3: AI Transparency and Ethics course material",
+      "Week 4: AI in Government and Policy course material",
+      "Week 5: AI Cybersecurity and Adversarial Use course material"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "text": "What does NLP stand for in the context of AI?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Natural Logic Processing",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Natural Language Processing",
+          "isCorrect": true,
+          "reasoning": "Natural Language Processing (NLP) is the branch of artificial intelligence focused on enabling machines to understand, interpret, and generate human language. NLP powers applications ranging from machine translation and sentiment analysis to chatbots, document summarization, named entity recognition, and question answering, making it foundational to modern AI mission capabilities. It combines computational linguistics, machine learning, and deep learning to process and analyze large amounts of natural language data."
+        },
+        {
+          "label": "C",
+          "text": "Neural Language Parsing",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Native Linguistic Protocol",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ACL Anthology - Computational Linguistics Research",
+          "url": "https://aclanthology.org/",
+          "description": "Authoritative repository of peer-reviewed NLP research"
+        },
+        {
+          "title": "Stanford NLP Group",
+          "url": "https://nlp.stanford.edu/",
+          "description": "Leading academic research on natural language processing"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "text": "Which model type is most commonly used for modern translation tasks?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Decision Trees",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Support Vector Machines",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Transformers",
+          "isCorrect": true,
+          "reasoning": "Transformer architectures, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., have become the dominant approach for neural machine translation due to their ability to process entire sequences in parallel and capture long-range dependencies through attention mechanisms. Unlike earlier RNN-based approaches, transformers eliminate sequential processing bottlenecks, enabling faster training and better handling of long-distance relationships in text. Models like BERT, GPT, and T5 all build on transformer architecture and significantly outperform earlier recurrent or statistical approaches in both quality and efficiency."
+        },
+        {
+          "label": "D",
+          "text": "Naive Bayes",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Attention Is All You Need - Original Paper",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "description": "Groundbreaking 2017 paper introducing transformer architecture"
+        },
+        {
+          "title": "Google Research - Transformer Architecture",
+          "url": "https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/",
+          "description": "Google's explanation of transformer neural networks for NLP"
+        },
+        {
+          "title": "IBM - Attention Mechanism Explained",
+          "url": "https://www.ibm.com/think/topics/attention-mechanism",
+          "description": "Technical overview of attention mechanisms in transformers"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "text": "Tokenization refers to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Encrypting text for security",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Splitting text into smaller units like words or subwords",
+          "isCorrect": true,
+          "reasoning": "Tokenization is the process of breaking text into discrete units (tokens) that serve as the atomic elements for NLP model processing. Modern approaches use subword tokenization methods like Byte Pair Encoding (BPE), WordPiece, or SentencePiece to handle rare words, multilingual vocabularies, and morphologically complex languages efficiently while maintaining manageable vocabulary sizes. Subword tokenization solves the out-of-vocabulary problem and enables models to process previously unseen words by breaking them into known subword units."
+        },
+        {
+          "label": "C",
+          "text": "Assigning sentiment scores",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Generating new languages",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Hugging Face - Tokenizers Documentation",
+          "url": "https://huggingface.co/docs/tokenizers/",
+          "description": "Comprehensive guide to modern tokenization techniques"
+        },
+        {
+          "title": "Google Research - SentencePiece",
+          "url": "https://github.com/google/sentencepiece",
+          "description": "Unsupervised text tokenizer for neural text processing"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "text": "A \"synthetic language\" generated by an AI most closely refers to:",
+      "options": [
+        {
+          "label": "A",
+          "text": "A newly invented spoken language",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "A programming language",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "A model-created structured communication pattern",
+          "isCorrect": true,
+          "reasoning": "Synthetic languages in AI contexts refer to structured communication patterns or representations created by models, often as intermediate encodings or emergent behaviors during training. These can include learned internal representations, novel compression schemes, or communication protocols that emerge when AI systems interact or when models learn to encode information efficiently. While these patterns can be highly structured and systematic, they typically lack the full complexity, cultural context, and evolutionary history of natural human languages."
+        },
+        {
+          "label": "D",
+          "text": "A compressed version of English",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "DeepMind Research - Emergent Communication",
+          "url": "https://www.deepmind.com/research",
+          "description": "Research on emergent communication protocols in AI agents"
+        },
+        {
+          "title": "ACL Anthology",
+          "url": "https://aclanthology.org/",
+          "description": "Research on language emergence and synthetic communication"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "text": "BLEU score is used to measure what?",
+      "options": [
+        {
+          "label": "A",
+          "text": "GPU performance",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Translation quality",
+          "isCorrect": true,
+          "reasoning": "BLEU (Bilingual Evaluation Understudy) is a widely adopted automatic metric for evaluating machine translation quality by comparing model outputs against human reference translations. It measures n-gram precision (typically 1-4 grams) across multiple reference texts, producing a score between 0 and 1 (often expressed as 0-100). While BLEU is fast and reproducible, it has significant limitations including insensitivity to meaning preservation, inability to capture fluency defects, bias toward shorter translations, and poor correlation with human judgment for certain language pairs."
+        },
+        {
+          "label": "C",
+          "text": "Ethical compliance",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Image accuracy",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ACL Anthology - BLEU Paper",
+          "url": "https://aclanthology.org/P02-1040/",
+          "description": "Original BLEU metric paper by Papineni et al. (2002)"
+        },
+        {
+          "title": "Machine Translation Evaluation Metrics",
+          "url": "https://aclanthology.org/",
+          "description": "Research on MT evaluation including BLEU, METEOR, and human evaluation"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "text": "\"Sequence-to-sequence\" models were early approaches for:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Predicting stock prices",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Machine translation",
+          "isCorrect": true,
+          "reasoning": "Sequence-to-sequence (seq2seq) models, typically implemented with encoder-decoder architectures using recurrent neural networks (LSTMs or GRUs), were breakthrough approaches for neural machine translation before transformers. They encode input sequences into fixed-length or variable-length vectors and decode them into target sequences. Introduced around 2014, these models with attention mechanisms established the foundation for modern neural translation systems. While largely superseded by transformer architectures for translation, seq2seq concepts remain fundamental to understanding modern NLP."
+        },
+        {
+          "label": "C",
+          "text": "Image classification",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Cyber defense",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Wikipedia - Seq2Seq Models",
+          "url": "https://en.wikipedia.org/wiki/Seq2seq",
+          "description": "Overview of sequence-to-sequence model architectures"
+        },
+        {
+          "title": "Google Research - Neural Machine Translation",
+          "url": "https://research.google/pubs/",
+          "description": "Research on sequence-to-sequence models for translation"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "text": "A multilingual LLM can:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Only translate between English and French",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Handle multiple languages within one shared model",
+          "isCorrect": true,
+          "reasoning": "Multilingual Large Language Models (LLMs) are trained on diverse language corpora, enabling them to process, understand, and generate text across multiple languages within a single unified model. This approach leverages transfer learning across languages, allowing low-resource languages to benefit from high-resource language training (cross-lingual transfer), while enabling zero-shot or few-shot translation and cross-lingual understanding tasks. Models like mBERT, XLM-R, and multilingual versions of GPT demonstrate this capability."
+        },
+        {
+          "label": "C",
+          "text": "Operate only on numeric data",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Ignore cultural context",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Hugging Face - Multilingual Models",
+          "url": "https://huggingface.co/models?pipeline_tag=translation",
+          "description": "Collection of multilingual language models and their capabilities"
+        },
+        {
+          "title": "Google Research - Multilingual NLP",
+          "url": "https://research.google/",
+          "description": "Research on cross-lingual transfer and multilingual models"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "text": "What challenge does code-switching represent?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Switching programming languages",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Mixing multiple human languages in a single sentence",
+          "isCorrect": true,
+          "reasoning": "Code-switching describes the linguistic phenomenon where speakers alternate between two or more languages within a single conversation or sentence, common in multilingual communities (e.g., 'Me voy al store' mixing Spanish and English). This presents significant challenges for NLP systems because it requires simultaneous understanding of multiple linguistic structures, grammatical rules, cultural contexts, and semantic boundaries that may not align with monolingual training data distributions. Models must handle ambiguous boundaries, mixed morphology, and culturally-specific meanings."
+        },
+        {
+          "label": "C",
+          "text": "Converting binary to text",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Removing encryption",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "ACL Anthology - Code-Switching Research",
+          "url": "https://aclanthology.org/",
+          "description": "Computational linguistics research on code-switching phenomena"
+        },
+        {
+          "title": "Stanford NLP - Multilingual Processing",
+          "url": "https://nlp.stanford.edu/",
+          "description": "Research on handling multilingual and code-mixed text"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "text": "Semantic similarity measures:",
+      "options": [
+        {
+          "label": "A",
+          "text": "Translation speed",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "How similar two texts are in meaning",
+          "isCorrect": true,
+          "reasoning": "Semantic similarity quantifies the degree to which two text segments share meaning, independent of surface-level lexical or syntactic differences. For example, 'The car is fast' and 'The automobile moves quickly' have high semantic similarity despite different words. Modern approaches use dense vector embeddings from language models (like BERT, sentence transformers) to compute cosine similarity or other distance metrics, enabling applications like duplicate detection, information retrieval, paraphrase identification, document clustering, and cross-lingual alignment in mission-critical text analysis workflows."
+        },
+        {
+          "label": "C",
+          "text": "Voice pitch analysis",
+          "isCorrect": false
+        },
+        {
+          "label": "D",
+          "text": "Password complexity",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "Sentence-BERT Research",
+          "url": "https://www.sbert.net/",
+          "description": "State-of-the-art sentence embeddings for semantic similarity"
+        },
+        {
+          "title": "ACL Anthology - Semantic Similarity",
+          "url": "https://aclanthology.org/",
+          "description": "Research on measuring semantic similarity in NLP"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "text": "Which of these is a potential risk of multilingual AI?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Improved comprehension",
+          "isCorrect": false
+        },
+        {
+          "label": "B",
+          "text": "Better documentation",
+          "isCorrect": false
+        },
+        {
+          "label": "C",
+          "text": "Cross-language misinformation or manipulation",
+          "isCorrect": true,
+          "reasoning": "Multilingual AI systems can amplify risks of cross-language misinformation campaigns, manipulation, and adversarial content generation by enabling rapid translation and adaptation of misleading content across linguistic boundaries. Threat actors can exploit these capabilities to bypass language-based content moderation, target specific linguistic communities with tailored disinformation, obscure malicious intent through translation artifacts, and scale influence operations across multiple languages. This requires enhanced monitoring, validation protocols, and cross-lingual content moderation systems."
+        },
+        {
+          "label": "D",
+          "text": "Higher training costs",
+          "isCorrect": false
+        }
+      ],
+      "references": [
+        {
+          "title": "MITRE ATLAS - Adversarial ML Threats",
+          "url": "https://atlas.mitre.org/",
+          "description": "Documented adversarial tactics targeting NLP and translation systems"
+        },
+        {
+          "title": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "description": "Framework for managing AI risks including multilingual systems"
+        },
+        {
+          "title": "CISA AI Roadmap",
+          "url": "https://www.cisa.gov/ai",
+          "description": "Security considerations for language models and NLP systems"
+        }
+      ]
+    }
+  ]
+}
