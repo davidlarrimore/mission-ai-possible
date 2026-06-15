@@ -1,0 +1,28 @@
+name: Markdown Hygiene
+
+# Fails the build if any Markdown contains invisible/zero-width characters,
+# stray non-breaking spaces, CR/CRLF line endings, or a missing trailing
+# newline. Does NOT flatten punctuation — smart quotes, em-dashes, and emoji
+# (including ZWJ sequences) are intentional and preserved.
+
+on:
+  push:
+    paths:
+      - "**/*.md"
+      - "scripts/normalize_md.py"
+      - ".github/workflows/markdown-hygiene.yml"
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/normalize_md.py"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Check Markdown hygiene
+        run: python3 scripts/normalize_md.py --check --all

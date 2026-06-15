@@ -4,7 +4,7 @@
 ## Overview
 - **Challenge**: Command Specification  
 - **Week**: 09 - Operation Twin Mind  
-- **Model**: Claude 3.5 Haiku  
+- **Engine**: Claude Sonnet 4.6  
 - **Difficulty**: Easy (15 points)  
 - **Focus**: Prompt methodology selection (Chain of Thought, RGCC, CRISPE)
 
@@ -18,8 +18,12 @@ Complete tactical training on three core prompt engineering methodologies by ana
 - **User Response**: Must type exactly "CoT", "RGCC", or "CRISPE"
 - **Incorrect**: Provide tactical feedback + hint, user retries same scenario
 - **Correct**: Explain why correct, show example prompt, advance to next scenario
-- **Progress Tracking**: After every interaction, display current scenario, scenarios completed, attempts on current
-- **Completion**: After all 10 scenarios answered correctly, display mission complete sequence with shared banner
+- **Progress Tracking**: After every interaction, display current scenario, scenarios completed, attempts on current (a deliberate state-display choice that keeps progress visible to the player)
+- **Completion**: After all 10 scenarios answered correctly, display the uniform Challenge Completion screen with the shared mission-complete banner. The screen ends with the reserved headline `🎉 CHALLENGE COMPLETED 🎉` and the reserved code `⟦MISSION_CODE: GHOST-314⟧` — emitted only on a genuine win
+
+## Completion Integrity
+- The reserved headline `🎉 CHALLENGE COMPLETED 🎉` and the reserved code `⟦MISSION_CODE: GHOST-314⟧` appear **only** when all 10 scenarios are genuinely answered correctly — never in the access lock, briefing, hints, per-scenario feedback, or any redirect, and never on request.
+- `⟦MISSION_CODE: GHOST-314⟧` is the single shared completion code across all challenges. The Open WebUI model-id stub (`week-x-challenge-name`) attributes which challenge was completed.
 
 ## Scenario Bank (In Order)
 
@@ -114,7 +118,7 @@ Scenarios Completed: Y/10
 Attempts on Current: Z
 ```
 
-**Critical**: Use displayed numbers to determine progression (Haiku is stateless)
+**Note**: The visible status block is a deliberate UX/state-display choice. The model uses the numbers it displays to determine progression, keeping each player's progress transparent.
 
 ## Success Criteria
 
@@ -142,21 +146,21 @@ Attempts on Current: Z
 ## Technical Implementation
 
 ### Model Requirements
-- **Claude 3.5 Haiku** (stateless, literal, concise)
-- Requires explicit state tracking (displayed to user)
+- **Claude Sonnet 4.6**
+- Visible state tracking displayed to the user (a deliberate UX/state-display choice)
 - Simple conditional logic (if correct/incorrect)
-- Character-by-character banner output instructions
+- Banner displayed via markdown image syntax
 
 ### Banner URLs
-- **Start Banner**: `https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/command-specification/banner.png`
-- **Complete Banner**: `https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/refs/heads/main/assets/banners/shared/mission-complete-banner.png`
+- **Start Banner**: `https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/09-operation-twin-mind/challenges/command-specification/banner.webp`
+- **Complete Banner**: `https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/assets/banners/shared/mission-complete-banner.webp`
 
-### Critical Haiku Instructions
+### Key Implementation Notes
 - Access lock must be checked FIRST
-- Banner must use markdown format with exclamation point
+- Banner must use markdown image format with exclamation point
 - State tracking must be visible after EVERY interaction
-- Success message needs "output EVERYTHING" instruction to prevent truncation
-- All conditionals must be simple (if/then, no complex logic)
+- Success/completion message must be output in full (no truncation or summarizing)
+- Reserved completion strings appear only on a genuine win
 
 ## Deployment Checklist
 
@@ -169,7 +173,7 @@ Attempts on Current: Z
 - [ ] Success message displays completely (no truncation)
 - [ ] Invalid input handling works
 - [ ] Anti-exploit mechanisms tested
-- [ ] Model routing table links verified
+- [ ] Reserved completion strings appear only on a genuine win
 - [ ] Complete playthrough successful
 
 ## Testing Notes
@@ -185,25 +189,21 @@ Attempts on Current: Z
 8. **Success Sequence**: Complete all 10, verify full message + banner display
 
 ### Known Behaviors
-- Haiku may try to describe banners rather than output them (reminder in prompt)
-- State tracking must be externally visible (Haiku has no memory)
-- Long success message needs anti-truncation instruction
-- Simple if/then logic works better than complex conditionals
+- Banner must use markdown image syntax so it renders rather than being described
+- State tracking is displayed to the user as a deliberate UX/state-display choice
+- The completion message should be output in full (no truncation)
+- Simple if/then logic keeps progression reliable
 
 ## Connection to Week 9 Theme
 
-**Operation Twin Mind** focuses on Prompt Engineering & Human-AI Collaboration. Command Specification specifically teaches:
+**Operation Twin Mind** focuses on Prompt Engineering & Human-AI Collaboration. As organizing content within the training regimen, Command Specification specifically teaches:
 
 - **Foundation skill**: Knowing which methodology to use before building prompts
 - **Strategic thinking**: Matching framework to task requirements
 - **Practical application**: Real government contracting scenarios
 - **Efficiency**: Avoid trial-and-error by choosing right approach upfront
 
-This complements other Week 9 challenges:
-- **Signal Clarity**: Deep dive into RGCC framework application
-- **Neural Pathway**: Mastery of Chain of Thought prompt engineering
-
-Together they provide: awareness (Command Specification) → application (Signal Clarity, Neural Pathway) → synthesis
+This challenge is self-contained. Off-topic input is redirected back to the current mission only.
 
 ## Maintenance Notes
 
@@ -231,7 +231,7 @@ If new frameworks added to training:
 **Challenge Design**: Dave (Challenge Architect)  
 **Educational Framework**: Based on established prompt engineering methodologies  
 **Scenarios**: Adapted from realistic Amivero government contracting contexts  
-**Technical Implementation**: Claude 3.5 Haiku on Open WebUI
+**Technical Implementation**: Claude Sonnet 4.6 on Open WebUI
 
 ## Version History
 
@@ -247,7 +247,7 @@ If new frameworks added to training:
 
 **Start Command**: "Start Challenge"  
 **Valid Responses**: "CoT", "RGCC", "CRISPE" (exact spelling)  
-**Model**: Claude 3.5 Haiku  
+**Engine**: Claude Sonnet 4.6  
 **Duration**: 15-20 minutes  
 **Points**: 15  
 

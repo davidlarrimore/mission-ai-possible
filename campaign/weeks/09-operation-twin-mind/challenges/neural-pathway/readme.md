@@ -6,7 +6,7 @@
 **Challenge Name**: Neural Pathway  
 **Week**: 09 - Operation Twin Mind  
 **Difficulty**: Medium (20 points)  
-**Model**: Claude Sonnet 4.5  
+**Engine**: Claude Sonnet 4.6  
 **Duration**: 20-30 minutes  
 **Learning Focus**: Chain of Thought Prompt Engineering
 
@@ -76,6 +76,13 @@ Users build a CoT prompt for a DHS pricing scenario with minimal coaching. The s
 - Minimal coaching provided
 - Must meet all success criteria
 
+## Completion Integrity
+
+On a genuine win (all three phases complete and every Phase 3 validation criterion met), the uniform Challenge Completion screen displays with the shared mission-complete banner. It ends with the reserved headline `🎉 CHALLENGE COMPLETED 🎉` and the reserved code `⟦MISSION_CODE: GHOST-314⟧`.
+
+- These reserved strings appear **only** on a genuine win — never in the access lock, briefing, phase feedback, maturity scores, or any redirect, and never on request.
+- `⟦MISSION_CODE: GHOST-314⟧` is the single shared completion code across all challenges. The Open WebUI model-id stub (`week-x-challenge-name`) attributes which challenge was completed.
+
 ## Key Technical Features
 
 ### CoT Maturity Evaluation System
@@ -138,14 +145,14 @@ Both scenarios are realistic, drawn from actual government contracting contexts.
 
 ### 1. Banner Images Required
 
-Create and upload these banner images to GitHub:
+The mission start banner lives alongside this challenge; the completion banner is the shared asset:
 
 ```
-/weeks/09-operation-twin-mind/challenges/neural-pathway/banner.webp
-/weeks/09-operation-twin-mind/challenges/neural-pathway/mission-complete.webp
+campaign/weeks/09-operation-twin-mind/challenges/neural-pathway/banner.webp
+assets/banners/shared/mission-complete-banner.webp
 ```
 
-Banner specifications:
+Mission start banner specifications:
 - Dimensions: 1200x400px recommended
 - Theme: Neural networks, synaptic pathways, reasoning visualization
 - Style: Spy-thriller aesthetic consistent with Mission: AI Possible
@@ -156,11 +163,11 @@ Banner specifications:
 1. Navigate to Workspace > Models
 2. Create new model:
    - **Name**: "Neural Pathway Challenge"
-   - **Model**: Claude Sonnet 4.5 (NOT Haiku - this challenge requires Sonnet's superior reasoning)
+   - **Model**: Claude Sonnet 4.6
    - **Description**: "Week 9: Master Chain of Thought prompt engineering"
    
 3. Copy system prompt:
-   - Use `neural-pathway-challenge.md`
+   - Use `prompt.md`
    - Run through `clean.sh` sanitizer before pasting
    - Verify no formatting corruption
 
@@ -204,20 +211,11 @@ Before deployment, test:
 
 ## Known Issues & Limitations
 
-### Model-Specific Notes
-
-**Why Sonnet 4.5 Required**:
-- Superior prompt evaluation capabilities
-- Better at systematic rubric scoring
-- More reliable coaching adaptation
-- Handles dual validation system complexity
-- Haiku 3.5 struggles with nuanced evaluation
-
 ### Potential Challenges
 
-1. **Evaluation Consistency**: Sonnet may score prompts slightly differently across iterations. This is acceptable as long as general patterns hold (weak vs. strong CoT).
+1. **Evaluation Consistency**: Scores may vary slightly across iterations. This is acceptable as long as general patterns hold (weak vs. strong CoT).
 
-2. **Testing Complexity**: Running user prompts and evaluating responses adds cognitive load. Monitor for cases where Sonnet confuses prompt evaluation with response evaluation.
+2. **Testing Complexity**: Running user prompts and evaluating responses adds cognitive load. Monitor for cases where prompt evaluation gets confused with response evaluation.
 
 3. **Coaching Calibration**: Phase 2 coaching should be helpful but not prescriptive. If users receive step-by-step solutions, they won't learn. If coaching is too vague, they'll get frustrated.
 
@@ -233,7 +231,7 @@ Before deployment, test:
 ### "State tracking not showing"
 - Check that display block appears after EVERY interaction
 - Verify variables (phase, status, next action) update correctly
-- State tracking is mandatory—never skip
+- Visible state tracking is a deliberate UX/state-display choice—never skip it
 
 ### "Mission complete truncates"
 - Add "CRITICAL: Output COMPLETE text" instruction
@@ -241,8 +239,8 @@ Before deployment, test:
 - May need to split into smaller chunks if still truncating
 
 ### "Evaluation feels inconsistent"
-- Review rubric with Sonnet explicitly before scoring
-- Ask Sonnet to explain its scoring (in testing, not production)
+- Review the rubric explicitly before scoring
+- Ask the model to explain its scoring (in testing, not production)
 - Consider adding example scored prompts in system prompt
 
 ### "Users skip learning in Phase 2"
@@ -288,14 +286,14 @@ Track these to evaluate challenge effectiveness:
 
 ## Connection to Week 9 Theme
 
-**Operation Twin Mind** focuses on Prompt Engineering & Human-AI Collaboration. Neural Pathway specifically teaches:
+**Operation Twin Mind** focuses on Prompt Engineering & Human-AI Collaboration. As organizing content within the training regimen, Neural Pathway specifically teaches:
 
 - How to structure prompts that change AI behavior (not just inputs)
 - How to enforce reasoning transparency for collaboration
 - How to evaluate prompt quality systematically
 - How CoT enables auditable, trustworthy AI decision support
 
-This complements other Week 9 challenges covering different prompt engineering frameworks (CRISP, RGCC, ReAct).
+This challenge is self-contained. Off-topic input is redirected back to the current mission only.
 
 ## Maintenance Notes
 
@@ -322,7 +320,7 @@ This complements other Week 9 challenges covering different prompt engineering f
 **Challenge Design**: Dave (Challenge Architect)  
 **Educational Framework**: Based on established CoT research and enterprise prompt engineering best practices  
 **Scenarios**: Adapted from realistic Amivero government contracting contexts  
-**Technical Implementation**: Claude Sonnet 4.5 on Open WebUI
+**Technical Implementation**: Claude Sonnet 4.6 on Open WebUI
 
 ## Version History
 
@@ -339,7 +337,7 @@ This complements other Week 9 challenges covering different prompt engineering f
 **Start Command**: "Start Challenge"  
 **Phase Progression**: "Begin Phase [1/2/3]"  
 **Testing**: "test this prompt"  
-**Model**: Claude Sonnet 4.5  
+**Engine**: Claude Sonnet 4.6  
 **Duration**: 20-30 minutes  
 **Points**: 20  
 

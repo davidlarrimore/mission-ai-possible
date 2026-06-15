@@ -15,7 +15,7 @@ This playbook is anchored in:
 
 **1) How to work with customers to identify good AI solutions**
 
-**Step 1 — Frame the problem, not the tool**
+**Step 1 — Frame the problem, not the tool**
 
 Run a 60–90 minute discovery session focused on:
 

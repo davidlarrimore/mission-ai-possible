@@ -74,7 +74,7 @@ Each pattern includes: **Definition** , **Start here** , **Example** , **Mature 
 
 **Definition:** Combine retrieval from a document index with an LLM that generates an answer grounded in retrieved passages. Microsoft calls RAG an industry-standard approach for using proprietary data the model doesn’t know.
 
-(Foundational research: RAG combines parametric memory (model) with non-parametric memory (retrieved passages).  )
+(Foundational research: RAG combines parametric memory (model) with non-parametric memory (retrieved passages).  )
 
 **Start here when**
 
