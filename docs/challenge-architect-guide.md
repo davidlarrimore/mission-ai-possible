@@ -777,26 +777,31 @@ Week X/
 - **Text:** Include mission name and week number
 - **Style:** Consistent with other week banners
 
-#### **Run Sanitizer Before Deployment**
+#### **Markdown Hygiene (Automatic on Commit)**
 
-**CRITICAL:** Markdown must be sanitized for Open WebUI:
+Markdown hygiene is handled by `scripts/normalize_md.py`, which runs **automatically via a pre-commit hook and is enforced in CI** — it is no longer a manual interactive step.
 
 ```bash
-./clean.sh
-# Select your new prompt file from the menu
-# Script will:
-# - Create backup
-# - Convert smart quotes to ASCII
-# - Normalize code blocks
-# - Remove problematic Unicode
-# - Save sanitized version
+# Normalize a specific file in place (optional; pre-commit does this for you)
+python3 scripts/normalize_md.py campaign/weeks/<week-folder>/challenges/<slug>/prompt.md
+
+# Normalize all repo Markdown
+python3 scripts/normalize_md.py --all
+
+# CI mode: report issues, exit 1 if any (no writes)
+python3 scripts/normalize_md.py --check --all
+
+# Enable the auto hook locally
+pip install pre-commit && pre-commit install
 ```
 
-**Why This Matters:**
-- Open WebUI's markdown parser is strict
-- Smart quotes break parsing
-- Some Unicode characters cause rendering issues
-- Code blocks need specific markers
+**What it does (invisible-character hygiene only):**
+- Strips zero-width spaces (U+200B), BOM, and word-joiners
+- Converts non-breaking spaces → regular spaces
+- Normalizes CRLF → LF and ensures a single trailing newline
+
+**What it preserves (on purpose):**
+- Smart quotes, em-dashes, bullets, and emoji (including ZWJ sequences like 👩‍🏫). It is **not** a punctuation flattener — the intentional Mission:AI Possible typography stays intact.
 
 #### **Deploy to Open WebUI**
 
@@ -817,7 +822,7 @@ Week X/
 
 3. **Paste System Prompt:**
    ```
-   Copy sanitized .md file content
+   Copy the .md file content (kept clean by the normalize_md.py pre-commit hook)
    Paste into System Prompt field
    ```
 
@@ -1743,7 +1748,7 @@ A challenge is ready for deployment when:
 **Pre-Deployment (Complete Before Creating Model)**
 
 - [ ] System prompt complete and tested
-- [ ] System prompt sanitized (run clean.sh)
+- [ ] Markdown hygiene passes (`python3 scripts/normalize_md.py --check --all`; pre-commit applies it automatically)
 - [ ] Mission start banner created and uploaded to GitHub
 - [ ] Mission complete banner verified (shared asset)
 - [ ] Banner URLs tested (images display)
@@ -1762,7 +1767,7 @@ A challenge is ready for deployment when:
   - [ ] Base Model: Claude Sonnet 4.6
   - [ ] Temperature: 0.7
   - [ ] Description: [Brief description]
-- [ ] 5. Paste sanitized system prompt
+- [ ] 5. Paste system prompt (kept clean by the normalize_md.py pre-commit hook)
 - [ ] 6. Save model
 - [ ] 7. Set permissions/visibility
 - [ ] 8. Add to appropriate workspace
@@ -2252,7 +2257,7 @@ You now have everything needed to create high-quality Mission: AI Possible chall
 2. Choose challenge type → Map to difficulty level
 3. Develop scenarios → Write system prompt
 4. Test extensively → Fix issues found
-5. Sanitize markdown → Create documentation
+5. Commit (markdown hygiene runs automatically via pre-commit) → Create documentation
 6. Deploy to OpenWebUI → Verify in production
 7. Monitor usage → Iterate based on feedback
 ```
@@ -2261,7 +2266,7 @@ You now have everything needed to create high-quality Mission: AI Possible chall
 - `docs/challenge-setup.md` - Universal component guide
 - `campaign/weeks/05-operation-firewall/challenges/echo-breach/prompt.md` - Gold-standard reference prompt for the current uniform standard
 - Week 2-5 challenges - Mature examples to learn from
-- `clean.sh` - Markdown sanitization tool
+- `scripts/normalize_md.py` - Markdown invisible-character hygiene (runs automatically via pre-commit + CI; punctuation/emoji preserved)
 - This guide - Comprehensive reference
 
 **Ready to start?**

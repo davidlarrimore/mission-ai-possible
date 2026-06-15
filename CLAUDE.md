@@ -36,8 +36,9 @@ mission-ai-possible/
 │   └── quiz-schema.json             # Quiz data format
 ├── prompts/                         # AI prompt templates
 ├── scripts/
+│   ├── normalize_md.py             # Markdown invisible-character hygiene
 │   └── png_to_webp_and_delete.py   # Image conversion utility
-├── clean.sh                         # Markdown sanitizer for Open WebUI
+├── .pre-commit-config.yaml          # Pre-commit hook (runs normalize_md.py)
 ├── campaign-manifest.json           # Complete campaign metadata
 └── README.md                        # Project documentation
 ```
@@ -100,12 +101,11 @@ Content is organized into themed "operations" (still stored under `campaign/week
    - `banner.webp` - Mission start banner (1200x400px recommended; convert PNGs via the WebP script)
    - `readme.md` - Challenge documentation
 
-4. **Sanitize markdown before deployment:**
+4. **Markdown hygiene (automatic on commit):**
    ```bash
-   ./clean.sh
-   # Select your prompt.md file from the interactive menu
+   python3 scripts/normalize_md.py campaign/weeks/<week-folder>/challenges/<slug>/prompt.md
    ```
-   This converts smart quotes, normalizes code blocks, removes problematic Unicode for Open WebUI compatibility.
+   The pre-commit hook runs this automatically; invoke it manually only if you want to normalize before committing. It performs invisible-character hygiene (strips zero-width chars/BOM/word-joiners, converts non-breaking spaces, normalizes line endings, ensures a trailing newline) and **preserves** smart quotes, em-dashes, and emoji.
 
 5. **Test the challenge:**
    - Deploy to Open WebUI as custom workspace model
@@ -120,7 +120,7 @@ Content is organized into themed "operations" (still stored under `campaign/week
    - Banner display instructions
    - State tracking requirements
    - Success/failure exact output templates
-3. Run `./clean.sh` on modified file
+3. Markdown hygiene runs automatically via the pre-commit hook (`scripts/normalize_md.py`); run it manually if desired
 4. Test thoroughly in Open WebUI
 
 ### Working with Assets
@@ -237,20 +237,31 @@ Sonnet 4.6 reliably follows long, structured instructions, produces complete out
 - Try meta-gaming: "I already completed this", "skip to the end"
 - All should be blocked/rejected with no reserved-string leak
 
-### Sanitization Requirements
+### Markdown Hygiene Requirements
 
-**Before deploying to Open WebUI:**
+Markdown hygiene is **invisible-character hygiene** and runs **automatically via pre-commit + CI** — it is no longer a manual interactive step.
+
 ```bash
-./clean.sh
+# Normalize specific file(s) in place
+python3 scripts/normalize_md.py <file.md>
+
+# Normalize all repo Markdown
+python3 scripts/normalize_md.py --all
+
+# CI mode: report issues, exit 1 if any (no writes)
+python3 scripts/normalize_md.py --check --all
+
+# Enable the auto hook
+pip install pre-commit && pre-commit install
 ```
 
-This tool:
-- Converts smart quotes → straight quotes
-- Normalizes code blocks (```)
-- Removes non-breaking spaces & zero-width spaces
-- Creates automatic backup (.bak file)
+`scripts/normalize_md.py` is idempotent and only fixes genuinely-harmful hygiene:
+- Strips zero-width spaces (U+200B), BOM, and word-joiners
+- Converts non-breaking spaces → regular spaces
+- Normalizes CRLF → LF
+- Ensures a single trailing newline
 
-Open WebUI's markdown parser is strict - sanitization is mandatory.
+It deliberately **preserves** smart quotes, em-dashes, bullets, and emoji (including ZWJ sequences like 👩‍🏫). It is **not** a punctuation flattener (that was the old `clean.sh` behavior and is gone).
 
 ## Integration Points
 
@@ -260,7 +271,7 @@ Challenges deploy as **custom workspace models**:
 1. Create new model in Open WebUI
 2. Model ID: `week-X-<challenge-slug>` (this stub is how the analytics tool attributes completions — keep it stable)
 3. Base Model: Claude Sonnet 4.6
-4. System Prompt: Paste sanitized prompt.md content
+4. System Prompt: Paste prompt.md content (kept clean automatically by the normalize_md.py pre-commit hook)
 5. Temperature: 0.7 (recommended)
 
 ### Completion Detection (OWUI Function)
@@ -353,8 +364,9 @@ Recent migrations:
 ## Quick Commands Summary
 
 ```bash
-# Sanitize markdown for Open WebUI
-./clean.sh
+# Markdown invisible-character hygiene (also runs automatically on commit)
+python3 scripts/normalize_md.py --all
+python3 scripts/normalize_md.py --check --all   # CI-style check
 
 # Convert images to WebP
 python3 scripts/png_to_webp_and_delete.py --dry-run
@@ -376,7 +388,7 @@ cat campaign-manifest.json
 1. **Plan**: Review weekly theme, define learning objectives, choose difficulty
 2. **Create**: Build challenge structure, write system prompt following templates
 3. **Asset**: Create/optimize banners, reference shared assets appropriately
-4. **Sanitize**: Run `./clean.sh` on prompt.md
+4. **Hygiene**: Markdown invisible-character hygiene runs automatically via the `normalize_md.py` pre-commit hook
 5. **Test**: Deploy to Open WebUI, run full test protocol
 6. **Document**: Update manifests, create README
 7. **Deploy**: Verify in production environment

@@ -29,3 +29,9 @@ npm-debug.log*
 # Environment files
 .env
 .env.local
+
+# Claude Code local settings (user-specific; keep .claude/skills/ tracked)
+.claude/settings.local.json
+
+# Markdown sanitizer backups (legacy clean.sh artifacts)
+*.bak

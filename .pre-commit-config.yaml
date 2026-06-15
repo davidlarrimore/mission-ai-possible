@@ -1,0 +1,17 @@
+# Pre-commit hooks for Mission:AI Possible.
+# Install once:  pip install pre-commit && pre-commit install
+# Run on demand: pre-commit run --all-files
+#
+# The markdown-hygiene hook strips invisible/zero-width chars, normalizes line
+# endings, and ensures a trailing newline. It deliberately preserves smart
+# quotes, em-dashes, and emoji (including ZWJ sequences like 👩‍🏫). If it
+# rewrites a staged file, the commit fails so you can review and re-stage.
+repos:
+  - repo: local
+    hooks:
+      - id: markdown-hygiene
+        name: Markdown invisible-char hygiene
+        description: Strip zero-width/NBSP/BOM and normalize line endings in Markdown
+        entry: python3 scripts/normalize_md.py
+        language: system
+        types: [markdown]

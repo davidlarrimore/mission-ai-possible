@@ -78,7 +78,7 @@ This repository contains comprehensive campaign assets for a 10-week AI literacy
 - **Weekly theme graphics** - Consistent visual language across the campaign
 
 **Deployment & Development Tools**
-- **Markdown sanitizer** (clean.sh) - Prepares prompts for Open WebUI deployment
+- **Markdown hygiene tool** (scripts/normalize_md.py) - Strips invisible characters (zero-width spaces, BOM, word-joiners), converts non-breaking spaces, normalizes line endings; runs automatically via pre-commit + CI. Punctuation and emoji are preserved.
 - **Image optimizer** (png_to_webp_and_delete.py) - Converts and resizes campaign graphics
 - **Challenge creation guides** - Templates and best practices for building new missions
 - **Campaign manifests** (JSON) - Complete metadata for programmatic integration
@@ -153,9 +153,11 @@ mission-ai-possible/
 │   └── quiz-schema.json           # Quiz data format specification
 ├── prompts/                       # AI prompt templates
 ├── scripts/
+│   ├── normalize_md.py            # Markdown invisible-character hygiene
 │   └── png_to_webp_and_delete.py # Image conversion utility
+├── .pre-commit-config.yaml        # Pre-commit hook (runs normalize_md.py)
+├── .github/workflows/markdown-hygiene.yml  # CI hygiene check
 ├── campaign-manifest.json         # Complete campaign metadata
-├── clean.sh                       # Markdown sanitizer for Open WebUI
 ├── LICENSE                        # Apache 2.0
 └── README.md
 ```
@@ -217,7 +219,7 @@ See individual week folders for complete challenge listings and documentation.
 1. **Review campaign manifests**: Start with `campaign-manifest.json` to understand week structure, challenge metadata, and quiz data
 
 2. **Deploy challenges**: Import challenge prompts as custom workspace models in Open WebUI
-   - Use `clean.sh` to sanitize markdown before deployment
+   - Markdown hygiene runs automatically via pre-commit + CI (`scripts/normalize_md.py`); no manual sanitization step is needed
    - Configure base model: Claude Sonnet 4.6
    - Use the model ID `week-X-<challenge-slug>` (the analytics tool attributes completions by this stub)
    - Set temperature: 0.7 (recommended)
@@ -246,7 +248,7 @@ See individual week folders for complete challenge listings and documentation.
 2. **Create structure**: Build challenge folder with required files (prompt.md, banner.webp, readme.md)
 3. **Write system prompt**: Use templates from setup guide; implement access lock, state tracking, and completion-integrity rules
 4. **Create/optimize assets**: Mission banners (1200x400px recommended), reference shared assets from `/assets`
-5. **Sanitize markdown**: Run `./clean.sh` on prompt.md before deployment
+5. **Markdown hygiene**: Handled automatically by the pre-commit hook (`scripts/normalize_md.py`); run `python3 scripts/normalize_md.py <file>` manually if you want to normalize before committing
 6. **Test thoroughly**: Deploy to Open WebUI, verify access lock, gameplay, completion states
 7. **Update manifests**: Add challenge metadata to `campaign-manifest.json`
 
@@ -261,17 +263,31 @@ See individual week folders for complete challenge listings and documentation.
 - Out-of-scope handling that redirects to THIS mission (never other models/challenges)
 - Learning outcomes summary
 
-### Using the Sanitizer Tool
+### Markdown Hygiene Tool
 
-The `clean.sh` script prepares markdown files for Open WebUI by:
-- Converting smart quotes to standard ASCII
-- Normalizing code block markers
-- Removing problematic Unicode characters
-- Creating automatic backups
+`scripts/normalize_md.py` is an idempotent tool that fixes only genuinely-harmful **invisible-character hygiene** in Markdown:
+- Strips zero-width spaces (U+200B), BOM, and word-joiners
+- Converts non-breaking spaces to regular spaces
+- Normalizes CRLF → LF line endings
+- Ensures a single trailing newline
+
+It deliberately **preserves** smart quotes, em-dashes, bullets, and emoji (including ZWJ sequences like 👩‍🏫). It is not a punctuation flattener. It runs **automatically on commit** via pre-commit and is **enforced in CI** — it is no longer a manual interactive step.
 
 ```bash
-./clean.sh
-# Interactive menu to select and sanitize markdown files
+# Normalize specific file(s) in place
+python3 scripts/normalize_md.py path/to/file.md
+
+# Normalize all repo Markdown
+python3 scripts/normalize_md.py --all
+
+# CI mode: report issues, exit 1 if any (no writes)
+python3 scripts/normalize_md.py --check --all
+
+# Enable the automatic pre-commit hook
+pip install pre-commit && pre-commit install
+
+# Run the hooks on demand
+pre-commit run --all-files
 ```
 
 ## Utility Scripts
