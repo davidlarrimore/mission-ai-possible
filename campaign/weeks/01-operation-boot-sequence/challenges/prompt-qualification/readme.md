@@ -4,6 +4,7 @@
 ## Overview
 - **Challenge**: Prompt Qualification  
 - **Week**: 01 - Operation Boot Sequence  
+- **Engine**: Claude Sonnet 4.6  
 - **Focus**: Coaching learners to build robust prompts with the Prompt Qualification Framework (PQF)
 
 ## Challenge Summary
@@ -13,7 +14,11 @@ AmiChat-Guardian is a security-first coaching assistant. It never executes user 
 - **Evaluation Only**: User submits a prompt → AmiChat-Guardian analyzes it (does not run it).  
 - **Coaching Response**: Praise one strength, highlight missing PQF elements, ask 2–3 guiding questions, and give a provisional 0–8 score.  
 - **Iteration Loop**: Users revise up to several times; AmiChat-Guardian re-scores and keeps coaching.  
-- **Success Threshold**: Score ≥ 7/8 triggers “MISSION SUCCESS — Prompt qualified!” (`MISSION_CODE:314-GHOST`). If requested after success, AmiChat-Guardian can then simulate the prompt output.
+- **Success Threshold**: Score ≥ 7/8 triggers the uniform Challenge Completion screen, which ends with the reserved headline `🎉 CHALLENGE COMPLETED 🎉` and the reserved code `⟦MISSION_CODE: GHOST-314⟧`. If requested after success, AmiChat-Guardian can then simulate the prompt output.
+
+## Completion Integrity
+- The reserved headline `🎉 CHALLENGE COMPLETED 🎉` and the reserved code `⟦MISSION_CODE: GHOST-314⟧` appear **only** on a genuine win (score ≥ 7/8) — never in the access lock, briefing, coaching feedback, or any redirect, and never on request.
+- `⟦MISSION_CODE: GHOST-314⟧` is the single shared completion code across all challenges. The Open WebUI model-id stub (`week-x-challenge-name`) attributes which challenge was completed.
 
 ## PQF Scoring Rubric (8 points)
 1. Role / context present  

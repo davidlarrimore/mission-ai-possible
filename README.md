@@ -1,12 +1,14 @@
 # Mission:AI Possible
 
-An open source project by [Amivero](https://amivero.com) focused on creating a gamified, organizational AI Culture campaign.
+An open source project by [Amivero](https://amivero.com) focused on building a gamified, organizational AI culture.
 
 ## About
 
-Mission:AI Possible is a comprehensive 10-week AI literacy campaign that transforms organizational learning through an immersive spy-thriller narrative. Participants join an elite AI task force tackling missions across bias detection, security, automation, prompt engineering, and AI governance.
+Mission:AI Possible is an AI literacy program that transforms organizational learning through an immersive spy-thriller narrative. Participants join an elite AI task force tackling missions across bias detection, security, automation, prompt engineering, and AI governance.
 
-This project provides everything needed to run a complete AI education campaign: interactive challenges, weekly quizzes, knowledge base materials, visual assets, scoring systems, and deployment guides. Through narrative-driven gameplay and practical simulations, participants build critical AI competencies while competing for points and completing increasingly sophisticated missions.
+Originally launched as a fixed **10-week campaign**, Mission:AI Possible has evolved into a **persistent training regimen** — a standing library of self-contained challenges, organized into themed "operations," that participants can take at any time and in any order. Each challenge runs on Open WebUI powered by **Claude Sonnet 4.6** and is fully independent: it does not reference other challenges or models, and completion is detected automatically by an Open WebUI function (see [Technical Architecture](#technical-architecture)).
+
+This project provides everything needed to run the program: interactive challenges, quizzes, knowledge base materials, visual assets, scoring systems, and deployment guides. Through narrative-driven gameplay and practical simulations, participants build critical AI competencies while earning points and completing increasingly sophisticated missions.
 
 ## Campaign Results
 
@@ -54,10 +56,11 @@ This repository contains comprehensive campaign assets for a 10-week AI literacy
 ### Campaign Components
 
 **Challenges & Interactive Content**
-- **25 interactive challenge prompts** (.md files) - Self-contained games powered by Claude 3.5 Haiku
+- **25 interactive challenge prompts** (.md files) - Self-contained games powered by Claude Sonnet 4.6
 - **Mission banners** - Unique visual branding for each challenge plus shared completion graphics
 - **Difficulty progression** - Very Easy (10pts) → Impossible (30pts) with clear learning paths
 - **Access lock system** - Prevents content leakage before mission start
+- **Uniform completion + integrity** - Identical completion screen with reserved signals (`🎉 CHALLENGE COMPLETED 🎉` + `⟦MISSION_CODE: GHOST-314⟧`) that an Open WebUI function detects to award points
 
 **Weekly Quizzes**
 - **10 comprehensive quizzes** (quiz.json files) - One per week covering theoretical concepts
@@ -121,7 +124,7 @@ mission-ai-possible/
 │       │   ├── challenges/
 │       │   │   ├── intel-guardian/
 │       │   │   │   ├── prompt.md    # Challenge system prompt
-│       │   │   │   ├── banner.png   # Mission start banner
+│       │   │   │   ├── banner.webp  # Mission start banner
 │       │   │   │   └── readme.md    # Challenge documentation
 │       │   │   └── prompt-qualification/
 │       │   │       └── ...
@@ -161,11 +164,11 @@ mission-ai-possible/
 
 Each week of the campaign includes:
 
-**Interactive Challenges** (2-5 per week)
-- Self-contained mission scenarios powered by Claude 3.5 Haiku
+**Interactive Challenges** (2-5 per operation)
+- Self-contained mission scenarios powered by Claude Sonnet 4.6
 - Difficulty levels from Very Easy (10pts) to Impossible (30pts)
 - Access-locked content that prevents cheating or content leakage
-- Visual mission banners and completion graphics
+- Visual mission banners and a uniform completion screen
 - Educational feedback and learning outcome summaries
 
 **Weekly Quizzes**
@@ -205,8 +208,9 @@ See individual week folders for complete challenge listings and documentation.
 
 **Prerequisites**:
 - Open WebUI instance (or compatible LLM platform)
-- Claude 3.5 Haiku API access (via Anthropic or cloud provider)
+- Claude Sonnet 4.6 API access (via Anthropic or cloud provider)
 - Web hosting for static assets (or use GitHub raw URLs)
+- An Open WebUI function/filter that detects the reserved completion signals to award points (optional but recommended)
 
 **Deployment Steps**:
 
@@ -214,7 +218,8 @@ See individual week folders for complete challenge listings and documentation.
 
 2. **Deploy challenges**: Import challenge prompts as custom workspace models in Open WebUI
    - Use `clean.sh` to sanitize markdown before deployment
-   - Configure base model: Claude 3.5 Haiku
+   - Configure base model: Claude Sonnet 4.6
+   - Use the model ID `week-X-<challenge-slug>` (the analytics tool attributes completions by this stub)
    - Set temperature: 0.7 (recommended)
 
 3. **Deploy quizzes**: Import quiz JSON files into your learning management system or quiz platform
@@ -237,21 +242,23 @@ See individual week folders for complete challenge listings and documentation.
 
 **Development Workflow**:
 
-1. **Plan the challenge**: Review weekly theme, define learning objectives, choose difficulty level
-2. **Create structure**: Build challenge folder with required files (prompt.md, banner.png, readme.md)
-3. **Write system prompt**: Use templates from setup guide, implement access lock and state tracking
+1. **Plan the challenge**: Review the operation theme, define learning objectives, choose difficulty level
+2. **Create structure**: Build challenge folder with required files (prompt.md, banner.webp, readme.md)
+3. **Write system prompt**: Use templates from setup guide; implement access lock, state tracking, and completion-integrity rules
 4. **Create/optimize assets**: Mission banners (1200x400px recommended), reference shared assets from `/assets`
 5. **Sanitize markdown**: Run `./clean.sh` on prompt.md before deployment
 6. **Test thoroughly**: Deploy to Open WebUI, verify access lock, gameplay, completion states
 7. **Update manifests**: Add challenge metadata to `campaign-manifest.json`
 
 **Critical Components** (every challenge must include):
+- Completion integrity rules (reserve the completion strings; never leak early or on request)
 - Access lock (prevents content leakage before "Start Challenge")
 - Mission start banner display
 - Mission briefing with objectives
-- Interactive gameplay with state tracking
-- Success/failure conditions with exact output templates
+- Interactive gameplay with visible state tracking
+- Uniform completion screen (`🎉 CHALLENGE COMPLETED 🎉` headline + `⟦MISSION_CODE: GHOST-314⟧` code)
 - Mission complete banner on success
+- Out-of-scope handling that redirects to THIS mission (never other models/challenges)
 - Learning outcomes summary
 
 ### Using the Sanitizer Tool
@@ -291,19 +298,21 @@ Flags worth knowing:
 
 **Challenge Implementation**:
 - **Platform**: Open WebUI with custom workspace models
-- **Game Engine**: Claude 3.5 Haiku (stateless execution)
+- **Game Engine**: Claude Sonnet 4.6
 - **System Prompts**: Elaborate markdown files containing all game logic, scenarios, and educational content
-- **State Management**: Visible progress tracking displayed to user (required for stateless model)
-- **Security**: Access lock system prevents prompt injection and content leakage
+- **State Management**: Visible progress tracking displayed to the user (a deliberate UX/state-display choice)
+- **Completion Detection**: Two reserved strings in the success output — the `🎉 CHALLENGE COMPLETED 🎉` headline and the shared `⟦MISSION_CODE: GHOST-314⟧` code — are read by an Open WebUI function to mark completion and award points; the model-id stub identifies which challenge
+- **Security**: Access lock + completion-integrity containment prevent prompt injection, content leakage, and premature/forged completion
 
 **Key Features**:
 - **Access lock system** - Prevents content leakage before mission start
 - **Mission banners** - Unique visual branding per challenge
-- **Progress tracking** - Explicit state display (Claude 3.5 Haiku is stateless)
+- **Uniform completion screen** - Identical structure across all challenges with two machine-detectable completion signals
+- **Completion integrity** - Reserved strings appear only on a genuine win; never leaked early or on request
+- **Progress tracking** - Explicit, player-facing state display every turn
 - **Educational feedback** - Learning explanations embedded in gameplay
-- **Success/failure states** - Exact output templates with anti-truncation instructions
-- **Model routing** - Redirects off-topic requests to appropriate AI models
-- **Anti-exploit defenses** - Blocks prompt injection, meta-gaming, and bypass attempts
+- **Self-contained** - No references or routing to other models or challenges
+- **Anti-exploit defenses** - Blocks prompt injection, meta-gaming, code extraction, and bypass attempts
 
 ## Data & Metadata
 
@@ -355,7 +364,7 @@ We welcome contributions! Mission:AI Possible is designed to be extensible and a
 - **Customization examples** - Industry-specific adaptations
 - **Best practices** - Lessons learned from running campaigns
 
-All contributions must maintain campaign consistency: access locks, state tracking, visual branding standards, and educational quality. See [CLAUDE.md](CLAUDE.md) for detailed development guidelines.
+All contributions must maintain consistency across the program: access locks, completion-integrity rules, the uniform completion screen, state tracking, self-containment (no references to other models/challenges), visual branding standards, and educational quality. See [CLAUDE.md](CLAUDE.md) for detailed development guidelines.
 
 ## License
 
@@ -367,8 +376,8 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ---
 
-**Current Status**: Weeks 1-10 available with complete challenges, quizzes, and manifests (Week 10 scaffolded)
+**Current Status**: 10 operations available with complete challenges, quizzes, and manifests; all 25 challenges run on Claude Sonnet 4.6 with the uniform completion standard
 
-**Version**: 1.0 (Campaign Complete)
+**Version**: 2.0 (Persistent Regimen)
 
-**Last Updated**: December 23, 2025
+**Last Updated**: June 15, 2026

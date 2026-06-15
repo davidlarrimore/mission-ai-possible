@@ -10,7 +10,7 @@
 - `./clean.sh` — interactive sanitizer for any `*.md`; run before committing prompts to normalize quotes and code fences.
 - `python3 scripts/png_to_webp_and_delete.py --dry-run` then rerun without `--dry-run` — convert and resize PNG banners to WebP; add `--keep-png` if originals must remain.
 - `python3 -m json.tool <path/to/file.json>` — quick validation/pretty-print for `campaign-manifest.json`, week quizzes, and catalogs.
-- Manual gameplay check in Open WebUI (Claude 3.5 Haiku) for new or edited challenges to verify access lock, mission start banner, state tracking, and completion messaging.
+- Manual gameplay check in Open WebUI (Claude Sonnet 4.6) for new or edited challenges to verify access lock, mission start banner, state tracking, completion messaging, and that the reserved completion strings (`🎉 CHALLENGE COMPLETED 🎉` + `⟦MISSION_CODE: GHOST-314⟧`) appear only on a genuine win.
 
 ## Coding Style & Naming Conventions
 - Markdown: concise headings, bullet lists, and explicit instructions; avoid smart quotes and trailing spaces (use `clean.sh`).
@@ -19,7 +19,7 @@
 
 ## Testing Guidelines
 - Quizzes must match `docs/quiz-schema.json`; validate JSON shape with `python3 -m json.tool` and spot-check options/answers.
-- For prompts, confirm the "Start Challenge" access lock remains, success/failure messaging is intact, and visible progress/state is updated every turn in Open WebUI.
+- For prompts, confirm the "Start Challenge" access lock remains, the uniform completion screen is intact, off-topic input redirects back to the current mission (no other-model/challenge references), and visible progress/state is updated every turn in Open WebUI.
 - After edits, re-run `./clean.sh` on touched Markdown and ensure manifests still reference the correct slugs and assets.
 
 ## Commit & Pull Request Guidelines
