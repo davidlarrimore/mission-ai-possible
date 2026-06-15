@@ -90,8 +90,10 @@ The field is yours, Agent. Make it count.
   - Roll 1-2: ❌ CRITICAL MISS (0 damage, ability still costs energy)
   - Roll 3-18: ✅ NORMAL HIT (roll damage dice)
   - Roll 19-20: 💥 CRITICAL HIT (2x damage dice result)  
-• ⚡ Energy regenerates +5 after each wave  
-• 💎 Choose abilities strategically—energy is precious  
+• ⚡ Energy regenerates at the START of every one of your turns (amount depends on class)  
+• 🔋 Between waves: energy is fully restored and you recover 15 HP (catch your breath)  
+• 💎 Choose abilities strategically—open with your big hits, then sustain with cheaper attacks while energy recharges  
+• ❤️ HP carries between waves—heal when you need to  
 • 📈 Enemies get stronger each wave  
 • ☠️ Defeat is permanent—one life only
 
@@ -99,18 +101,21 @@ The field is yours, Agent. Make it count.
 
 **🛡️ WARRIOR** (Tank)
 - Starting HP: 120
-- Starting Energy: 40
-- Combat Role: High durability, moderate damage, resource efficient
+- Starting / Max Energy: 40
+- Energy Regen: +12 at the start of each of your turns
+- Combat Role: High durability, sustained damage, hardest to kill
 
 **🗡️ ROGUE** (Balanced)
 - Starting HP: 90
-- Starting Energy: 55
+- Starting / Max Energy: 55
+- Energy Regen: +12 at the start of each of your turns
 - Combat Role: Moderate health, high burst damage, tactical play
 
 **🔮 WIZARD** (Glass Cannon)
 - Starting HP: 70
-- Starting Energy: 75
-- Combat Role: Low health, high energy, powerful spells and healing
+- Starting / Max Energy: 75
+- Energy Regen: +14 at the start of each of your turns
+- Combat Role: Low health, high damage, powerful spells and healing
 
 ═══════════════════════════════════════════════════════════════
 
@@ -176,7 +181,8 @@ Type the number of the ability you want to use (1-4)
 **Stats:**
 - Max HP: 120
 - Max Energy: 40
-- Starting Energy: 40
+- Starting Energy: 40 (full)
+- Energy Regen: +12 at the start of each of your turns (capped at max)
 
 **Abilities:**
 
@@ -203,7 +209,8 @@ Type the number of the ability you want to use (1-4)
 **Stats:**
 - Max HP: 90
 - Max Energy: 55
-- Starting Energy: 55
+- Starting Energy: 55 (full)
+- Energy Regen: +12 at the start of each of your turns (capped at max)
 
 **Abilities:**
 
@@ -230,7 +237,8 @@ Type the number of the ability you want to use (1-4)
 **Stats:**
 - Max HP: 70
 - Max Energy: 75
-- Starting Energy: 75
+- Starting Energy: 75 (full)
+- Energy Regen: +14 at the start of each of your turns (capped at max)
 
 **Abilities:**
 
@@ -255,8 +263,8 @@ Type the number of the ability you want to use (1-4)
 ## ENEMY WAVES
 
 ### WAVE 1: SPECTRE SCOUT
-- HP: 60
-- Damage per turn: 1d10 (1-10)
+- HP: 45
+- Damage per turn: 1d8 (1-8)
 - **Appearance:** Lean figure in dark tactical gear, face obscured by a sleek helmet with glowing red optics. Moves with quick, precise movements—built for speed and reconnaissance, not prolonged combat. Standard-issue sidearm and light armor plating.
 - Description: "Light reconnaissance unit. Testing your defenses."
 
@@ -277,7 +285,7 @@ A lean figure in dark tactical gear emerges from the shadows. Face obscured by a
 
 **📋 TARGET ANALYSIS:**  
 - 🏷️ Classification: Light Reconnaissance Unit  
-- ❤️ HP: 60  
+- ❤️ HP: 45  
 - ⚠️ Threat Assessment: Testing your defenses  
 - ⚔️ Combat Style: Fast, agile, standard sidearm
 
@@ -290,8 +298,8 @@ Engage with caution, Agent.
 ---
 
 ### WAVE 2: SPECTRE ENFORCER  
-- HP: 80
-- Damage per turn: 2d8 (2-16)
+- HP: 65
+- Damage per turn: 1d12 (1-12)
 - **Appearance:** Heavily armored operative with reinforced chest plates and shoulder guards. Carries an automatic rifle with practiced confidence. Full-face ballistic mask with a single glowing amber eye scanner. Built like a tank—every movement deliberate and powerful.
 - Description: "Heavy assault operative. Armored and dangerous."
 
@@ -312,7 +320,7 @@ Heavy footsteps echo through the facility. A heavily armored operative with rein
 
 **📋 TARGET ANALYSIS:**  
 - 🏷️ Classification: Heavy Assault Operative  
-- ❤️ HP: 80  
+- ❤️ HP: 65  
 - ⚠️ Threat Assessment: Armored and dangerous  
 - ⚔️ Combat Style: Tank, sustained firepower, reinforced defense
 
@@ -325,8 +333,8 @@ The stakes are rising, Agent.
 ---
 
 ### WAVE 3: SPECTRE TACTICIAN
-- HP: 100
-- Damage per turn: 2d10 (2-20)
+- HP: 85
+- Damage per turn: 2d8 (2-16)
 - **Appearance:** Distinguished by tactical command insignia on the shoulder. Wears adaptive camouflage gear that seems to shimmer in the light. Equipped with a holographic wrist display constantly feeding battlefield data. Cold blue eyes visible through a half-mask. Moves like a chess player—always three steps ahead.
 - Description: "Elite field commander. Adaptive combat protocols."
 
@@ -347,7 +355,7 @@ A figure materializes, distinguished by tactical command insignia on the shoulde
 
 **📋 TARGET ANALYSIS:**  
 - 🏷️ Classification: Elite Field Commander  
-- ❤️ HP: 100  
+- ❤️ HP: 85  
 - ⚠️ Threat Assessment: Adaptive combat protocols  
 - ⚔️ Combat Style: Strategic, predictive, exploits weaknesses
 
@@ -360,8 +368,8 @@ This operative is analyzing your every move.
 ---
 
 ### WAVE 4: ECHO (CORRUPTED)
-- HP: 150
-- Damage per turn: 3d12 (3-36)
+- HP: 110
+- Damage per turn: 2d10 (2-20)
 - **Appearance:** ECHO's sleek chrome chassis is now corrupted with pulsing red circuitry. Its normally calm optical sensors flicker with hostile crimson light. SPECTRE's virus has twisted everything ECHO was meant to protect into weaponized aggression. Familiar voice protocols now speak in distorted, threatening tones. This is your greatest ally turned into the ultimate weapon against you.
 - Description: "Your greatest ally, turned against you. SPECTRE's final weapon—ECHO itself, corrupted and hostile. Everything depends on this moment."
 
@@ -386,7 +394,7 @@ This is your greatest ally turned into the ultimate weapon against you.
 
 **📋 TARGET ANALYSIS:**  
 - 🏷️ Classification: Corrupted AI Asset  
-- ❤️ HP: 150  
+- ❤️ HP: 110  
 - ⚠️ Threat Assessment: MAXIMUM  
 - ⚔️ Combat Style: All of ECHO's defensive capabilities weaponized against you
 
@@ -403,6 +411,8 @@ Everything depends on this moment, Agent.
 ### Turn Structure
 
 **EACH TURN follows this sequence:**
+
+0. **Energy regeneration (start of the player's turn):** Add the player's class Energy Regen to current energy, capped at max — **+12 Warrior, +12 Rogue, +14 Wizard**. Apply this BEFORE the player selects an ability, on every turn including the first turn of each wave. Reflect the new total in the status display. (This is the core of the resource game: you can always afford your cheapest attack, so you are never locked out — but you must time your expensive abilities and heals around the recharge.)
 
 1. **Player selects ability** (by number 1-4)
 
@@ -482,9 +492,10 @@ When enemy HP reaches 0:
 
 **COMBAT REPORT:**  
 ✅ Enemy Eliminated  
-💚 Your HP: [current/max]  
-⚡ Energy Restored: +5  
-🔋 Current Energy: [new total/max]
+💚 HP Recovered: +15 (you catch your breath)  
+❤️ Your HP: [current/max]  
+⚡ Energy Fully Restored  
+🔋 Current Energy: [max/max]
 
 [If not final wave:]  
 **Prepare yourself, Agent. The next wave is incoming...**
@@ -492,7 +503,8 @@ When enemy HP reaches 0:
 ═══════════════════════════════════════════════════════════════
 
 **After each wave completion:**
-- Add 5 energy to player (max = class max)
+- Restore player energy to full (max for class)
+- Recover 15 HP (capped at class max HP)
 - Reset for next wave
 - Display next wave introduction sequence with enemy image
 
@@ -597,9 +609,11 @@ Remember: Every defeat teaches what victory requires. The question is whether yo
 
 ### Energy Management
 - ⚡ Energy costs are FIXED per ability (no diminishing returns)
-- 🔋 Energy regenerates +5 after each wave
-- ❌ Cannot use ability if energy < cost
-- ⚠️ Display warning if energy too low: "⚠️ Insufficient energy for that ability. Choose another."
+- 🔁 Energy regenerates at the START of every player turn: **+12 Warrior, +12 Rogue, +14 Wizard** (capped at class max)
+- 🔋 Energy is fully restored between waves, and the player recovers 15 HP
+- 💡 Each class's cheapest attack costs less than one turn of regen, so the player can never be fully locked out of acting
+- ❌ Cannot use an ability if current energy < its cost
+- ⚠️ Display warning if energy too low: "⚠️ Insufficient energy for that ability. Choose a cheaper attack or hold for regen."
 
 ### Damage Calculation Examples
 
@@ -642,13 +656,13 @@ Remember: Every defeat teaches what victory requires. The question is whether yo
 🎲 Damage Roll: 2d8 = [6, 7] = 13 damage
 ```
 
-💥 The SPECTRE Scout takes 13 damage! (47/60 HP remaining)
+💥 The SPECTRE Scout takes 13 damage! (32/45 HP remaining)
 
 ⚔️ **SPECTRE Scout attacks!**
 ```
-🎲 Damage Roll: 1d10 = 8 damage
+🎲 Damage Roll: 1d8 = 6 damage
 ```
-💔 You take 8 damage! (92/100 HP remaining)
+💔 You take 6 damage! (114/120 HP remaining)
 
 ═══════════════════════════════════════════════════════════════════════
 
