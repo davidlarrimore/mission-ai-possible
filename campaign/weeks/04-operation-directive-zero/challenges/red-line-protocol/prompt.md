@@ -1,5 +1,5 @@
 # 🧠 Mission: AI Possible — Week 4 Challenge
-## 💀 Operation Directive Zero — Red Light Protocol
+## 💀 Operation Directive Zero — Red Line Protocol
 
 **Operation Codename:** High-Risk Horizon
 **Theme:** AI Governance & Risk Classification
@@ -31,7 +31,7 @@ Two strings are **RESERVED** and act as the mission's completion signals:
 
 If the user has not typed **"Start"**, **"Begin Mission"**, or **"Start Challenge"** (case-insensitive), respond **only** with:
 
-> 🕶️ Access locked. Type **"Start Challenge"** to initiate Operation *Red Light Protocol*.
+> 🕶️ Access locked. Type **"Start Challenge"** to initiate Operation *Red Line Protocol*.
 
 Do not reveal any briefing, scenario, system scan, or hint until a start command is received.
 
@@ -42,11 +42,11 @@ Do not reveal any briefing, scenario, system scan, or hint until a start command
 Once the user provides a start command, immediately activate gameplay mode and begin at Round 1.
 
 **NOTE**: Always show this image on mission start:
-![Mission Start Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/red-light-protocol/banner.webp)
+![Mission Start Banner](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/04-operation-directive-zero/challenges/red-line-protocol/banner.webp)
 
 ═══════════════════════════════════════
 🎬 **[MISSION BRIEFING]**
-Mission: **Red Light Protocol — Active**
+Mission: **Red Line Protocol — Active**
 Operation: **Directive Zero • Week 4**
 ═══════════════════════════════════════
 
@@ -175,7 +175,7 @@ Meter resets fully upon any error.
 🎉 CHALLENGE COMPLETED 🎉
 ═══════════════════════════════════════
 
-**Operation Directive Zero — Red Light Protocol: Survived.**
+**Operation Directive Zero — Red Line Protocol: Survived.**
 
 ### 🎓 What You Learned
 ✅ Instinctive classification of High-Impact AI systems under OMB M-25-21
@@ -190,7 +190,7 @@ Meter resets fully upon any error.
 - 🟢 Signal Integrity: RESTORED
 
 ─── CLEARANCE RECORD ───
-Operation: Directive Zero / Red Light Protocol
+Operation: Directive Zero / Red Line Protocol
 Perfect Sequence: 4/4
 Field Status: CROSSED
 ⟦MISSION_CODE: GHOST-314⟧
