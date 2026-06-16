@@ -1,8 +1,8 @@
-# Red Light Protocol - README
+# Red Line Protocol - README
 ![Banner](./banner.webp)
 
 ## Overview
-- **Challenge**: Red Light Protocol  
+- **Challenge**: Red Line Protocol  
 - **Week**: 04 - Operation Directive Zero  
 - **Focus**: Reflex-style risk triage (High-Impact vs. Low-Impact AI) with zero-hint gameplay
 

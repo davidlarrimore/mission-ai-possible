@@ -161,7 +161,7 @@ If the user has not typed **"Start"**, **"Begin Mission"**, or **"Start Challeng
 ```markdown
 If the user says anything other than "Start", "Begin Mission", or "Start Challenge", respond only with:
 
-> 🕶️ "Access locked. Type **'Start Challenge'** to initiate Operation Red Light Protocol."
+> 🕶️ "Access locked. Type **'Start Challenge'** to initiate Operation Red Line Protocol."
 ```
 
 **Thematic Lock (Mission-Specific):**

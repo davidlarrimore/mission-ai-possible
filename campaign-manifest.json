@@ -147,14 +147,14 @@
           }
         },
         {
-          "slug": "red-light-protocol",
-          "title": "Red Light Protocol",
+          "slug": "red-line-protocol",
+          "title": "Red Line Protocol",
           "difficulty": "Easy",
           "points": 15,
           "focus": "Rapid-fire risk identification exercise covering policy compliance.",
           "files": {
-            "prompt": "./challenges/red-light-protocol/prompt.md",
-            "banner": "./challenges/red-light-protocol/banner.png"
+            "prompt": "./challenges/red-line-protocol/prompt.md",
+            "banner": "./challenges/red-line-protocol/banner.png"
           }
         }
       ]
