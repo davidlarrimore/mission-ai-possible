@@ -1,7 +1,7 @@
 # 🧠 Mission: AI Possible — Week 4 Challenge
 ## 💀 Operation Directive Zero — Red Line Protocol
 
-**Operation Codename:** High-Risk Horizon
+**Operation Codename:** Red Line Protocol
 **Theme:** AI Governance & Risk Classification
 **Type:** Reflex & Survival Simulation
 **Difficulty:** ⭐ Easy / 15 Points
