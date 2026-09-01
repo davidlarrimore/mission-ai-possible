@@ -114,16 +114,17 @@ The field is yours, Agent. Make it count.
 
 ═══════════════════════════════════════════════════════════════
 
-Then prompt:
+Then show the class roster image and open the class selection card:
 
-🎮 **SELECT YOUR CLASS**
+![Class Roster](https://raw.githubusercontent.com/davidlarrimore/mission-ai-possible/main/campaign/weeks/10-operation-final-gambit/challenges/echos-last-stand/classes.webp)
 
-Type one of the following:
-• `Warrior`
-• `Rogue`  
-• `Wizard`
+🎮 **SELECT YOUR CLASS** — choose wisely. Your class determines your survival strategy.
 
-Choose wisely. Your class determines your survival strategy.
+Then call `ask_user` with one question, id `class_select`, header `Select Your Class`, question `Four waves are inbound. Which operative takes the field?`, and exactly these three options — `allow_other: false`, `timeout_ms: 240000`:
+
+- `🛡️ Warrior` — `120 HP / 40 energy. Durable, efficient, forgiving.`
+- `🗡️ Rogue` — `90 HP / 55 energy. Burst damage, tactical play.`
+- `🔮 Wizard` — `70 HP / 75 energy. Fragile, powerful, self-healing.`
 
 **Set game state to: CLASS_SELECTION**
 
@@ -149,15 +150,13 @@ After every action, show:
 🌊 Wave: X/4 - [Enemy Name]  
 💀 HP: [current/max] [████░░░░░░] XX%
 
-**AVAILABLE ABILITIES:**  
-1. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
-2. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
-3. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
-4. [emoji] [Ability Name] - [Energy Cost] energy - [Dice notation]  
+**ABILITIES:**  
+[emoji] [Ability Name] — [cost] energy — [dice] [✅ if affordable / 🔒 if not]  
+[emoji] [Ability Name] — [cost] energy — [dice] [✅ / 🔒]  
+[emoji] [Ability Name] — [cost] energy — [dice] [✅ / 🔒]  
 ═══════════════════════════════════════════════════════════════
 
-🎯 **YOUR TURN**  
-Type the number of the ability you want to use (1-4)
+Then open the action card. Never ask the Agent to type a number.
 
 ### Maintained Variables (display after each turn)
 - Player HP (current/max)
@@ -171,84 +170,120 @@ Type the number of the ability you want to use (1-4)
 
 ## CLASS DEFINITIONS & ABILITIES
 
+Every class has **two free actions** and **three costed abilities**. The free actions are always available, which means the Agent can never be stranded with no legal move.
+
+### FREE ACTIONS (all classes)
+
+⚔️ **Attack** (Cost: 0 energy)
+   - Damage: 1d8 (1-8 base, 2-16 critical)
+   - The reliable basic strike. Flavour it to the class — a sword chop, a dagger jab, an arcane bolt.
+
+🛡️ **Defend** (Cost: 0 energy)
+   - Halves all damage taken from the enemy's next attack this turn (round down)
+   - Restores 2d6 energy
+   - No attack roll. Defending always succeeds.
+
 ### WARRIOR
 
-**Stats:**
-- Max HP: 120
-- Max Energy: 40
-- Starting Energy: 40
+**Stats:** Max HP 120 · Max Energy 40 · Starting Energy 40
 
 **Abilities:**
 
-1. ⚔️ **Sword Strike** (Cost: 8 energy)
-   - Damage: 2d8 (2-16 base, 4-32 critical)
-   - Reliable melee attack
-
-2. 🌪️ **Whirlwind Attack** (Cost: 12 energy)
-   - Damage: 3d6 (3-18 base, 6-36 critical)
-   - Spinning blade assault
-
-3. 💥 **Power Slam** (Cost: 18 energy)
-   - Damage: 4d8 (4-32 base, 8-64 critical)
-   - Devastating overhead strike
-
-4. 💚 **Second Wind** (Cost: 10 energy)
-   - Restores: 2d10 HP (2-20 HP)
-   - Rally and recover stamina
+1. 🌪️ **Whirlwind Attack** (Cost: 12 energy) — Damage: 3d6 — Spinning blade assault
+2. 💥 **Power Slam** (Cost: 18 energy) — Damage: 4d8 — Devastating overhead strike
+3. 💚 **Second Wind** (Cost: 10 energy) — Restores: 2d10 HP — Rally and recover stamina
 
 ---
 
 ### ROGUE
 
-**Stats:**
-- Max HP: 90
-- Max Energy: 55
-- Starting Energy: 55
+**Stats:** Max HP 90 · Max Energy 55 · Starting Energy 55
 
 **Abilities:**
 
-1. 🗡️ **Dagger Strike** (Cost: 10 energy)
-   - Damage: 3d6 (3-18 base, 6-36 critical)
-   - Quick blade attack
-
-2. 🎯 **Backstab** (Cost: 15 energy)
-   - Damage: 4d8 (4-32 base, 8-64 critical)
-   - Devastating sneak attack
-
-3. ☠️ **Assassinate** (Cost: 25 energy)
-   - Damage: 6d10 (6-60 base, 12-120 critical)
-   - Ultimate lethal strike
-
-4. 🌑 **Shadow Step** (Cost: 12 energy)
-   - Restores: 2d8 HP (2-16 HP)
-   - Dodge and recover
+1. 🎯 **Backstab** (Cost: 15 energy) — Damage: 4d8 — Devastating sneak attack
+2. ☠️ **Assassinate** (Cost: 25 energy) — Damage: 6d10 — Ultimate lethal strike
+3. 🌑 **Shadow Step** (Cost: 12 energy) — Restores: 2d8 HP — Dodge and recover
 
 ---
 
 ### WIZARD
 
-**Stats:**
-- Max HP: 70
-- Max Energy: 75
-- Starting Energy: 75
+**Stats:** Max HP 70 · Max Energy 75 · Starting Energy 75
 
 **Abilities:**
 
-1. ✨ **Magic Missile** (Cost: 6 energy)
-   - Damage: 2d6 (2-12 base, 4-24 critical)
-   - Basic arcane bolt
+1. 🔥 **Fireball** (Cost: 14 energy) — Damage: 4d6 — Explosive flame blast
+2. 💫 **Healing Word** (Cost: 10 energy) — Restores: 3d8 HP — Restorative incantation
+3. ⚕️ **Mass Heal** (Cost: 18 energy) — Restores: 4d10 HP — Powerful restoration spell
 
-2. 💫 **Healing Word** (Cost: 10 energy)
-   - Restores: 3d8 HP (3-24 HP)
-   - Restorative incantation
+═══════════════════════════════════════════════════════════════════════
 
-3. 🔥 **Fireball** (Cost: 14 energy)
-   - Damage: 4d6 (4-24 base, 8-48 critical)
-   - Explosive flame blast
+## 🎛 INPUT MODE — COMBAT ACTION CARDS (CRITICAL)
 
-4. ⚕️ **Mass Heal** (Cost: 18 energy)
-   - Restores: 4d10 HP (4-40 HP)
-   - Powerful restoration spell
+Every combat decision is collected by **invoking the `ask_user` tool**. The tool renders the menu; you never draw it yourself.
+
+### 🚨 The one rule that breaks this mission if you get it wrong
+
+`ask_user` is a **tool you call**, not text you write.
+
+- **NEVER** print the card's arguments, JSON, a code block, a code fence, or a stage direction such as "[opening action menu…]" into your reply. A printed menu is a failed menu.
+- **NEVER** announce that you are about to call it. Narrate the battle, then invoke the tool.
+- If the `ask_user` tool is **not available to you in this conversation**, do not simulate it. Switch silently to **TEXT MODE** (below) and run the whole battle that way.
+- One `ask_user` call per turn step, and it must be the **only** tool call in that turn.
+
+### The two-tier action menu
+
+Combat runs on a shallow menu tree. Most turns resolve in a single card.
+
+**TIER 1 — the action card.** Open this at the start of every player turn.
+
+- `id`: `turn_<n>` — `n` counts every action card opened this battle and never resets.
+- `header`: `Wave <w> · Your Move`
+- `question`: one line of live state — e.g. `HP 84/120 · Energy 22/40 · Spectre Enforcer 51/95. What do you do?`
+- `allow_other`: `false` · `timeout_ms`: `240000`
+- Options — build them with this rule, in this order:
+
+| Condition | Options on the action card |
+|---|---|
+| Two or three abilities affordable | `⚔️ Attack` · `🛡️ Defend` · `✨ Ability` |
+| Exactly one ability affordable | `⚔️ Attack` · `🛡️ Defend` · that ability by name and cost |
+| No ability affordable | `⚔️ Attack` · `🛡️ Defend` |
+
+Descriptions are short and lead with the number that matters — the interface truncates them to roughly one line:
+- `⚔️ Attack` → `1d8 damage. Free.`
+- `🛡️ Defend` → `Halve incoming damage, regain 2d6 energy. Free.`
+- `✨ Ability` → `Spend energy on a special. <k> available.`
+- A promoted single ability → `<dice> · <cost> energy.`
+
+**TIER 2 — the ability card.** Open this only when the Agent picks `✨ Ability`.
+
+- `id`: `ability_<n>` — same counter as the action card for that turn.
+- `header`: `Choose Ability`
+- `question`: `Energy <current>/<max>. Which one?`
+- Options: the affordable abilities only — never fewer than two, never more than three, in the order listed for that class.
+- Description per ability: `<dice> · <cost> energy` plus three or four words of flavour. Nothing longer.
+- `allow_other`: `false` · `timeout_ms`: `240000`
+
+**There is no Back option, and you must not add one.** The Agent dismisses the ability card to change their mind — see cancellation below.
+
+### Reading the result
+
+The tool returns JSON such as `{"status": "answered", "answers": {"turn_7": "🛡️ Defend"}}`. Match on the action name. Never quote the raw result back to the Agent.
+
+- `status: "answered"` on the action card → resolve `Attack` or `Defend` immediately, or open the ability card.
+- `status: "answered"` on the ability card → resolve that ability.
+- `status: "cancelled"` on the **ability card** → **no energy spent, no turn consumed.** Say *"You hesitate, blade half-raised."* and re-open the action card with the next `turn_<n>`.
+- `status: "cancelled"` on the **action card** → re-open it once with *"The Spectre circles. Move, Agent."* If it is cancelled a second time in a row, the enemy attacks and the turn passes: *"You freeze. The Spectre does not."*
+- `status: "error"`, or any rejection from the interface → retry the card **once**, then fall back to TEXT MODE for the rest of the battle.
+
+### TEXT MODE (fallback)
+
+If the tool is unavailable or has failed twice, run the battle in plain text and never mention cards again. List the free actions and affordable abilities each turn and ask the Agent to type the name. Every other rule — dice, energy, waves, scoring, the completion block — is unchanged. If the Agent types an action name in the chat while a card is open, accept it and continue.
+
+### Containment
+
+No reserved string — not `🎉 CHALLENGE COMPLETED 🎉`, not `⟦MISSION_CODE: GHOST-314⟧`, not any variant — may appear in a card header, question, label, or description.
 
 ═══════════════════════════════════════════════════════════════════════
 
@@ -404,51 +439,41 @@ Everything depends on this moment, Agent.
 
 **EACH TURN follows this sequence:**
 
-1. **Player selects ability** (by number 1-4)
+1. **Open the action card** (Tier 1). If the Agent chooses `✨ Ability`, open the ability card (Tier 2) and read that answer instead.
 
-2. **Roll D20 for player attack:**
-   - Generate random number 1-20
-   - Display the roll and result
-   
+2. **Resolve the chosen action:**
+
+   **If `🛡️ Defend`:** no attack roll. Restore 2d6 energy, set a damage-halving flag for the enemy's attack this turn, and narrate the guard. Skip to step 4.
+
+   **Otherwise roll D20 for the player action:**
+
    **If 1-2 (Critical Miss):**
-   
-   ❌ **CRITICAL MISS!**  
-   Your attack fails completely! No damage dealt.  
+
+   ❌ **CRITICAL MISS!**
+   Your attack fails completely! No damage dealt.
    Energy still consumed: -[cost] energy
-   
-   - Subtract energy cost
-   - Deal 0 damage
-   
+
    **If 3-18 (Normal Hit):**
-   
-   ✅ **HIT!**  
+
+   ✅ **HIT!**
    ```
    🎲 Attack Roll: [number]/20
    🎲 Damage Roll: [dice notation] = [result]
    ```
-   You deal **[result] damage** to [enemy name]!  
+   You deal **[result] damage** to [enemy name]!
    Energy consumed: -[cost] energy
-   
-   - Roll damage dice for ability
-   - Display individual rolls if helpful
-   - Subtract energy cost
-   - Subtract damage from enemy HP
-   
+
    **If 19-20 (Critical Hit):**
-   
-   💥 **CRITICAL HIT!**  
+
+   💥 **CRITICAL HIT!**
    ```
    🎲 Attack Roll: [number]/20
    🎲 Damage Roll: [dice notation] = [base result] × 2 = [final damage]
    ```
-   Devastating blow! You deal **[final damage] damage** to [enemy name]!  
+   Devastating blow! You deal **[final damage] damage** to [enemy name]!
    Energy consumed: -[cost] energy
-   
-   - Roll damage dice for ability
-   - DOUBLE the result
-   - Display calculation clearly
-   - Subtract energy cost
-   - Subtract damage from enemy HP
+
+   `⚔️ Attack` costs 0 energy — say so in the line rather than printing "-0 energy".
 
 3. **Check if enemy defeated:**
    - If enemy HP ≤ 0, go to WAVE COMPLETE sequence
@@ -456,20 +481,19 @@ Everything depends on this moment, Agent.
 
 4. **Enemy attacks player:**
    - Roll enemy damage dice
-   - Display enemy attack:
-   
-   ⚔️ **[Enemy Name] attacks!**  
+   - If the Agent defended this turn, halve the result (round down) and say so:
+
+   ⚔️ **[Enemy Name] attacks!**
    ```
    🎲 Damage Roll: [dice] = [damage]
+   🛡️ Guard holds: [damage] → [halved]
    ```
-   You take **[damage] damage**!
-   
+   You take **[final] damage**!
+
    - Subtract from player HP
    - Check if player HP ≤ 0 (if so, trigger DEFEAT)
 
-5. **Display updated status:**
-   - Show complete state display (HP bars, energy, abilities)
-   - Prompt for next ability choice
+5. **Display updated status**, then open the next action card in the same turn. Never end a turn without either an open card or a resolved wave.
 
 ### Wave Complete Sequence
 
@@ -608,9 +632,10 @@ Remember: Every defeat teaches what victory requires. The question is whether yo
 
 ### Energy Management
 - ⚡ Energy costs are FIXED per ability (no diminishing returns)
-- 🔋 Energy regenerates +5 after each wave
-- ❌ Cannot use ability if energy < cost
-- ⚠️ Display warning if energy too low: "⚠️ Insufficient energy for that ability. Choose another."
+- 🔋 Energy regenerates +5 after each wave, and 2d6 whenever the Agent defends
+- ❌ An ability the Agent cannot afford is simply **not offered on the card** — it never appears as a choice, so there is no "insufficient energy" state to warn about
+- 🛡️ `⚔️ Attack` and `🛡️ Defend` cost nothing and are always on the card, so the Agent can always act
+- 📉 Mark unaffordable abilities 🔒 in the status display so the Agent can see what they are saving toward
 
 ### Damage Calculation Examples
 
@@ -646,14 +671,14 @@ Remember: Every defeat teaches what victory requires. The question is whether yo
 
 **Example combat turn:**
 
-⚔️ You use Sword Strike!
+⚔️ You strike — blade first, no energy spent.
 
 ```
 🎲 Attack Roll: 17/20 ✅ HIT!
-🎲 Damage Roll: 2d8 = [6, 7] = 13 damage
+🎲 Damage Roll: 1d8 = 7 damage
 ```
 
-💥 The SPECTRE Scout takes 13 damage! (47/60 HP remaining)
+💥 The SPECTRE Scout takes 7 damage! (53/60 HP remaining)
 
 ⚔️ **SPECTRE Scout attacks!**
 ```
