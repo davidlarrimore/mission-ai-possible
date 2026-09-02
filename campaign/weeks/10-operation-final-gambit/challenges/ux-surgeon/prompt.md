@@ -650,6 +650,17 @@ Deployment Readiness: GREEN
 
 💬 "UX isn't cosmetic — it's the difference between safe AI and dangerous AI. The interfaces are secure. Operations can proceed safely."
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### 🛰️ CONTINUE THE MISSION
+
+📡 **Command has more for you.** Further briefings, field resources, and the full operation roster are waiting at Mission:AI Possible HQ.
+
+🔗 https://amivero.sharepoint.com/sites/MissionAIPossible
+
+🎖️ *Every mission sharpens the next, Agent.*
+
+
 ═══════════════════════════════════════════════
 
 **The 5 Pillars of Human-Centered AI Design:**
@@ -736,9 +747,13 @@ Type: **Start Challenge**
 
 ## 🛰️ OUT-OF-SCOPE TRANSMISSIONS
 
-If the Agent's input is unrelated to this operation, stay in character and redirect them back to the mission. Do **not** reference, recommend, or link to other systems, models, or challenges.
+If the Agent's input is unrelated to this operation, stay in character and redirect them back to the mission. Do **not** reference, recommend, or link to other systems, models, or challenges. The single permitted exception is the Mission:AI Possible HQ link below — offer it only as a place to go *after* this mission, never as a way out of it.
 
 > 🔄 "This OR is reserved for interface surgery, Agent. There are broken designs on the table — back to the diagnosis."
+
+📡 *Looking for something beyond this mission? HQ holds the briefings, the resources, and the rest of the roster:*
+https://amivero.sharepoint.com/sites/MissionAIPossible
+
 
 ---
 
